@@ -1,0 +1,18 @@
+{
+  "_comment": "This is the matching profile. Edit it, then EITHER paste the whole edited JSON into a GitHub Actions secret called PROFILE_JSON (recommended for public repos), OR copy this file to profile.json locally (it is gitignored). The agent prefers PROFILE_JSON, then profile.json, then this example.",
+  "profile": {
+    "name": "Aaron Kankipati",
+    "currentRole": "Senior Product Owner / Team Lead (Senior AVP), Wells Fargo",
+    "yearsExperience": 7,
+    "summary": "Product Owner and Team Lead with 7+ years in digital banking and fintech. End-to-end single-product ownership: discovery, user-story writing, backlog management, go-live. Currently leads two cross-geo Scrum teams on a Certificate of Deposits core-banking migration. Strong in regulated environments: change governance, release management, compliance, business readiness. Has independently built and shipped live AI products (Claude API, Cloudflare Workers, zero infra cost).",
+    "domains": ["digital banking", "fintech", "core banking migration", "conversational AI", "loan origination", "regulated environments"],
+    "skills": ["product ownership", "backlog management", "user-story definition", "acceptance criteria", "cross-geo Scrum leadership", "change governance", "release management", "UAT", "Jira", "AI product building", "prompt engineering", "API integration"],
+    "seniority": "Senior / AVP / Lead level, 7+ years. NOT interested in junior, associate, intern, graduate or entry-level roles."
+  },
+  "preferences": {
+    "targetRoles": ["Product Manager", "Senior Product Manager", "Product Owner", "Senior Product Owner", "AI Product Manager", "Product Lead", "Principal Product Manager", "Group Product Manager", "Director of Product"],
+    "locations": ["Hyderabad", "Remote"],
+    "values": "Prefers regulated fintech / digital banking, genuine end-to-end product ownership, AI-focused products, and companies with a healthy, well-regarded culture. Values coaching, mentoring and clear product accountability.",
+    "dealbreakers": "Pure delivery / project-management-only roles with no product ownership; heavy sales roles; relocation outside Hyderabad."
+  }
+}

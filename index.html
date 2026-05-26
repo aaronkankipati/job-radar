@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Job Radar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0e0e10;
+    --bg-card: #16161a;
+    --bg-card-hi: #1c1c21;
+    --line: #2a2a31;
+    --ink: #ece8e1;
+    --ink-dim: #8d8a82;
+    --ink-faint: #5d5b56;
+    --gold: #e0a949;
+    --green: #84c45c;
+    --rust: #c97a4a;
+    --radius: 14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: var(--bg); }
+  body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    color: var(--ink);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    background-image:
+      radial-gradient(620px 320px at 88% -4%, rgba(224,169,73,0.07), transparent 70%),
+      radial-gradient(520px 300px at 0% 100%, rgba(132,196,92,0.05), transparent 70%);
+  }
+  .wrap { max-width: 660px; margin: 0 auto; padding: 28px 18px 64px; }
+
+  /* ---- header ---- */
+  header { margin-bottom: 22px; }
+  .mast {
+    display: flex; align-items: baseline; gap: 10px;
+  }
+  .dot {
+    width: 9px; height: 9px; border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 0 0 rgba(132,196,92,0.5);
+    animation: pulse 2.6s infinite;
+    transform: translateY(-2px);
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(132,196,92,0.45); }
+    70% { box-shadow: 0 0 0 9px rgba(132,196,92,0); }
+    100% { box-shadow: 0 0 0 0 rgba(132,196,92,0); }
+  }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: -0.01em;
+  }
+  .tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+  .statusbar {
+    margin-top: 16px;
+    display: flex; flex-wrap: wrap; gap: 8px 18px;
+    align-items: center;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 12px 2px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    color: var(--ink-dim);
+  }
+  .statusbar b { color: var(--ink); font-weight: 500; }
+  .sort { margin-left: auto; display: flex; gap: 6px; }
+  .sort button {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px; letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: transparent; color: var(--ink-dim);
+    border: 1px solid var(--line); border-radius: 999px;
+    padding: 5px 11px; cursor: pointer;
+    transition: all .15s ease;
+  }
+  .sort button.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+  /* ---- states ---- */
+  .msg {
+    text-align: center; padding: 70px 20px;
+    color: var(--ink-dim);
+    font-size: 15px;
+  }
+  .msg .big {
+    font-family: 'Fraunces', serif; font-size: 22px;
+    color: var(--ink); display: block; margin-bottom: 8px;
+  }
+  .skel {
+    height: 132px; border-radius: var(--radius);
+    background: linear-gradient(100deg, var(--bg-card) 30%, var(--bg-card-hi) 50%, var(--bg-card) 70%);
+    background-size: 220% 100%;
+    animation: shimmer 1.4s infinite;
+    margin-bottom: 12px;
+  }
+  @keyframes shimmer { to { background-position: -220% 0; } }
+
+  /* ---- job card ---- */
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px 16px 14px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: rise .5s ease forwards;
+    transition: border-color .15s ease, background .15s ease;
+  }
+  .card:hover { border-color: #3a3a44; background: var(--bg-card-hi); }
+  @keyframes rise { to { opacity: 1; transform: translateY(0); } }
+
+  .toprow {
+    display: flex; justify-content: space-between;
+    align-items: center; gap: 10px; margin-bottom: 9px;
+  }
+  .company {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; letter-spacing: 0.07em;
+    text-transform: uppercase; color: var(--ink-dim);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .src {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9.5px; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--ink-faint);
+    border: 1px solid var(--line); border-radius: 4px;
+    padding: 2px 6px; flex-shrink: 0;
+  }
+  .title {
+    font-family: 'Fraunces', serif;
+    font-size: 19px; font-weight: 500; line-height: 1.3;
+    padding-right: 64px;
+  }
+  .meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; color: var(--ink-faint);
+    margin-top: 7px;
+  }
+  .verdict {
+    font-size: 13.5px; color: var(--ink-dim);
+    line-height: 1.5; margin-top: 10px;
+    font-style: italic;
+  }
+
+  /* score badge */
+  .score {
+    position: absolute; top: 14px; right: 14px;
+    text-align: right;
+  }
+  .score .num {
+    font-family: 'Fraunces', serif;
+    font-size: 30px; font-weight: 600; line-height: 1;
+  }
+  .score .lbl {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 8.5px; letter-spacing: 0.14em;
+    color: var(--ink-faint); text-transform: uppercase;
+    margin-top: 2px;
+  }
+  .bar {
+    height: 3px; border-radius: 2px; margin-top: 12px;
+    background: var(--line); overflow: hidden;
+  }
+  .bar > i { display: block; height: 100%; border-radius: 2px; }
+
+  /* expandable detail */
+  .detail {
+    display: none;
+    margin-top: 14px; padding-top: 13px;
+    border-top: 1px solid var(--line);
+  }
+  .card.open .detail { display: block; }
+  .fit {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 8px; border-radius: 5px;
+    display: inline-block; margin-bottom: 11px;
+  }
+  .fit.good { background: rgba(132,196,92,0.14); color: var(--green); }
+  .fit.stretch { background: rgba(224,169,73,0.14); color: var(--gold); }
+  .fit.mismatch { background: rgba(201,122,74,0.14); color: var(--rust); }
+  .pc { list-style: none; margin-bottom: 9px; }
+  .pc li {
+    font-size: 13px; line-height: 1.5;
+    padding-left: 18px; position: relative;
+    margin-bottom: 4px; color: var(--ink);
+  }
+  .pc.pro li::before { content: '+'; color: var(--green); position: absolute; left: 2px; font-weight: 600; }
+  .pc.con li::before { content: '–'; color: var(--rust); position: absolute; left: 4px; }
+  .open-link {
+    display: inline-block; margin-top: 8px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px; letter-spacing: 0.04em;
+    color: var(--bg); background: var(--gold);
+    text-decoration: none; padding: 8px 14px;
+    border-radius: 7px; font-weight: 500;
+  }
+  .hint {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9.5px; color: var(--ink-faint);
+    letter-spacing: 0.05em; margin-top: 11px;
+    text-transform: uppercase;
+  }
+  footer {
+    margin-top: 30px; text-align: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; color: var(--ink-faint);
+    letter-spacing: 0.05em;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="mast">
+      <span class="dot"></span>
+      <h1>Job Radar</h1>
+    </div>
+    <div class="tag">product roles &middot; hyderabad &middot; scored against your profile</div>
+    <div class="statusbar" id="statusbar">
+      <span>loading&hellip;</span>
+    </div>
+  </header>
+  <main id="board">
+    <div class="skel"></div>
+    <div class="skel"></div>
+    <div class="skel"></div>
+  </main>
+  <footer>JOB RADAR &mdash; runs every other day via github actions</footer>
+</div>
+
+<script>
+  const board = document.getElementById('board');
+  const statusbar = document.getElementById('statusbar');
+  let JOBS = [];
+  let sortMode = 'score';
+
+  const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) =>
+    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  function scoreColor(s) {
+    if (s >= 85) return 'var(--green)';
+    if (s >= 75) return 'var(--gold)';
+    return 'var(--rust)';
+  }
+
+  function fmtDate(iso) {
+    if (!iso || iso === 'sample') return '—';
+    const d = new Date(iso);
+    if (isNaN(d)) return '—';
+    return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short' });
+  }
+
+  function renderStatus(meta) {
+    const last = meta && meta.lastRun ? fmtDate(meta.lastRun) : 'not yet run';
+    statusbar.innerHTML =
+      `<span>last scan &middot; <b>${esc(last)}</b></span>` +
+      `<span><b>${JOBS.length}</b> on the board</span>` +
+      (meta && typeof meta.scanned === 'number'
+        ? `<span><b>${meta.scanned}</b> scanned</span>` : '') +
+      `<span class="sort">
+         <button data-s="score" class="${sortMode === 'score' ? 'active' : ''}">match</button>
+         <button data-s="new" class="${sortMode === 'new' ? 'active' : ''}">newest</button>
+       </span>`;
+    statusbar.querySelectorAll('.sort button').forEach((b) => {
+      b.onclick = () => { sortMode = b.dataset.s; renderBoard(); };
+    });
+  }
+
+  function sortJobs(list) {
+    const a = [...list];
+    if (sortMode === 'score') a.sort((x, y) => y.score - x.score);
+    else a.sort((x, y) => String(y.firstSeen).localeCompare(String(x.firstSeen))
+      || y.score - x.score);
+    return a;
+  }
+
+  function cardHTML(j, i) {
+    const fit = ['good', 'stretch', 'mismatch'].includes(j.seniorityFit)
+      ? j.seniorityFit : 'stretch';
+    const pros = (j.pros || []).map((p) => `<li>${esc(p)}</li>`).join('');
+    const cons = (j.cons || []).map((c) => `<li>${esc(c)}</li>`).join('');
+    return `
+      <article class="card" style="animation-delay:${i * 55}ms">
+        <div class="toprow">
+          <span class="company">${esc(j.company)}</span>
+          <span class="src">${esc(j.source)}</span>
+        </div>
+        <div class="title">${esc(j.title)}</div>
+        <div class="score">
+          <div class="num" style="color:${scoreColor(j.score)}">${j.score}</div>
+          <div class="lbl">match</div>
+        </div>
+        <div class="meta">${esc(j.location || '—')} &nbsp;&middot;&nbsp; posted ${fmtDate(j.postedAt)}</div>
+        <div class="verdict">${esc(j.verdict)}</div>
+        <div class="bar"><i style="width:${Math.min(100, j.score)}%;background:${scoreColor(j.score)}"></i></div>
+        <div class="detail">
+          <span class="fit ${fit}">seniority: ${esc(j.seniorityFit || 'unknown')}</span>
+          ${pros ? `<ul class="pc pro">${pros}</ul>` : ''}
+          ${cons ? `<ul class="pc con">${cons}</ul>` : ''}
+          <a class="open-link" href="${esc(j.url)}" target="_blank" rel="noopener">Open posting &nearr;</a>
+        </div>
+        <div class="hint">tap to ${'expand'}</div>
+      </article>`;
+  }
+
+  function renderBoard() {
+    renderStatus(window.__meta);
+    if (!JOBS.length) {
+      board.innerHTML =
+        `<div class="msg"><span class="big">Nothing on the radar yet</span>
+         The agent hasn't logged any matches. The next scan will populate this board.</div>`;
+      return;
+    }
+    board.innerHTML = sortJobs(JOBS).map(cardHTML).join('');
+    board.querySelectorAll('.card').forEach((c) => {
+      c.addEventListener('click', (e) => {
+        if (e.target.closest('.open-link')) return;
+        c.classList.toggle('open');
+        const h = c.querySelector('.hint');
+        if (h) h.textContent = 'tap to ' + (c.classList.contains('open') ? 'collapse' : 'expand');
+      });
+    });
+  }
+
+  fetch('./data/results.json?t=' + Date.now())
+    .then((r) => { if (!r.ok) throw new Error('no data'); return r.json(); })
+    .then((data) => {
+      window.__meta = data.meta || {};
+      JOBS = Array.isArray(data.jobs) ? data.jobs : [];
+      renderBoard();
+    })
+    .catch(() => {
+      statusbar.innerHTML = '<span>could not load results</span>';
+      board.innerHTML =
+        `<div class="msg"><span class="big">No results file found</span>
+         Run the agent once (Actions &rarr; Job Radar &rarr; Run workflow) to generate data/results.json.</div>`;
+    });
+</script>
+</body>
+</html>

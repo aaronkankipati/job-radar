@@ -1,0 +1,46 @@
+name: Job Radar
+
+on:
+  schedule:
+    # 04:17 UTC daily (~09:47 IST). Off-the-hour to avoid GitHub's scheduling
+    # congestion. The agent itself enforces the every-2-days cadence.
+    - cron: '17 4 * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Run now, ignoring the every-N-days cadence'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run the job agent
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+          JSEARCH_API_KEY: ${{ secrets.JSEARCH_API_KEY }}
+          PROFILE_JSON: ${{ secrets.PROFILE_JSON }}
+          FORCE_RUN: ${{ inputs.force }}
+        run: node scripts/agent.mjs
+
+      - name: Commit updated results
+        run: |
+          git config user.name "job-radar-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --staged --quiet || git commit -m "Update job matches ($(date -u +%Y-%m-%d))"
+          git push

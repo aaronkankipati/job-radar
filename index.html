@@ -329,6 +329,21 @@
     font-style: italic; color: var(--ink-2); display: block; margin-bottom: 7px;
   }
 
+
+  /* ── Back to top ── */
+  .back-top {
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+    width: 100%; margin-top: 24px; padding: 13px 0;
+    background: transparent; border: 1px solid var(--border);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--ink-3);
+    cursor: pointer; transition: all .2s;
+  }
+  .back-top:hover { border-color: var(--ink); color: var(--ink); }
+  .back-top svg { transition: transform .2s; }
+  .back-top:hover svg { transform: translateY(-2px); }
+
   /* ── Footer ── */
   footer {
     margin-top: 40px; text-align: center; font-size: 11px;
@@ -446,6 +461,12 @@
     </div>
   </section>
 
+  <button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+      <path d="M2 8l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Back to top
+  </button>
   <footer>Career Orbit &middot; Scans daily at 9 PM IST &middot; Hyderabad</footer>
 </div>
 

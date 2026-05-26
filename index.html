@@ -9,92 +9,118 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --bg:           #F8F5EF;
-    --surface:      #FFFFFF;
-    --surface-2:    #F3EFE8;
-    --border:       #E2DDD4;
-    --border-mid:   #CAC3B8;
-    --ink:          #1A1814;
-    --ink-2:        #5A554D;
-    --ink-3:        #9A9288;
-    --green:        #1A5C38;
-    --green-light:  #EBF4EE;
-    --amber:        #7B4D00;
-    --amber-light:  #FBF3E6;
-    --red:          #7A1E1E;
-    --red-light:    #FAF0F0;
+    --bg:          #F8F5EF;
+    --surface:     #FFFFFF;
+    --surface-2:   #F3EFE8;
+    --border:      #E2DDD4;
+    --border-mid:  #CAC3B8;
+    --ink:         #1A1814;
+    --ink-2:       #5A554D;
+    --ink-3:       #9A9288;
+    --green:       #1A5C38;
+    --green-light: #EBF4EE;
+    --amber:       #7B4D00;
+    --amber-light: #FBF3E6;
+    --red:         #7A1E1E;
+    --red-light:   #FAF0F0;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { background: var(--bg); }
+  html { background: var(--bg); scroll-behavior: smooth; }
   body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background: var(--bg); color: var(--ink);
     font-size: 14.5px; line-height: 1.55;
     -webkit-font-smoothing: antialiased;
   }
-  .wrap { max-width: 700px; margin: 0 auto; padding: 32px 20px 80px; }
+  .wrap { max-width: 700px; margin: 0 auto; padding: 28px 20px 80px; }
 
   /* ── Header ── */
-  header {
+  header { padding-bottom: 18px; border-bottom: 2px solid var(--ink); margin-bottom: 20px; }
+  .hdr-row1 {
     display: flex; justify-content: space-between;
-    align-items: flex-start; padding-bottom: 18px;
-    border-bottom: 2px solid var(--ink); margin-bottom: 24px;
-  }
-  .logo {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 28px; font-weight: 600; font-style: italic;
-    letter-spacing: -0.01em; color: var(--ink); line-height: 1;
+    align-items: center; margin-bottom: 6px;
   }
   .logo-eyebrow {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 11px; font-weight: 500; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--ink-2); margin-bottom: 4px;
+    text-transform: uppercase; color: var(--ink-2);
+  }
+  .logo {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px; font-weight: 600; font-style: italic;
+    letter-spacing: -0.01em; color: var(--ink); line-height: 1.1;
+    margin-bottom: 8px;
   }
   .logo-sub {
-    font-size: 10.5px; font-weight: 500; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--ink-3); margin-top: 6px;
+    font-size: 10.5px; font-weight: 500; letter-spacing: 0.09em;
+    text-transform: uppercase; color: var(--ink-3); line-height: 1.6;
   }
-  .header-right { text-align: right; padding-top: 3px; }
-  .live-dot {
-    display: inline-block; width: 6px; height: 6px;
-    border-radius: 50%; background: var(--green);
-    margin-right: 5px; vertical-align: middle;
+  /* ── Status pill ── */
+  .status-pill {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 10px; font-weight: 600; letter-spacing: 0.07em;
+    text-transform: uppercase; padding: 5px 11px; border-radius: 20px;
+    flex-shrink: 0; white-space: nowrap;
+    transition: background .3s, color .3s;
+  }
+  .status-pill.ok     { background: var(--green-light); color: var(--green); }
+  .status-pill.pending { background: var(--amber-light); color: var(--amber); }
+  .status-pill.waiting { background: var(--surface-2); color: var(--ink-3); }
+  .status-dot {
+    width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
     animation: breathe 2.4s ease-in-out infinite;
   }
+  .status-pill.ok      .status-dot { background: var(--green); }
+  .status-pill.pending .status-dot { background: var(--amber); }
+  .status-pill.waiting .status-dot { background: var(--ink-3); animation: none; }
   @keyframes breathe { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
-  .live-label {
-    font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
-    text-transform: uppercase; color: var(--green);
-  }
-  .hdr-meta {
-    font-size: 11.5px; color: var(--ink-3); margin-top: 6px; text-align: right;
-  }
-  .hdr-meta b { color: var(--ink-2); font-weight: 600; }
 
   /* ── Stats bar ── */
   .stats-bar {
     display: flex; border: 1px solid var(--border-mid);
-    background: var(--surface); margin-bottom: 32px;
+    background: var(--surface); margin-bottom: 0;
   }
   .stat {
-    flex: 1; padding: 14px 16px; text-align: center;
+    flex: 1; padding: 13px 10px; text-align: center;
     border-right: 1px solid var(--border);
   }
   .stat:last-child { border-right: none; }
   .stat-val {
-    font-family: 'Fraunces', serif;
-    font-size: 26px; font-weight: 600; color: var(--ink); line-height: 1;
-    font-variation-settings: 'opsz' 26;
+    font-family: 'Fraunces', serif; font-size: 24px; font-weight: 600;
+    color: var(--ink); line-height: 1; font-variation-settings: 'opsz' 24;
   }
   .stat-lbl {
-    font-size: 10px; font-weight: 500; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--ink-3); margin-top: 5px;
+    font-size: 9.5px; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--ink-3); margin-top: 4px;
   }
 
-  /* ── Section heading ── */
+  /* ── Sticky quick nav ── */
+  .quick-nav {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    display: flex; overflow-x: auto; scrollbar-width: none;
+    margin: 0 -20px; padding: 0 20px;
+    margin-bottom: 24px;
+  }
+  .quick-nav::-webkit-scrollbar { display: none; }
+  .qnav-item {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px; font-weight: 500; letter-spacing: 0.03em;
+    color: var(--ink-3); text-decoration: none;
+    white-space: nowrap; padding: 13px 16px 11px;
+    min-height: 44px; display: flex; align-items: center;
+    border-bottom: 2px solid transparent;
+    transition: color .15s, border-color .15s;
+    flex-shrink: 0;
+  }
+  .qnav-item.active { color: var(--ink); border-bottom-color: var(--ink); }
+  .qnav-item:hover { color: var(--ink-2); }
+
+  /* ── Section headings ── */
+  .section-block { margin-bottom: 32px; }
   .sec-head {
-    display: flex; align-items: center; gap: 12px;
-    margin-bottom: 14px;
+    display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
   }
   .sec-title {
     font-size: 10.5px; font-weight: 600; letter-spacing: 0.12em;
@@ -104,96 +130,16 @@
   .sec-actions { display: flex; gap: 4px; }
   .sort-btn {
     font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px;
-    font-weight: 500; letter-spacing: 0.04em;
-    background: var(--surface); color: var(--ink-3);
+    font-weight: 500; background: var(--surface); color: var(--ink-3);
     border: 1px solid var(--border); padding: 5px 11px;
-    cursor: pointer; transition: all .15s;
+    cursor: pointer; transition: all .15s; min-height: 32px;
   }
-  .sort-btn:hover { color: var(--ink-2); border-color: var(--border-mid); }
-  .sort-btn.active { color: var(--ink); border-color: var(--ink); background: var(--surface); }
+  .sort-btn.active { color: var(--ink); border-color: var(--ink); }
 
-  /* ── Intel Brief panels ── */
-  .intel-section { margin-bottom: 34px; }
-  .intel-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-    gap: 10px;
-  }
-  .intel-panel {
-    background: var(--surface); border: 1px solid var(--border);
-    padding: 16px 15px 14px;
-    opacity: 0; animation: fadein .4s ease forwards;
-  }
-  @keyframes fadein { to { opacity: 1; } }
-  .intel-panel-title {
-    font-size: 10px; font-weight: 600; letter-spacing: 0.12em;
-    text-transform: uppercase; padding-bottom: 10px;
-    border-bottom: 1px solid var(--border); margin-bottom: 12px;
-  }
-  .intel-panel.trends  .intel-panel-title { color: var(--green); }
-  .intel-panel.certs   .intel-panel-title { color: var(--amber); }
-  .intel-panel.news    .intel-panel-title { color: var(--ink); }
-  .intel-item { padding: 9px 0; border-bottom: 1px solid var(--surface-2); }
-  .intel-item:last-child { border-bottom: none; padding-bottom: 0; }
-  .trend-label {
-    font-size: 11px; font-weight: 600; color: var(--ink);
-    margin-bottom: 3px;
-  }
-  .trend-detail { font-size: 12px; color: var(--ink-2); line-height: 1.55; }
-  .cert-name {
-    font-family: 'Fraunces', serif;
-    font-size: 14px; font-weight: 500; color: var(--ink);
-    font-variation-settings: 'opsz' 14;
-  }
-  .cert-provider {
-    font-size: 10px; font-weight: 500; letter-spacing: 0.07em;
-    text-transform: uppercase; color: var(--amber); margin: 2px 0 4px;
-  }
-  .cert-why { font-size: 12px; color: var(--ink-2); line-height: 1.5; }
-  .news-headline {
-    font-family: 'Fraunces', serif;
-    font-size: 14px; font-style: italic; color: var(--ink);
-    margin-bottom: 4px; line-height: 1.3;
-  }
-  .news-summary { font-size: 12px; color: var(--ink-2); line-height: 1.5; }
-
-
-  /* ── Scrollable intel items ── */
-  .intel-items {
-    overflow-y: auto;
-    max-height: 220px;
-  }
-  .intel-items::-webkit-scrollbar { width: 3px; }
-  .intel-items::-webkit-scrollbar-track { background: transparent; }
-  .intel-items::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 2px; }
-  /* ── Mobile carousel for intel ── */
-  @media (max-width: 640px) {
-    .intel-grid {
-      display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      gap: 12px;
-      padding-bottom: 2px;
-      /* peek: next card edge visible at ~10vw */
-      padding-right: 10vw;
-    }
-    .intel-grid::-webkit-scrollbar { display: none; }
-    .intel-panel {
-      flex: 0 0 82vw;
-      min-width: 0;
-      scroll-snap-align: start;
-    }
-    .intel-items { max-height: 260px; }
-  }
-  /* ── Board container ── */
+  /* ── Board (Matched Roles) ── */
   .board-wrap {
-    position: relative;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 12px 12px 0;
-    margin-bottom: 28px;
+    position: relative; background: var(--surface);
+    border: 1px solid var(--border); padding: 12px 12px 0;
   }
   .board-wrap::after {
     content: ''; pointer-events: none;
@@ -201,104 +147,73 @@
     height: 48px; margin-top: -48px;
     background: linear-gradient(to top, var(--surface) 40%, transparent);
   }
-  #board {
-    max-height: 660px; overflow-y: auto;
-    /* nudge cards to fill the padded container */
-  }
+  #board { max-height: 660px; overflow-y: auto; }
   #board::-webkit-scrollbar { width: 3px; }
   #board::-webkit-scrollbar-track { background: transparent; }
   #board::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 2px; }
 
-  /* ── Mobile card tightening ── */
-  @media (max-width: 640px) {
-    .board-wrap { padding: 10px 10px 0; }
-    #board { max-height: 600px; }
-    .card { padding: 13px 12px 11px; }
-    .card-title { font-size: 17px; padding-right: 56px; }
-    .card-score-num { font-size: 27px; }
-    .card-verdict { font-size: 13px; }
-    /* Full-width apply button on mobile */
-    .card-footer { flex-direction: column; align-items: stretch; gap: 8px; }
-    .apply-btn { text-align: center; padding: 11px 0; }
-    .expand-hint { justify-content: center; }
-  }
-
   /* ── Job card ── */
   .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
+    background: var(--surface); border: 1px solid var(--border);
     border-left: 3px solid var(--border-mid);
-    padding: 18px 18px 14px; margin-bottom: 10px;
-    cursor: pointer; opacity: 0;
-    animation: fadein .35s ease forwards;
-    transition: border-color .15s, box-shadow .2s;
-    position: relative;
+    padding: 16px 16px 13px; margin-bottom: 10px;
+    cursor: pointer; opacity: 0; animation: fadein .35s ease forwards;
+    transition: border-color .15s, box-shadow .2s; position: relative;
   }
-  .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.07); border-color: var(--border-mid); }
+  @keyframes fadein { to { opacity: 1; } }
+  .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
   .card.score-green { border-left-color: var(--green); }
   .card.score-amber { border-left-color: var(--amber); }
-  .card.score-red   { border-left-color: var(--red);   }
-
-  .card-header {
-    display: flex; justify-content: space-between;
-    align-items: flex-start; gap: 12px;
-    margin-bottom: 10px;
-  }
+  .card.score-red   { border-left-color: var(--red); }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 9px; }
   .card-header-left { flex: 1; min-width: 0; }
   .card-company {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10.5px; font-weight: 500; letter-spacing: 0.08em;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; font-weight: 500; letter-spacing: 0.08em;
     text-transform: uppercase; color: var(--ink-3); margin-bottom: 5px;
     display: flex; align-items: center; gap: 8px;
   }
   .card-src {
-    font-size: 9px; font-weight: 400; letter-spacing: 0.06em;
-    color: var(--ink-3); border: 1px solid var(--border);
-    padding: 1px 6px; font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px; color: var(--ink-3); border: 1px solid var(--border);
+    padding: 1px 5px; font-family: 'JetBrains Mono', monospace;
   }
   .card-title {
-    font-family: 'Fraunces', serif;
-    font-size: 20px; font-weight: 500; line-height: 1.25;
-    font-variation-settings: 'opsz' 20;
-    color: var(--ink); padding-right: 72px;
+    font-family: 'Fraunces', serif; font-size: 19px; font-weight: 500;
+    line-height: 1.25; font-variation-settings: 'opsz' 19;
+    color: var(--ink); padding-right: 64px;
   }
   .card-score-block { text-align: right; flex-shrink: 0; }
   .card-score-num {
-    font-family: 'Fraunces', serif;
-    font-size: 34px; font-weight: 600; line-height: 1;
-    font-variation-settings: 'opsz' 34;
+    font-family: 'Fraunces', serif; font-size: 32px; font-weight: 600;
+    line-height: 1; font-variation-settings: 'opsz' 32;
   }
   .card-score-num.green { color: var(--green); }
   .card-score-num.amber { color: var(--amber); }
-  .card-score-num.red   { color: var(--red);   }
+  .card-score-num.red   { color: var(--red); }
   .card-score-lbl {
     font-size: 9px; font-weight: 500; letter-spacing: 0.1em;
     text-transform: uppercase; color: var(--ink-3); margin-top: 2px;
   }
   .card-meta {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px; color: var(--ink-3); margin-bottom: 9px;
-    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    color: var(--ink-3); margin-bottom: 9px;
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
   }
   .card-verdict {
-    font-family: 'Fraunces', serif;
-    font-size: 14px; font-style: italic; color: var(--ink-2);
-    line-height: 1.6; margin-bottom: 12px;
-    padding-left: 12px; border-left: 2px solid var(--border-mid);
+    font-family: 'Fraunces', serif; font-size: 13.5px; font-style: italic;
+    color: var(--ink-2); line-height: 1.6; margin-bottom: 12px;
+    padding-left: 11px; border-left: 2px solid var(--border-mid);
   }
   .card-footer {
-    display: flex; align-items: center;
-    justify-content: space-between; gap: 10px;
-    padding-top: 10px; border-top: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 10px; padding-top: 10px; border-top: 1px solid var(--border);
   }
   .apply-btn {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 12px; font-weight: 600;
-    letter-spacing: 0.04em;
-    background: var(--ink); color: #fff;
-    border: none; padding: 9px 18px;
-    text-decoration: none; display: inline-block;
-    cursor: pointer; transition: opacity .15s; flex-shrink: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px;
+    font-weight: 600; background: var(--ink); color: #fff;
+    border: none; padding: 10px 18px; text-decoration: none;
+    display: inline-block; cursor: pointer; transition: opacity .15s;
+    flex-shrink: 0; min-height: 40px; display: flex; align-items: center;
   }
   .apply-btn:hover { opacity: 0.82; }
   .expand-hint {
@@ -307,27 +222,20 @@
   }
   .expand-hint svg { flex-shrink: 0; transition: transform .2s; }
   .card.open .expand-hint svg { transform: rotate(180deg); }
-
-  /* ── Expanded detail ── */
-  .card-detail {
-    display: none; margin-top: 14px; padding-top: 14px;
-    border-top: 1px solid var(--border);
-  }
+  .card-detail { display: none; margin-top: 13px; padding-top: 13px; border-top: 1px solid var(--border); }
   .card.open .card-detail { display: block; }
   .fit-label {
     font-size: 10.5px; font-weight: 600; letter-spacing: 0.08em;
-    text-transform: uppercase; margin-bottom: 12px; display: flex;
-    align-items: center; gap: 6px;
+    text-transform: uppercase; margin-bottom: 11px;
+    display: flex; align-items: center; gap: 6px;
   }
-  .fit-label::before {
-    content: ''; width: 6px; height: 6px; border-radius: 50; flex-shrink: 0;
-  }
-  .fit-label.good   { color: var(--green); }
-  .fit-label.good::before { background: var(--green); border-radius: 50%; }
+  .fit-label::before { content: ''; width: 6px; height: 6px; flex-shrink: 0; border-radius: 50%; }
+  .fit-label.good    { color: var(--green); }
+  .fit-label.good::before    { background: var(--green); }
   .fit-label.stretch { color: var(--amber); }
-  .fit-label.stretch::before { background: var(--amber); border-radius: 50%; }
+  .fit-label.stretch::before { background: var(--amber); }
   .fit-label.mismatch { color: var(--red); }
-  .fit-label.mismatch::before { background: var(--red); border-radius: 50%; }
+  .fit-label.mismatch::before { background: var(--red); }
   .plist { list-style: none; margin-bottom: 10px; }
   .plist li {
     font-size: 13px; line-height: 1.55; color: var(--ink-2);
@@ -336,37 +244,122 @@
   }
   .plist li:last-child { border-bottom: none; }
   .plist.pro li::before { content: '+'; font-weight: 700; color: var(--green); position: absolute; left: 2px; }
-  .plist.con li::before { content: '–'; font-weight: 700; color: var(--red);   position: absolute; left: 4px; }
+  .plist.con li::before { content: '–'; font-weight: 700; color: var(--red); position: absolute; left: 4px; }
 
-  /* ── Loading / empty ── */
+  /* ── Certifications section ── */
+  .certs-panel {
+    background: var(--surface); border: 1px solid var(--border);
+    border-top: 3px solid var(--amber);
+    padding: 16px 16px 0; position: relative;
+  }
+  .certs-panel::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+    height: 36px; pointer-events: none;
+    background: linear-gradient(to top, var(--surface) 25%, transparent);
+  }
+  .certs-items {
+    overflow-y: auto; max-height: 222px;
+    -webkit-overflow-scrolling: touch; padding-bottom: 16px;
+  }
+  .certs-items::-webkit-scrollbar { width: 3px; }
+  .certs-items::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 2px; }
+  .cert-item { padding: 10px 0; border-bottom: 1px solid var(--surface-2); }
+  .cert-item:last-child { border-bottom: none; }
+  .cert-name {
+    font-family: 'Fraunces', serif; font-size: 14px; font-weight: 500;
+    color: var(--ink); font-variation-settings: 'opsz' 14;
+  }
+  .cert-provider {
+    font-size: 9.5px; font-weight: 500; letter-spacing: 0.07em;
+    text-transform: uppercase; color: var(--amber); margin: 2px 0 4px;
+  }
+  .cert-why { font-size: 12px; color: var(--ink-2); line-height: 1.5; }
+
+  /* ── Orbit Intel section (2-col) ── */
+  .orbit-intel-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+  }
+  .orbit-col {
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 14px 14px 0; position: relative;
+    opacity: 0; animation: fadein .4s ease forwards;
+  }
+  .orbit-col.trends { border-top: 3px solid var(--green); }
+  .orbit-col.news   { border-top: 3px solid var(--ink-3); animation-delay: 80ms; }
+  .orbit-col::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+    height: 32px; pointer-events: none;
+    background: linear-gradient(to top, var(--surface) 25%, transparent);
+  }
+  .orbit-col-title {
+    font-size: 9.5px; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; padding-bottom: 9px;
+    border-bottom: 1px solid var(--border); margin-bottom: 10px;
+  }
+  .orbit-col.trends .orbit-col-title { color: var(--green); }
+  .orbit-col.news   .orbit-col-title { color: var(--ink-2); }
+  .orbit-items {
+    overflow-y: auto; max-height: 156px; /* 2 paragraphs */
+    -webkit-overflow-scrolling: touch; padding-bottom: 14px;
+  }
+  .orbit-items::-webkit-scrollbar { width: 3px; }
+  .orbit-items::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 2px; }
+  .orbit-item { padding: 8px 0; border-bottom: 1px solid var(--surface-2); }
+  .orbit-item:last-child { border-bottom: none; }
+  .trend-label {
+    font-size: 11px; font-weight: 600; color: var(--ink); margin-bottom: 2px;
+  }
+  .trend-detail { font-size: 11.5px; color: var(--ink-2); line-height: 1.5; }
+  .news-headline {
+    font-family: 'Fraunces', serif; font-size: 13px; font-style: italic;
+    color: var(--ink); margin-bottom: 3px; line-height: 1.3;
+  }
+  .news-summary { font-size: 11.5px; color: var(--ink-2); line-height: 1.5; }
+
+  /* ── Loading states ── */
   .skel {
     background: linear-gradient(90deg, var(--surface) 25%, var(--surface-2) 50%, var(--surface) 75%);
     background-size: 200% 100%; animation: skel-move 1.5s infinite;
     height: 110px; margin-bottom: 10px; border: 1px solid var(--border);
   }
   @keyframes skel-move { to { background-position: -200% 0; } }
-  .empty-msg { text-align: center; padding: 56px 20px; color: var(--ink-3); }
+  .empty-msg { text-align: center; padding: 48px 20px; color: var(--ink-3); }
   .empty-msg strong {
-    font-family: 'Fraunces', serif;
-    font-size: 22px; font-weight: 500; font-style: italic;
-    color: var(--ink-2); display: block; margin-bottom: 8px;
+    font-family: 'Fraunces', serif; font-size: 20px; font-weight: 500;
+    font-style: italic; color: var(--ink-2); display: block; margin-bottom: 7px;
   }
 
-  @media (max-width: 640px) {
-    .stat { padding: 11px 8px; }
-    .stat-val { font-size: 22px; }
-    .stat-lbl { font-size: 9px; }
-    .logo { font-size: 24px; }
-    .logo-sub { font-size: 9.5px; }
-    .logo-eyebrow { font-size: 10px; }
-    .hdr-meta { font-size: 10.5px; }
-  }
-
+  /* ── Footer ── */
   footer {
-    margin-top: 40px; text-align: center;
-    font-size: 11px; letter-spacing: 0.08em;
-    text-transform: uppercase; color: var(--ink-3);
+    margin-top: 40px; text-align: center; font-size: 11px;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3);
     border-top: 1px solid var(--border); padding-top: 20px;
+  }
+
+  /* ── Mobile overrides ── */
+  @media (max-width: 640px) {
+    .wrap { padding: 20px 16px 70px; }
+    .logo { font-size: 26px; }
+    .logo-eyebrow { font-size: 10px; }
+    .logo-sub { font-size: 9.5px; }
+    .stat { padding: 11px 8px; }
+    .stat-val { font-size: 21px; }
+    .stat-lbl { font-size: 9px; }
+    .card { padding: 13px 12px 11px; }
+    .card-title { font-size: 17px; padding-right: 52px; }
+    .card-score-num { font-size: 26px; }
+    .card-verdict { font-size: 13px; }
+    .card-footer { flex-direction: column; align-items: stretch; gap: 8px; }
+    .apply-btn { justify-content: center; padding: 11px 0; }
+    .expand-hint { justify-content: center; }
+    #board { max-height: 580px; }
+    /* 2-col orbit stays as-is on mobile — works at ~165px per col */
+    .orbit-col { padding: 12px 11px 0; }
+    .orbit-col-title { font-size: 8.5px; }
+    .trend-detail, .news-summary { font-size: 11px; }
+  }
+  @media (max-width: 380px) {
+    .orbit-intel-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -375,16 +368,15 @@
 
   <!-- Header -->
   <header>
-    <div>
+    <div class="hdr-row1">
       <div class="logo-eyebrow">Aaron Kankipati</div>
-      <div class="logo">Career Orbit</div>
-      <div class="logo-sub">Senior PM roles, scored daily against your profile</div>
-      <div class="logo-sub" style="margin-top:3px;color:var(--ink-3);opacity:0.75;">Market trends &middot; Certifications in demand &middot; Industry news</div>
+      <div class="status-pill waiting" id="status-pill">
+        <span class="status-dot"></span><span id="status-text">Loading</span>
+      </div>
     </div>
-    <div class="header-right">
-      <div><span class="live-dot"></span><span class="live-label">Active</span></div>
-      <div class="hdr-meta" id="hdr-meta">Loading&hellip;</div>
-    </div>
+    <div class="logo">Career Orbit</div>
+    <div class="logo-sub">Senior PM roles, scored daily against your profile</div>
+    <div class="logo-sub" style="margin-top:3px;opacity:0.7;">Market trends &middot; Certifications in demand &middot; Industry news</div>
   </header>
 
   <!-- Stats bar -->
@@ -403,34 +395,58 @@
     </div>
   </div>
 
-  <!-- Job board -->
-  <div class="sec-head">
-    <span class="sec-title">Matched Roles</span>
-    <div class="sec-rule"></div>
-    <div class="sec-actions">
-      <button class="sort-btn active" data-s="score">Match</button>
-      <button class="sort-btn" data-s="new">Latest</button>
-    </div>
-  </div>
-  <div class="board-wrap">
-  <main id="board">
-    <div class="skel"></div>
-    <div class="skel"></div>
-    <div class="skel"></div>
-  </main>
-  </div>
+  <!-- Quick nav -->
+  <nav class="quick-nav" id="quick-nav">
+    <a href="#roles" class="qnav-item active">Matched Roles</a>
+    <a href="#certs" class="qnav-item">Certifications</a>
+    <a href="#orbit-intel" class="qnav-item">Orbit Intel</a>
+  </nav>
 
-
-  <!-- Intel Brief -->
-  <section class="intel-section" id="insights">
+  <!-- 1. Matched Roles -->
+  <section class="section-block" id="roles">
     <div class="sec-head">
-      <span class="sec-title">Intelligence Brief</span>
+      <span class="sec-title">Matched Roles</span>
       <div class="sec-rule"></div>
+      <div class="sec-actions">
+        <button class="sort-btn active" data-s="score">Match</button>
+        <button class="sort-btn" data-s="new">Latest</button>
+      </div>
     </div>
-    <div class="skel" style="height:140px"></div>
+    <div class="board-wrap">
+      <main id="board">
+        <div class="skel"></div>
+        <div class="skel"></div>
+        <div class="skel"></div>
+      </main>
+    </div>
   </section>
 
-  <footer>Job Radar &middot; Scans daily at 9 PM &middot; Hyderabad</footer>
+  <!-- 2. Certifications -->
+  <section class="section-block" id="certs">
+    <div class="sec-head">
+      <span class="sec-title">Certifications</span>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="certs-panel" id="certs-panel">
+      <div class="certs-items">
+        <div class="skel" style="height:100px;border:none;margin:0"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Orbit Intel -->
+  <section class="section-block" id="orbit-intel">
+    <div class="sec-head">
+      <span class="sec-title">Orbit Intel</span>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="orbit-intel-grid" id="orbit-intel-grid">
+      <div class="skel" style="height:160px;margin:0"></div>
+      <div class="skel" style="height:160px;margin:0"></div>
+    </div>
+  </section>
+
+  <footer>Career Orbit &middot; Scans daily at 9 PM IST &middot; Hyderabad</footer>
 </div>
 
 <script>
@@ -448,11 +464,28 @@
 
   let JOBS = [], sortMode = 'score';
 
-  /* --- status --- */
+  /* --- dynamic status pill --- */
+  function updateStatusPill(meta) {
+    const pill = document.getElementById('status-pill');
+    const txt  = document.getElementById('status-text');
+    if (!pill || !txt) return;
+    const todayStr = new Date().toISOString().slice(0, 10);
+    const lastRun  = meta && meta.lastRun;
+    if (lastRun && lastRun >= todayStr) {
+      pill.className = 'status-pill ok';
+      txt.textContent = 'Scanned \u00b7 ' + fmtDate(lastRun);
+    } else if (lastRun) {
+      pill.className = 'status-pill pending';
+      txt.textContent = 'Next scan \u00b7 9 PM IST';
+    } else {
+      pill.className = 'status-pill waiting';
+      txt.textContent = 'Awaiting first scan';
+    }
+  }
+
+  /* --- stats --- */
   function renderStatus(meta) {
-    const last = meta && meta.lastRun ? fmtDate(meta.lastRun) : 'Pending';
-    document.getElementById('hdr-meta').innerHTML =
-      'Last scan &nbsp;<b>' + esc(last) + '</b>';
+    updateStatusPill(meta);
     document.getElementById('stat-scanned').textContent =
       (meta && meta.scanned != null) ? meta.scanned : '\u2014';
     document.getElementById('stat-acquired').textContent = JOBS.length;
@@ -465,9 +498,7 @@
   }
 
   /* --- card --- */
-  const chevronDown = `<svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-    <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>`;
+  const chevronDown = '<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
   function cardHTML(j, idx) {
     const cls = scoreClass(j.score);
@@ -476,14 +507,10 @@
     const pros = (j.pros || []).map(p => '<li>' + esc(p) + '</li>').join('');
     const cons = (j.cons || []).map(c => '<li>' + esc(c) + '</li>').join('');
     const num = String(idx + 1).padStart(2, '0');
-    return `
-    <article class="card score-${cls}" data-hash="${esc(j.hash)}" style="animation-delay:${idx * 45}ms">
+    return `<article class="card score-${cls}" data-hash="${esc(j.hash)}" style="animation-delay:${idx * 45}ms">
       <div class="card-header">
         <div class="card-header-left">
-          <div class="card-company">
-            <span>${num} &nbsp; ${esc(j.company)}</span>
-            <span class="card-src">${esc(j.source)}</span>
-          </div>
+          <div class="card-company"><span>${num} &nbsp; ${esc(j.company)}</span><span class="card-src">${esc(j.source)}</span></div>
           <div class="card-title">${esc(j.title)}</div>
         </div>
         <div class="card-score-block">
@@ -491,14 +518,10 @@
           <div class="card-score-lbl">${scoreLabel(j.score)}</div>
         </div>
       </div>
-      <div class="card-meta">
-        <span>${esc(j.location || '\u2014')}</span>
-        <span>Posted ${fmtDate(j.postedAt)}</span>
-      </div>
+      <div class="card-meta"><span>${esc(j.location || '\u2014')}</span><span>Posted ${fmtDate(j.postedAt)}</span></div>
       <div class="card-verdict">${esc(j.verdict)}</div>
       <div class="card-footer">
-        <a class="apply-btn" href="${esc(j.url)}" target="_blank" rel="noopener"
-           onclick="event.stopPropagation()">Apply Now &rarr;</a>
+        <a class="apply-btn" href="${esc(j.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Apply Now &rarr;</a>
         <span class="expand-hint">Details ${chevronDown}</span>
       </div>
       <div class="card-detail">
@@ -531,46 +554,72 @@
     });
   }
 
-  /* --- insights --- */
-  function renderInsights(d) {
-    const sec = document.getElementById('insights');
-    const head = '<div class="sec-head"><span class="sec-title">Intelligence Brief</span><div class="sec-rule"></div></div>';
-    if (!d || (!d.trends && !d.certifications && !d.news)) {
-      sec.innerHTML = head; return;
+  /* --- certifications (standalone) --- */
+  function renderCerts(d) {
+    const panel = document.getElementById('certs-panel');
+    if (!panel) return;
+    if (!d || !d.certifications || !d.certifications.length) {
+      panel.innerHTML = '<div class="certs-items"><div style="padding:16px 0;font-size:12px;color:var(--ink-3)">Run agent to generate certifications.</div></div>';
+      return;
     }
-    const updated = d.generatedAt ? ' &middot; ' + esc(d.generatedAt) : '';
-    const trends = (d.trends || []).map(t =>
-      '<div class="intel-item"><div class="trend-label">' + esc(t.label) +
-      '</div><div class="trend-detail">' + esc(t.detail) + '</div></div>').join('');
-    const certs = (d.certifications || []).map(c =>
-      '<div class="intel-item"><div class="cert-name">' + esc(c.name) +
+    const items = d.certifications.map(c =>
+      '<div class="cert-item"><div class="cert-name">' + esc(c.name) +
       '</div><div class="cert-provider">' + esc(c.provider) +
-      '</div><div class="cert-why">' + esc(c.why) + '</div></div>').join('');
-    const news = (d.news || []).map(n =>
-      '<div class="intel-item"><div class="news-headline">' + esc(n.headline) +
-      '</div><div class="news-summary">' + esc(n.summary) + '</div></div>').join('');
-    sec.innerHTML =
-      '<div class="sec-head"><span class="sec-title">Intelligence Brief' + updated + '</span><div class="sec-rule"></div></div>' +
-      '<div class="intel-grid">' +
-        '<div class="intel-panel trends" style="animation-delay:0ms">' +
-          '<div class="intel-panel-title">Market Trends</div>' +
-          (trends || '<div class="trend-detail" style="color:var(--ink-3)">Run agent to generate.</div>') +
-        '</div>' +
-        '<div class="intel-panel certs" style="animation-delay:70ms">' +
-          '<div class="intel-panel-title">Certifications</div>' +
-          (certs || '<div class="cert-why" style="color:var(--ink-3)">Run agent to generate.</div>') +
-        '</div>' +
-        '<div class="intel-panel news" style="animation-delay:140ms">' +
-          '<div class="intel-panel-title">Industry News</div>' +
-          (news || '<div class="news-summary" style="color:var(--ink-3)">Run agent to generate.</div>') +
-        '</div>' +
+      '</div><div class="cert-why">' + esc(c.why) + '</div></div>'
+    ).join('');
+    panel.innerHTML = '<div class="certs-items">' + items + '</div>';
+  }
+
+  /* --- orbit intel (trends + news, 2-col) --- */
+  function renderOrbitIntel(d) {
+    const grid = document.getElementById('orbit-intel-grid');
+    if (!grid) return;
+    const empty = '<div style="padding:10px 0;font-size:12px;color:var(--ink-3)">Run agent to generate.</div>';
+    const trends = d && d.trends ? d.trends.map(t =>
+      '<div class="orbit-item"><div class="trend-label">' + esc(t.label) +
+      '</div><div class="trend-detail">' + esc(t.detail) + '</div></div>'
+    ).join('') : '';
+    const news = d && d.news ? d.news.map(n =>
+      '<div class="orbit-item"><div class="news-headline">' + esc(n.headline) +
+      '</div><div class="news-summary">' + esc(n.summary) + '</div></div>'
+    ).join('') : '';
+    grid.innerHTML =
+      '<div class="orbit-col trends" style="animation-delay:0ms">' +
+        '<div class="orbit-col-title">Market Trends</div>' +
+        '<div class="orbit-items">' + (trends || empty) + '</div>' +
+      '</div>' +
+      '<div class="orbit-col news" style="animation-delay:80ms">' +
+        '<div class="orbit-col-title">Industry News</div>' +
+        '<div class="orbit-items">' + (news || empty) + '</div>' +
       '</div>';
+  }
+
+  /* --- intersection observer for nav --- */
+  function initNav() {
+    const items = {};
+    document.querySelectorAll('.qnav-item').forEach(a => {
+      const id = a.getAttribute('href').slice(1);
+      items[id] = a;
+    });
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          Object.values(items).forEach(a => a.classList.remove('active'));
+          if (items[e.target.id]) items[e.target.id].classList.add('active');
+        }
+      });
+    }, { threshold: 0.25 });
+    ['roles','certs','orbit-intel'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) obs.observe(el);
+    });
   }
 
   /* --- load --- */
   fetch('./data/insights.json?t=' + Date.now())
     .then(r => r.ok ? r.json() : null)
-    .then(renderInsights).catch(() => renderInsights(null));
+    .then(d => { renderCerts(d); renderOrbitIntel(d); })
+    .catch(() => { renderCerts(null); renderOrbitIntel(null); });
 
   fetch('./data/results.json?t=' + Date.now())
     .then(r => { if (!r.ok) throw new Error('no data'); return r.json(); })
@@ -580,10 +629,12 @@
       renderBoard();
     })
     .catch(() => {
-      document.getElementById('hdr-meta').textContent = 'No data';
+      updateStatusPill(null);
       document.getElementById('board').innerHTML =
         '<div class="empty-msg"><strong>No signal yet</strong>Run the workflow to generate results.</div>';
     });
+
+  initNav();
 </script>
 </body>
 </html>

@@ -166,27 +166,62 @@
   .intel-items::-webkit-scrollbar { width: 3px; }
   .intel-items::-webkit-scrollbar-track { background: transparent; }
   .intel-items::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 2px; }
-  @media (max-width: 500px) {
-    .intel-grid { grid-template-columns: 1fr; }
-    .intel-items { max-height: 180px; }
+  /* ── Mobile carousel for intel ── */
+  @media (max-width: 640px) {
+    .intel-grid {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      gap: 12px;
+      padding-bottom: 2px;
+      /* peek: next card edge visible at ~10vw */
+      padding-right: 10vw;
+    }
+    .intel-grid::-webkit-scrollbar { display: none; }
+    .intel-panel {
+      flex: 0 0 82vw;
+      min-width: 0;
+      scroll-snap-align: start;
+    }
+    .intel-items { max-height: 260px; }
   }
-  /* ── Scrollable board ── */
-  .board-wrap { position: relative; }
+  /* ── Board container ── */
+  .board-wrap {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 12px 12px 0;
+    margin-bottom: 28px;
+  }
   .board-wrap::after {
     content: ''; pointer-events: none;
-    position: absolute; bottom: 0; left: 0; right: 0;
-    height: 52px;
-    background: linear-gradient(to top, var(--bg) 30%, transparent);
-    border-radius: 0 0 2px 2px;
+    position: sticky; bottom: 0; display: block;
+    height: 48px; margin-top: -48px;
+    background: linear-gradient(to top, var(--surface) 40%, transparent);
   }
   #board {
     max-height: 660px; overflow-y: auto;
-    padding-right: 2px;
+    /* nudge cards to fill the padded container */
   }
   #board::-webkit-scrollbar { width: 3px; }
   #board::-webkit-scrollbar-track { background: transparent; }
   #board::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 2px; }
-  @media (max-width: 500px) { #board { max-height: 580px; } }
+
+  /* ── Mobile card tightening ── */
+  @media (max-width: 640px) {
+    .board-wrap { padding: 10px 10px 0; }
+    #board { max-height: 600px; }
+    .card { padding: 13px 12px 11px; }
+    .card-title { font-size: 17px; padding-right: 56px; }
+    .card-score-num { font-size: 27px; }
+    .card-verdict { font-size: 13px; }
+    /* Full-width apply button on mobile */
+    .card-footer { flex-direction: column; align-items: stretch; gap: 8px; }
+    .apply-btn { text-align: center; padding: 11px 0; }
+    .expand-hint { justify-content: center; }
+  }
 
   /* ── Job card ── */
   .card {
@@ -315,6 +350,16 @@
     font-family: 'Fraunces', serif;
     font-size: 22px; font-weight: 500; font-style: italic;
     color: var(--ink-2); display: block; margin-bottom: 8px;
+  }
+
+  @media (max-width: 640px) {
+    .stat { padding: 11px 8px; }
+    .stat-val { font-size: 22px; }
+    .stat-lbl { font-size: 9px; }
+    .logo { font-size: 24px; }
+    .logo-sub { font-size: 9.5px; }
+    .logo-eyebrow { font-size: 10px; }
+    .hdr-meta { font-size: 10.5px; }
   }
 
   footer {

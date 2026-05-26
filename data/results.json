@@ -1,53 +1,11 @@
 {
   "meta": {
-    "generatedAt": "sample",
-    "note": "These two rows are samples so the dashboard renders before the first scan. They have firstSeen 2000-01-01, so the first real run drops them automatically.",
-    "scanned": 0,
-    "newlyScored": 0,
+    "lastRun": "2026-05-26",
+    "generatedAt": "2026-05-26T08:54:11.477Z",
+    "scanned": 150,
+    "newlyScored": 96,
     "newMatches": 0,
-    "onBoard": 2
+    "onBoard": 0
   },
-  "jobs": [
-    {
-      "hash": "sample1",
-      "company": "Experian",
-      "title": "Senior Product Owner - Financial Crime Compliance",
-      "location": "Hyderabad, Telangana, India",
-      "url": "https://jobs.experian.com/",
-      "source": "sample",
-      "score": 89,
-      "seniorityFit": "good",
-      "verdict": "Strong fit - regulated fintech, genuine product ownership, KYC/KYB domain overlaps directly with the candidate's OCR and onboarding work.",
-      "pros": [
-        "Owns the product backlog and user stories within an Agile Scrum team",
-        "Financial-crime / KYC domain matches prior Piramal and banking experience",
-        "Senior-level title aligned with current AVP standing"
-      ],
-      "cons": [
-        "Compliance-heavy roadmap may be narrower than a full digital-product remit"
-      ],
-      "postedAt": "2000-01-01",
-      "firstSeen": "2000-01-01"
-    },
-    {
-      "hash": "sample2",
-      "company": "Example Fintech",
-      "title": "AI Product Manager - Digital Banking",
-      "location": "Hyderabad (hybrid)",
-      "url": "https://example.com",
-      "source": "sample",
-      "score": 72,
-      "seniorityFit": "stretch",
-      "verdict": "Decent fit - AI product focus matches the candidate's side projects, but the role leans more technical than their core PO background.",
-      "pros": [
-        "AI-at-the-core product mandate matches Moodfilm / Neon Bull experience",
-        "Digital banking domain is squarely in the candidate's wheelhouse"
-      ],
-      "cons": [
-        "Job description expects hands-on ML depth the candidate hasn't shipped commercially"
-      ],
-      "postedAt": "2000-01-01",
-      "firstSeen": "2000-01-01"
-    }
-  ]
+  "jobs": []
 }

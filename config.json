@@ -1,6 +1,6 @@
 {
   "matching": {
-    "minScore": 65,
+    "minScore": 60,
     "retentionDays": 10,
     "titleKeywords": [
       "product manager",
@@ -33,7 +33,9 @@
     "locationKeywords": [
       "hyderabad",
       "remote",
-      "telangana"
+      "telangana",
+      "india",
+      "hyd"
     ]
   },
   "sources": {

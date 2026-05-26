@@ -26,6 +26,8 @@ const ADZUNA_ID = process.env.ADZUNA_APP_ID;
 const ADZUNA_KEY = process.env.ADZUNA_APP_KEY;
 const JSEARCH_KEY = process.env.JSEARCH_API_KEY;
 const FORCE_RUN = process.env.FORCE_RUN === 'true';
+const GROQ_KEY = process.env.GROQ_API_KEY;
+const GROQ_MODEL = 'llama-3.3-70b-versatile';
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const today = () => new Date().toISOString().slice(0, 10);
@@ -186,6 +188,55 @@ async function fetchLever(company) {
   }
 }
 
+
+// ----------------------------------------------------------- LLM caller with fallback
+
+async function callLLM(prompt, temperature = 0.2) {
+  // --- try Gemini first ---
+  try {
+    const res = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_KEY}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: prompt }] }],
+          generationConfig: { temperature, responseMimeType: 'application/json' },
+        }),
+      }
+    );
+    if (res.status === 429) {
+      console.warn('  ~ Gemini quota hit, trying Groq fallback...');
+      throw new Error('QUOTA');
+    }
+    if (!res.ok) throw new Error(`Gemini HTTP ${res.status}`);
+    const data = await res.json();
+    const text = data?.candidates?.[0]?.content?.parts?.[0]?.text || '{}';
+    return JSON.parse(text.replace(/```json|```/g, '').trim());
+  } catch (e) {
+    if (!GROQ_KEY) throw new Error(`Gemini failed (${e.message}) and no GROQ_API_KEY set`);
+    // --- Groq fallback ---
+    const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${GROQ_KEY}`,
+      },
+      body: JSON.stringify({
+        model: GROQ_MODEL,
+        messages: [{ role: 'user', content: prompt }],
+        response_format: { type: 'json_object' },
+        temperature,
+        max_tokens: 1024,
+      }),
+    });
+    if (!res.ok) throw new Error(`Groq HTTP ${res.status}: ${await res.text()}`);
+    const data = await res.json();
+    const text = data?.choices?.[0]?.message?.content || '{}';
+    return JSON.parse(text.replace(/```json|```/g, '').trim());
+  }
+}
+
 // ----------------------------------------------------------- filter + score
 
 function preFilter(job, m) {
@@ -224,21 +275,74 @@ Return ONLY a JSON object with this exact shape:
 Be strict. Reserve scores above 85 for genuinely strong matches. Penalise seniority
 mismatches and roles that lack real end-to-end product ownership.`;
 
-  const res = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_KEY}`,
+  return callLLM(prompt, 0.2);
+}
+
+
+// ----------------------------------------------------------- insights
+
+async function fetchInsights(profile, preferences) {
+  const INSIGHTS_PATH = join(ROOT, 'data', 'insights.json');
+  const existing = await loadJson(INSIGHTS_PATH, null);
+  if (existing && existing.generatedAt === today()) {
+    console.log('  Insights already generated today, skipping.');
+    return;
+  }
+  console.log('Generating market insights...');
+  const prompt = `You are a product-management career advisor with deep knowledge of the Indian tech and fintech job market in 2026.
+
+The candidate is:
+- Role: ${JSON.stringify(profile.currentRole)}
+- Domain: ${JSON.stringify(profile.domains)}
+- Skills: ${JSON.stringify(profile.skills)}
+- Seniority: ${JSON.stringify(profile.seniority)}
+- Target roles: ${JSON.stringify(preferences.targetRoles)}
+
+Return ONLY a JSON object with this exact shape (no markdown, no extra keys):
+{
+  "trends": [
     {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        contents: [{ parts: [{ text: prompt }] }],
-        generationConfig: { temperature: 0.2, responseMimeType: 'application/json' },
-      }),
+      "label": "<short trend name, max 5 words>",
+      "detail": "<2 sentences: what is happening and why it matters for this candidate>"
     }
-  );
-  if (!res.ok) throw new Error(`Gemini HTTP ${res.status}: ${await res.text()}`);
-  const data = await res.json();
-  const text = data?.candidates?.[0]?.content?.parts?.[0]?.text || '{}';
-  return JSON.parse(text.replace(/```json|```/g, '').trim());
+  ],
+  "certifications": [
+    {
+      "name": "<certification name>",
+      "provider": "<issuing body>",
+      "why": "<1-2 sentences: why this cert is worth getting right now for this candidate>"
+    }
+  ],
+  "news": [
+    {
+      "headline": "<short punchy headline, max 10 words>",
+      "summary": "<2 sentences: what happened and why it matters for a senior product professional in fintech/AI>"
+    }
+  ]
+}
+
+Rules:
+- trends: exactly 5 items. Focus on Indian market + global trends relevant to product management and AI product roles in 2026.
+- certifications: exactly 5 items. Only include certifications that are genuinely valued by hiring managers in 2026. Mix AI, product, and domain-specific.
+- news: exactly 4 items. Recent and relevant to product management, fintech, or AI product trends. Be specific - name real companies, products or regulations.
+- Be specific and practical. No generic filler.`;
+
+  let text;
+  try {
+    text = await callLLM(prompt, 0.3);
+    // callLLM already returns parsed JSON, re-stringify so the catch block can parse
+    text = JSON.stringify(text);
+  } catch (e) {
+    console.warn(`  ! insights call failed: ${e.message}`);
+    return;
+  }
+  try {
+    const insights = JSON.parse(text.replace(/```json|```/g, '').trim());
+    await saveJson(INSIGHTS_PATH, { generatedAt: today(), ...insights });
+    console.log('  Insights saved.');
+  } catch (e) {
+    console.warn(`  ! insights parse failed: ${e.message}`);
+  }
 }
 
 // ------------------------------------------------------------------- main
@@ -352,6 +456,9 @@ async function main() {
     jobs,
   });
   await saveJson(SEEN_PATH, { hashes: [...seenSet].slice(-5000) });
+  // --- 7. generate market insights
+  await fetchInsights(profile, preferences);
+
   console.log(
     `Done. ${newMatches.length} new match(es); ${jobs.length} on the board.`
   );

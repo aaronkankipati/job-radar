@@ -4,7 +4,7 @@ on:
   schedule:
     # 04:17 UTC daily (~09:47 IST). Off-the-hour to avoid GitHub's scheduling
     # congestion. The agent itself enforces the every-2-days cadence.
-    - cron: '17 4 * * *'
+    - cron: '30 15 * * *'
   workflow_dispatch:
     inputs:
       force:

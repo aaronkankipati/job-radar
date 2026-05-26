@@ -34,6 +34,7 @@ jobs:
           ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
           JSEARCH_API_KEY: ${{ secrets.JSEARCH_API_KEY }}
           PROFILE_JSON: ${{ secrets.PROFILE_JSON }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           FORCE_RUN: ${{ inputs.force }}
         run: node scripts/agent.mjs
 

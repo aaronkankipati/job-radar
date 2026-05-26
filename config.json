@@ -2,25 +2,63 @@
   "matching": {
     "minScore": 65,
     "retentionDays": 10,
-    "titleKeywords": ["product manager", "product owner", "product lead", "product management", "head of product", "principal product", "group product", "director of product", "ai product"],
-    "titleExclude": ["intern", "internship", "marketing", "designer", "design ", " ux", "ui ", "analyst", "engineer", "developer", "graduate", "trainee", "sales", "support", "qa "],
-    "locationKeywords": ["hyderabad", "remote", "telangana"]
+    "titleKeywords": [
+      "product manager",
+      "product owner",
+      "product lead",
+      "product management",
+      "head of product",
+      "principal product",
+      "group product",
+      "director of product",
+      "ai product"
+    ],
+    "titleExclude": [
+      "intern",
+      "internship",
+      "marketing",
+      "designer",
+      "design ",
+      " ux",
+      "ui ",
+      "analyst",
+      "engineer",
+      "developer",
+      "graduate",
+      "trainee",
+      "sales",
+      "support",
+      "qa "
+    ],
+    "locationKeywords": [
+      "hyderabad",
+      "remote",
+      "telangana"
+    ]
   },
   "sources": {
     "_comment": "Adzuna + JSearch are the primary engines for India coverage. Greenhouse/Lever are an optional targeted layer - add tokens (the company slug from their careers-page URL) for firms that actually hire in Hyderabad. Bad tokens are skipped gracefully.",
     "jsearch": {
       "enabled": true,
-      "queries": ["product manager jobs in Hyderabad, India", "product owner jobs in Hyderabad, India", "AI product manager jobs in Hyderabad, India"],
+      "queries": [
+        "product manager jobs in Hyderabad, India",
+        "product owner jobs in Hyderabad, India",
+        "AI product manager jobs in Hyderabad, India"
+      ],
       "datePosted": "week"
     },
     "adzuna": {
       "enabled": true,
       "country": "in",
       "where": "hyderabad",
-      "queries": ["product manager", "product owner", "AI product manager"]
+      "queries": [
+        "product manager",
+        "product owner",
+        "AI product manager"
+      ]
     },
     "greenhouse": [],
     "lever": []
   },
-  "runEveryNDays": 2
+  "runEveryNDays": 1
 }

@@ -1,6 +1,6 @@
 # Job Radar
 
-A free, self-hosted job-matching agent. Every other day it pulls product
+A free, self-hosted job-matching agent. Every day it pulls product
 roles in Hyderabad from public job APIs, scores each one against your CV
 with an LLM, and publishes the matches to a dashboard.
 

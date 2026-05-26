@@ -215,25 +215,35 @@ async function callLLM(prompt, temperature = 0.2) {
     return JSON.parse(text.replace(/```json|```/g, '').trim());
   } catch (e) {
     if (!GROQ_KEY) throw new Error(`Gemini failed (${e.message}) and no GROQ_API_KEY set`);
-    // --- Groq fallback ---
-    const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${GROQ_KEY}`,
-      },
-      body: JSON.stringify({
-        model: GROQ_MODEL,
-        messages: [{ role: 'user', content: prompt }],
-        response_format: { type: 'json_object' },
-        temperature,
-        max_tokens: 1024,
-      }),
-    });
-    if (!res.ok) throw new Error(`Groq HTTP ${res.status}: ${await res.text()}`);
-    const data = await res.json();
-    const text = data?.choices?.[0]?.message?.content || '{}';
-    return JSON.parse(text.replace(/```json|```/g, '').trim());
+    // --- Groq fallback (retry up to 3x on TPM 429) ---
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${GROQ_KEY}`,
+        },
+        body: JSON.stringify({
+          model: GROQ_MODEL,
+          messages: [{ role: 'user', content: prompt }],
+          response_format: { type: 'json_object' },
+          temperature,
+          max_tokens: 1024,
+        }),
+      });
+      if (res.status === 429) {
+        const body = await res.json().catch(() => ({}));
+        const wait = Math.ceil((body?.error?.message?.match(/try again in ([\d.]+)s/)?.[1] || 5) * 1000) + 500;
+        console.warn(`  ~ Groq TPM limit, waiting ${Math.round(wait/1000)}s (attempt ${attempt}/3)...`);
+        await sleep(wait);
+        continue;
+      }
+      if (!res.ok) throw new Error(`Groq HTTP ${res.status}: ${await res.text()}`);
+      const data = await res.json();
+      const text = data?.choices?.[0]?.message?.content || '{}';
+      return JSON.parse(text.replace(/```json|```/g, '').trim());
+    }
+    throw new Error('Groq TPM limit: all 3 retries exhausted');
   }
 }
 

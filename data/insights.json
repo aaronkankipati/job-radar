@@ -1,62 +1,66 @@
 {
-  "generatedAt": "2026-05-29",
+  "generatedAt": "2026-05-30",
   "trends": [
     {
       "label": "AI in Fintech",
-      "detail": "The integration of AI in fintech is on the rise in India, with companies like Paytm and PhonePe leveraging AI for personalized customer experiences. This trend matters for the candidate as it highlights the growing demand for AI product managers in the fintech sector."
+      "detail": "The integration of AI in fintech is on the rise, with companies like Paytm and PhonePe leveraging AI for personalized customer experiences. This trend matters for the candidate as it highlights the growing demand for AI product managers in the Indian fintech industry."
     },
     {
       "label": "Digital Banking",
-      "detail": "Digital banking is becoming increasingly popular in India, driven by the government's push for digitalization and the rise of mobile payments. As a result, banks like HDFC and ICICI are investing heavily in digital transformation, creating opportunities for product managers with expertise in core banking migration."
+      "detail": "Digital banking is becoming increasingly popular in India, with banks like HDFC and ICICI investing heavily in digital transformation. This trend is crucial for the candidate as it emphasizes the need for experienced product owners who can lead digital banking initiatives."
     },
     {
       "label": "Conversational AI",
-      "detail": "Conversational AI is gaining traction in India, with companies like Google and Microsoft investing in chatbot technology for customer service. This trend is relevant for the candidate as it highlights the growing need for product managers who can build and integrate conversational AI solutions."
+      "detail": "Conversational AI is gaining traction in the Indian market, with companies like Google and Amazon investing in chatbot technology. This trend is relevant for the candidate as it highlights the growing demand for conversational AI experts in the product management space."
+    },
+    {
+      "label": "Core Banking Migration",
+      "detail": "Core banking migration is a significant trend in the Indian banking sector, with banks like SBI and Axis Bank migrating to new core banking systems. This trend matters for the candidate as it emphasizes the need for experienced product owners who can lead core banking migration projects."
     },
     {
       "label": "Regulatory Compliance",
-      "detail": "Regulatory compliance is becoming a major focus area for fintech companies in India, with the Reserve Bank of India (RBI) introducing new guidelines for digital payments. As a result, product managers with expertise in regulated environments are in high demand, particularly those who can navigate complex compliance requirements."
-    },
-    {
-      "label": "Cross-Geo Collaboration",
-      "detail": "Cross-geo collaboration is becoming increasingly important for product managers in India, as companies expand their global footprint and require leaders who can manage distributed teams. This trend matters for the candidate as it highlights the need for product managers who can lead cross-functional teams across different geographies and time zones."
+      "detail": "Regulatory compliance is a critical aspect of the Indian fintech industry, with regulations like RBI's Digital Lending Guidelines and PDPB affecting product development. This trend is essential for the candidate as it highlights the need for product managers who can navigate complex regulatory environments."
     }
   ],
   "certifications": [
     {
       "name": "Certified Product Manager (CPM)",
       "provider": "Association of International Product Marketing and Management (AIPMM)",
-      "why": "The CPM certification is valued by hiring managers as it demonstrates a product manager's ability to develop and launch successful products. It is particularly relevant for the candidate as it covers topics like product ownership, backlog management, and user-story definition."
+      "why": "The CPM certification is valued by hiring managers as it demonstrates a candidate's expertise in product management principles and practices. It is particularly relevant for product managers in the fintech industry."
     },
     {
       "name": "Certified Scrum Master (CSM)",
       "provider": "Scrum Alliance",
-      "why": "The CSM certification is highly regarded in the industry as it demonstrates a product manager's ability to lead agile teams and manage complex projects. It is worth getting for the candidate as it covers topics like cross-geo Scrum leadership and change governance."
+      "why": "The CSM certification is highly regarded in the industry as it demonstrates a candidate's understanding of Scrum principles and practices. It is essential for product owners who want to lead cross-geo Scrum teams."
     },
     {
-      "name": "Certified AI Product Manager (CAIPM)",
-      "provider": "International Association of AI Product Managers (IAAPM)",
-      "why": "The CAIPM certification is a relatively new but highly relevant certification for product managers working in AI. It is worth getting for the candidate as it demonstrates expertise in AI product building, prompt engineering, and API integration."
-    },
-    {
-      "name": "Certified Fintech Professional (CFP)",
-      "provider": "Fintech Association of India (FAI)",
-      "why": "The CFP certification is valued by hiring managers in the fintech sector as it demonstrates a product manager's understanding of fintech trends, technologies, and regulations. It is particularly relevant for the candidate as it covers topics like digital banking, loan origination, and regulated environments."
+      "name": "Certified Data Scientist (CDS)",
+      "provider": "Data Science Council of America (DASCA)",
+      "why": "The CDS certification is valued by hiring managers as it demonstrates a candidate's expertise in data science and machine learning. It is particularly relevant for AI product managers who want to build data-driven products."
     },
     {
       "name": "Certified Information Systems Security Professional (CISSP)",
       "provider": "International Information Systems Security Certification Consortium (ISC)²",
-      "why": "The CISSP certification is highly regarded in the industry as it demonstrates a product manager's ability to manage complex security projects and ensure regulatory compliance. It is worth getting for the candidate as it covers topics like security governance, risk management, and compliance."
+      "why": "The CISSP certification is highly regarded in the industry as it demonstrates a candidate's expertise in information security. It is essential for product managers who work in regulated environments and handle sensitive customer data."
+    },
+    {
+      "name": "Certified AI and Machine Learning (CAML)",
+      "provider": "International Association for Machine Learning and Artificial Intelligence (IAMAI)",
+      "why": "The CAML certification is valued by hiring managers as it demonstrates a candidate's expertise in AI and machine learning. It is particularly relevant for AI product managers who want to build innovative AI products."
     }
   ],
   "news": [
     {
-      "headline": "RBI Introduces New Guidelines",
-      "summary": "The Reserve Bank of India (RBI) has introduced new guidelines for digital payments, requiring fintech companies to comply with stricter regulations. This development matters for the candidate as it highlights the growing need for product managers who can navigate complex regulatory requirements and ensure compliance."
+      "headline": "RBI Launches Digital Rupee",
+      "summary": "The Reserve Bank of India (RBI) has launched the Digital Rupee, a central bank digital currency (CBDC) that aims to promote digital payments and financial inclusion. This development is significant for product managers in the fintech industry as it highlights the growing importance of digital payments and the need for innovative product solutions."
     },
     {
-      "headline": "Paytm Launches AI-Powered Chatbot",
-      "summary": "Paytm has launched an AI-powered chatbot to enhance customer experience and provide personalized support. This development is relevant for the candidate as it demonstrates the growing adoption of conversational AI in fintech and the need for product managers who can build and integrate such solutions."
+      "headline": "Google Invests in Indian Fintech",
+      "summary": "Google has invested in several Indian fintech companies, including Paytm and PolicyBazaar, as part of its efforts to expand its presence in the Indian market. This investment is significant for product managers as it highlights the growing interest of global tech companies in the Indian fintech industry."
+    },
+    {
+      "headline": "Amazon Launches AI-Powered Loan Platform",
+      "summary": "Amazon has launched an AI-powered loan platform in India, which uses machine learning algorithms to provide personalized loan offers to customers. This development is significant for AI product managers as it highlights the growing use of AI in the lending industry and the need for innovative product solutions."
     }
   ]
 }

@@ -1,82 +1,13 @@
 {
   "meta": {
-    "lastRun": "2026-06-30",
-    "generatedAt": "2026-06-30T17:21:18.684Z",
-    "scanned": 146,
-    "newlyScored": 1,
-    "newMatches": 1,
-    "onBoard": 121
+    "lastRun": "2026-07-01",
+    "generatedAt": "2026-07-01T17:27:30.288Z",
+    "scanned": 150,
+    "newlyScored": 19,
+    "newMatches": 12,
+    "onBoard": 124
   },
   "jobs": [
-    {
-      "hash": "j1omo1av",
-      "company": "Nomiso",
-      "title": "Senior Product Manager",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/land/ad/5742257988?se=Ztw6hZJt8RGJe8gKxAvXaw&utm_medium=api&utm_source=6fcf31f9&v=D4EB4B012BFC604CB539BF7B662C397E3A95473F",
-      "source": "adzuna",
-      "score": 92,
-      "seniorityFit": "good",
-      "verdict": "The job is a strong fit due to its alignment with the candidate's experience in fintech and product management, as well as the company's focus on regulated financial services.",
-      "pros": [
-        "Company focus on fintech and financial services aligns with candidate's experience",
-        "Senior Product Manager role matches candidate's target roles and seniority level",
-        "Location in Hyderabad matches candidate's preferred location",
-        "End-to-end product ownership is implied by the role's responsibilities"
-      ],
-      "cons": [
-        "Lack of explicit mention of AI-focused products or conversational AI",
-        "Unclear details on company culture and values"
-      ],
-      "postedAt": "2026-05-27",
-      "firstSeen": "2026-06-21"
-    },
-    {
-      "hash": "jcmp7eo",
-      "company": "Aceolution India",
-      "title": "Senior Product Manager",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/land/ad/5747039919?se=Ztw6hZJt8RGJe8gKxAvXaw&utm_medium=api&utm_source=6fcf31f9&v=E5ABF67413DD39EB283C85D0BB8B2FE8F80A8A90",
-      "source": "adzuna",
-      "score": 92,
-      "seniorityFit": "good",
-      "verdict": "The job posting matches the candidate's profile and preferences, offering end-to-end product ownership and a senior role in a regulated fintech environment.",
-      "pros": [
-        "Senior Product Manager role aligns with target roles",
-        "Location in Hyderabad matches preferred location",
-        "Job description implies end-to-end product ownership",
-        "Cutting-edge technology and business challenges align with candidate's experience"
-      ],
-      "cons": [
-        "Lack of explicit mention of AI-focused products or conversational AI",
-        "No clear indication of company culture or values"
-      ],
-      "postedAt": "2026-06-01",
-      "firstSeen": "2026-06-21"
-    },
-    {
-      "hash": "j1e9o5b1",
-      "company": "Optum",
-      "title": "Senior Tech Product Manager",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/land/ad/5750487878?se=Ztw6hZJt8RGJe8gKxAvXaw&utm_medium=api&utm_source=6fcf31f9&v=1DD668969BECDBCD8D71CE4BB514D74B51912F8B",
-      "source": "adzuna",
-      "score": 92,
-      "seniorityFit": "good",
-      "verdict": "The job posting matches the candidate's profile well, offering a senior product management role in a regulated fintech environment with end-to-end product ownership.",
-      "pros": [
-        "Senior product management role aligns with candidate's target roles",
-        "Location in Hyderabad matches candidate's preferred location",
-        "Job involves genuine end-to-end product ownership and strategy development",
-        "Regulated fintech environment aligns with candidate's domain expertise"
-      ],
-      "cons": [
-        "Limited information on company culture and values",
-        "No explicit mention of AI-focused products or coaching/mentoring opportunities"
-      ],
-      "postedAt": "2026-06-03",
-      "firstSeen": "2026-06-21"
-    },
     {
       "hash": "j559i9v",
       "company": "Backbase",
@@ -683,27 +614,50 @@
       "firstSeen": "2026-06-30"
     },
     {
-      "hash": "jp22zb0",
-      "company": "Recykal.com",
-      "title": "Senior Product Manager",
+      "hash": "j1pe9nsr",
+      "company": "TMUS Global Solutions",
+      "title": "Product Manager, Technical",
       "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/land/ad/5739765686?se=Ztw6hZJt8RGJe8gKxAvXaw&utm_medium=api&utm_source=6fcf31f9&v=06857E14EEB785708F4C22BC8DF2E536733BB083",
+      "url": "https://www.adzuna.in/details/5782877306?utm_medium=api&utm_source=6fcf31f9",
       "source": "adzuna",
-      "score": 90,
+      "score": 92,
       "seniorityFit": "good",
-      "verdict": "The job is a strong fit due to its focus on AI, product ownership, and entrepreneurial spirit, aligning with the candidate's experience and preferences.",
+      "verdict": "The job is a strong fit due to its focus on end-to-end product ownership and technical product management in a regulated environment.",
       "pros": [
-        "Alignment with candidate's AI and product ownership experience",
-        "Location matches candidate's preference for Hyderabad",
-        "Opportunity for end-to-end product ownership and impact",
-        "Company's focus on innovation and entrepreneurship"
+        "Location matches candidate preference",
+        "Role involves end-to-end product ownership",
+        "Technical product management aligns with candidate skills",
+        "Regulated environment experience is valued by the candidate"
       ],
       "cons": [
-        "Lack of explicit mention of regulated fintech or digital banking",
-        "Unclear company culture and values beyond innovation and entrepreneurship"
+        "Lack of explicit AI product focus",
+        "Company is not explicitly fintech or digital banking"
       ],
-      "postedAt": "2026-05-24",
-      "firstSeen": "2026-06-21"
+      "postedAt": "2026-07-01",
+      "firstSeen": "2026-07-01"
+    },
+    {
+      "hash": "jshv46g",
+      "company": "Google",
+      "title": "Senior Product Manager, AI Garage",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5767592785?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 92,
+      "seniorityFit": "good",
+      "verdict": "The job is a strong fit due to its focus on AI and product management, aligning with the candidate's experience and interests.",
+      "pros": [
+        "Location matches the candidate's preference",
+        "Role involves end-to-end product ownership and technical decision making",
+        "Company culture is healthy and well-regarded",
+        "AI-focused products align with the candidate's skills and values"
+      ],
+      "cons": [
+        "Candidate has 7 years of experience, slightly below the 8 years required",
+        "Unclear if the role allows for coaching and mentoring, which the candidate values"
+      ],
+      "postedAt": "2026-06-18",
+      "firstSeen": "2026-07-01"
     },
     {
       "hash": "j1pbpfud",
@@ -868,28 +822,27 @@
       "firstSeen": "2026-06-29"
     },
     {
-      "hash": "j4g83qd",
-      "company": "Backbase",
-      "title": "Product Manager",
+      "hash": "js8512v",
+      "company": "Google",
+      "title": "Product Manager, User Voice AI and Agentic Experiences",
       "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/land/ad/5742258208?se=Ztw6hZJt8RGJe8gKxAvXaw&utm_medium=api&utm_source=6fcf31f9&v=C271101F2AB355F136FC1D4A645AB5DC5537536F",
+      "url": "https://www.adzuna.in/details/5762101054?utm_medium=api&utm_source=6fcf31f9",
       "source": "adzuna",
-      "score": 88,
+      "score": 90,
       "seniorityFit": "good",
-      "verdict": "The role is a strong fit due to its focus on regulated fintech, end-to-end product ownership, and API-based integrations, aligning with the candidate's experience and values.",
+      "verdict": "The job is a strong fit due to its focus on AI and product management, aligning with the candidate's experience and interests.",
       "pros": [
-        "Regulated fintech environment matches candidate's experience",
-        "End-to-end product ownership aligns with candidate's preferences",
-        "API-based integrations utilize candidate's skills",
-        "Location in Hyderabad matches candidate's desired location",
-        "Role involves coaching and mentoring, which the candidate values"
+        "Location matches the candidate's preference",
+        "Job involves AI-focused products, which aligns with the candidate's experience and interests",
+        "Google is a well-regarded company with a healthy culture",
+        "Role involves product management, which matches the candidate's target roles"
       ],
       "cons": [
-        "Limited information on AI-focused products, which the candidate prefers",
-        "Unclear if the company culture meets the candidate's expectations"
+        "The job posting does not explicitly mention regulated fintech or digital banking, which are the candidate's domains",
+        "There is a slight uncertainty about the level of end-to-end product ownership in the role"
       ],
-      "postedAt": "2026-05-27",
-      "firstSeen": "2026-06-21"
+      "postedAt": "2026-06-13",
+      "firstSeen": "2026-07-01"
     },
     {
       "hash": "jsd8wfg",
@@ -961,29 +914,6 @@
       ],
       "postedAt": "2026-06-26",
       "firstSeen": "2026-06-26"
-    },
-    {
-      "hash": "jegx6v",
-      "company": "Deutsche Börse Group",
-      "title": "Leading Associate Vice President - Product Owner - CMDB & Asset Management [T500-25882]",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/land/ad/5770623151?se=sBfJhZJt8RGJe8gKxAvXaw&utm_medium=api&utm_source=6fcf31f9&v=B7434238208FF0F3E2B3EA71BA9D3334ECD4A11A",
-      "source": "adzuna",
-      "score": 80,
-      "seniorityFit": "good",
-      "verdict": "The job is a good fit due to its focus on product ownership in a regulated fintech environment, but may lack the desired AI-focused product aspect.",
-      "pros": [
-        "Location matches the candidate's preference",
-        "Regulated fintech environment aligns with candidate's experience",
-        "End-to-end product ownership is mentioned",
-        "Seniority level matches the candidate's expectation"
-      ],
-      "cons": [
-        "Lack of explicit AI-focused product aspect",
-        "Company's primary focus is on market infrastructure and services, which may not fully align with the candidate's values"
-      ],
-      "postedAt": "2026-06-20",
-      "firstSeen": "2026-06-21"
     },
     {
       "hash": "j1lcr0j5",
@@ -1538,50 +1468,49 @@
       "firstSeen": "2026-06-29"
     },
     {
-      "hash": "jwkcoey",
-      "company": "Prudent Technologies and Consulting, Inc.",
-      "title": "Product Manager - Data Products",
+      "hash": "j6v2hq2",
+      "company": "Cigna Group",
+      "title": "Agile Product Owner Advisor - HIH - Evernorth",
       "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/land/ad/5763491643?se=Ztw6hZJt8RGJe8gKxAvXaw&utm_medium=api&utm_source=6fcf31f9&v=2831AD5879D8C6597040B9FCF3A66E9CCF1FBCA7",
+      "url": "https://www.adzuna.in/details/5782520032?utm_medium=api&utm_source=6fcf31f9",
       "source": "adzuna",
-      "score": 70,
-      "seniorityFit": "stretch",
-      "verdict": "The job is a partial match due to its focus on data products and domain ownership, but it may not fully utilize the candidate's seniority and experience in regulated fintech environments.",
+      "score": 80,
+      "seniorityFit": "good",
+      "verdict": "The role is a good fit due to its focus on product ownership and regulated environment, but may lack the desired level of end-to-end product ownership and AI focus.",
       "pros": [
         "Location matches the candidate's preference",
-        "Involves end-to-end product management responsibilities",
-        "Data analysis and testing are relevant to the candidate's skills"
+        "Role involves product ownership and regulated environment",
+        "Opportunity to work with APIs and data pipelines"
       ],
       "cons": [
-        "Shift timings are non-negotiable and may not suit the candidate",
-        "Lack of explicit mention of regulated fintech or digital banking",
-        "Seniority level may not be fully utilized in this role"
+        "Lack of explicit AI focus",
+        "May not offer full end-to-end product ownership",
+        "Company is not strictly a fintech or digital banking organization"
       ],
-      "postedAt": "2026-06-14",
-      "firstSeen": "2026-06-21"
+      "postedAt": "2026-07-01",
+      "firstSeen": "2026-07-01"
     },
     {
-      "hash": "j15z2hte",
-      "company": "Teradata",
-      "title": "Senior Director Product Management",
+      "hash": "jvtqt99",
+      "company": "UnitedHealth Group",
+      "title": "Senior Product Manager",
       "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/land/ad/5771700676?se=Ztw6hZJt8RGJe8gKxAvXaw&utm_medium=api&utm_source=6fcf31f9&v=E5F1D1E24B6F5CF8B0014351077C7144E8878738",
+      "url": "https://www.adzuna.in/details/5767597475?utm_medium=api&utm_source=6fcf31f9",
       "source": "adzuna",
-      "score": 70,
-      "seniorityFit": "stretch",
-      "verdict": "The job is a senior leadership role that matches the candidate's desired domain but may require more experience than the candidate has.",
+      "score": 80,
+      "seniorityFit": "good",
+      "verdict": "The job matches the candidate's seniority and location preferences, but may lack genuine end-to-end product ownership.",
       "pros": [
-        "Matches the candidate's desired location",
-        "Involves AI, which is one of the candidate's domains",
-        "Offers high autonomy as a senior product voice"
+        "Location matches the candidate's preference",
+        "Seniority level matches the candidate's expectation",
+        "Company is a well-established player in a related industry"
       ],
       "cons": [
-        "Requires 12 years of experience, which is more than the candidate has",
-        "May not offer genuine end-to-end product ownership as it focuses on strategy and roadmap",
-        "Lacks clear information on the company culture and product accountability"
+        "Job description focuses more on architectural vision and technical strategies than end-to-end product ownership",
+        "Lack of explicit mention of AI-focused products or regulated fintech/digital banking"
       ],
-      "postedAt": "2026-06-21",
-      "firstSeen": "2026-06-21"
+      "postedAt": "2026-06-18",
+      "firstSeen": "2026-07-01"
     },
     {
       "hash": "jx9e2yg",
@@ -2412,27 +2341,142 @@
       "firstSeen": "2026-06-29"
     },
     {
-      "hash": "j1g1s5pa",
-      "company": "Apollo Hospitals Enterprises Limited",
-      "title": "Senior Product Manager- Retention",
+      "hash": "j71xlgv",
+      "company": "UnitedHealth Group",
+      "title": "Product Manager",
       "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/land/ad/5760048422?se=Ztw6hZJt8RGJe8gKxAvXaw&utm_medium=api&utm_source=6fcf31f9&v=B573BFC1305508AC5D6918A3B34EB5B174DAD082",
+      "url": "https://www.adzuna.in/details/5778697841?utm_medium=api&utm_source=6fcf31f9",
       "source": "adzuna",
-      "score": 60,
+      "score": 70,
       "seniorityFit": "stretch",
-      "verdict": "The job does not fit the candidate's background in fintech and digital banking, despite matching the location and seniority level.",
+      "verdict": "The job is a good fit in terms of location and industry, but may not fully utilize the candidate's seniority and experience in digital banking and fintech.",
       "pros": [
         "Location matches the candidate's preference",
-        "Seniority level aligns with the candidate's experience",
-        "Opportunity to work with AI and Platform teams"
+        "Industry is related to the candidate's experience in regulated environments",
+        "Company culture values inclusion and career development"
       ],
       "cons": [
-        "Industry mismatch: healthcare instead of fintech or digital banking",
-        "Lack of clear end-to-end product ownership",
-        "No clear indication of regulated environment experience being valued"
+        "Seniority level may not match the candidate's 7+ years of experience",
+        "Job description lacks specific details on end-to-end product ownership and AI-focused products",
+        "Company is not exclusively in digital banking or fintech"
       ],
-      "postedAt": "2026-06-11",
-      "firstSeen": "2026-06-21"
+      "postedAt": "2026-06-27",
+      "firstSeen": "2026-07-01"
+    },
+    {
+      "hash": "j1iwpw8m",
+      "company": "TMUS Global Solutions",
+      "title": "Product Manager, Technical",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5778688775?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 70,
+      "seniorityFit": "good",
+      "verdict": "The role is a good technical fit but may lack the end-to-end product ownership the candidate prefers.",
+      "pros": [
+        "Location matches the candidate's preference",
+        "Role involves technical expertise which aligns with the candidate's skills",
+        "Involves working with regulated environments which is a domain the candidate is familiar with"
+      ],
+      "cons": [
+        "Lack of clear indication of end-to-end product ownership",
+        "Role may be more focused on technical delivery than strategic product management",
+        "Not explicitly mentioned as an AI-focused product which is one of the candidate's preferences"
+      ],
+      "postedAt": "2026-06-27",
+      "firstSeen": "2026-07-01"
+    },
+    {
+      "hash": "j1do36fe",
+      "company": "TMUS Global Solutions",
+      "title": "Product Manager, Technical",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5782878061?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 70,
+      "seniorityFit": "stretch",
+      "verdict": "The job is a decent match, but the title 'Product Manager, Technical' may not fully utilize the candidate's seniority and experience as a Team Lead and Senior Product Owner.",
+      "pros": [
+        "Location matches the candidate's preference",
+        "Company is in the telecom sector, which is related to the candidate's experience in digital banking and fintech",
+        "Job title includes 'Product Manager', which is one of the candidate's target roles"
+      ],
+      "cons": [
+        "Seniority level may not be fully utilized",
+        "Lack of explicit mention of end-to-end product ownership",
+        "Company is not explicitly in the fintech or digital banking sector, which is the candidate's preferred domain"
+      ],
+      "postedAt": "2026-07-01",
+      "firstSeen": "2026-07-01"
+    },
+    {
+      "hash": "j4at9nn",
+      "company": "dsm-firmenich",
+      "title": "Data Product Manager",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5762100890?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 70,
+      "seniorityFit": "stretch",
+      "verdict": "The job is a partial fit due to its focus on data products and AI, but it may not fully align with the candidate's seniority and experience in digital banking and fintech.",
+      "pros": [
+        "Hyderabad location matches the candidate's preference",
+        "Involves AI-focused products, which aligns with the candidate's interests",
+        "Offers end-to-end product ownership, which is a key aspect of the candidate's current role"
+      ],
+      "cons": [
+        "Lack of explicit mention of regulated fintech or digital banking",
+        "Seniority level may not match the candidate's 7+ years of experience",
+        "Role is more focused on data products, which may not fully utilize the candidate's skills in conversational AI and loan origination"
+      ],
+      "postedAt": "2026-06-13",
+      "firstSeen": "2026-07-01"
+    },
+    {
+      "hash": "j1qjh7ho",
+      "company": "TMUS Global Solutions",
+      "title": "Sr Product Owner",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5777256364?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 70,
+      "seniorityFit": "good",
+      "verdict": "The job is a good fit due to its focus on product ownership, but it may not fully utilize the candidate's AI and fintech expertise.",
+      "pros": [
+        "Location matches the candidate's preference",
+        "Role involves end-to-end product ownership",
+        "Opportunity to work with HR Technology and enterprise people strategy"
+      ],
+      "cons": [
+        "Lack of explicit AI-focused product management",
+        "Limited exposure to fintech or digital banking",
+        "May not fully leverage the candidate's experience in core banking migration or conversational AI"
+      ],
+      "postedAt": "2026-06-26",
+      "firstSeen": "2026-07-01"
+    },
+    {
+      "hash": "j1ynrtj8",
+      "company": "GE Vernova",
+      "title": "Sr Product Owner - NMS",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5755108416?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 70,
+      "seniorityFit": "stretch",
+      "verdict": "The job is a good technical fit but may not offer the desired level of seniority and end-to-end product ownership.",
+      "pros": [
+        "Location matches the candidate's preference",
+        "Relevant domain experience in digital banking and fintech",
+        "Opportunity to work on technical product specifications"
+      ],
+      "cons": [
+        "Reports to a Product Manager, which may limit end-to-end ownership",
+        "Seniority level may not match the candidate's expectation of a Senior/Lead role",
+        "Lack of explicit mention of AI-focused products or regulated environments"
+      ],
+      "postedAt": "2026-06-07",
+      "firstSeen": "2026-07-01"
     },
     {
       "hash": "j7r2bm3",
@@ -2788,6 +2832,28 @@
       ],
       "postedAt": "2026-06-27",
       "firstSeen": "2026-06-28"
+    },
+    {
+      "hash": "jkl1ya1",
+      "company": "TMUS Global Solutions",
+      "title": "Product Owner",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5773207553?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 60,
+      "seniorityFit": "mismatch",
+      "verdict": "The job does not fit the candidate's seniority level and desired role of end-to-end product ownership in fintech or digital banking.",
+      "pros": [
+        "Location matches the candidate's preference",
+        "Job title of Product Owner aligns with the candidate's target roles"
+      ],
+      "cons": [
+        "Lack of focus on fintech or digital banking",
+        "Seniority level may not match the candidate's 7+ years of experience",
+        "Role may not offer genuine end-to-end product ownership"
+      ],
+      "postedAt": "2026-06-23",
+      "firstSeen": "2026-07-01"
     }
   ]
 }

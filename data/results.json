@@ -1,58 +1,13 @@
 {
   "meta": {
-    "lastRun": "2026-07-18",
-    "generatedAt": "2026-07-18T16:24:16.314Z",
+    "lastRun": "2026-07-19",
+    "generatedAt": "2026-07-19T16:25:05.735Z",
     "scanned": 150,
-    "newlyScored": 3,
-    "newMatches": 2,
-    "onBoard": 46
+    "newlyScored": 2,
+    "newMatches": 1,
+    "onBoard": 41
   },
   "jobs": [
-    {
-      "hash": "jxhp5nh",
-      "company": "MSD",
-      "title": "Director – Group Product Manager, Data & AI Studio Capability",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/land/ad/5790410724?se=QNb3j7t78RGm9YHvQ8XokQ&utm_medium=api&utm_source=6fcf31f9&v=14E2B0257F31477F889A165CAE821D44B70D8FBC",
-      "source": "adzuna",
-      "score": 92,
-      "seniorityFit": "good",
-      "verdict": "The job is a strong fit due to its focus on AI, end-to-end product ownership, and senior leadership role.",
-      "pros": [
-        "Director-level role aligns with candidate's seniority and experience",
-        "Job involves end-to-end product ownership, a key aspect of candidate's current role and preferences",
-        "Focus on AI and data aligns with candidate's skills and interests",
-        "Location is in Hyderabad, which is one of the candidate's preferred locations"
-      ],
-      "cons": [
-        "Company is not explicitly a fintech or digital banking company, which are the candidate's preferred domains"
-      ],
-      "postedAt": "2026-07-07",
-      "firstSeen": "2026-07-09"
-    },
-    {
-      "hash": "j1xsmfae",
-      "company": "MSD",
-      "title": "Director – Group Product Manager, Data & AI Studio Capability",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/land/ad/5790410724?se=hA8akbt78RGeKYDwYWEj0Q&utm_medium=api&utm_source=6fcf31f9&v=14E2B0257F31477F889A165CAE821D44B70D8FBC",
-      "source": "adzuna",
-      "score": 92,
-      "seniorityFit": "good",
-      "verdict": "The job is a strong fit due to its alignment with the candidate's experience in product management, AI, and regulated environments.",
-      "pros": [
-        "Alignment with candidate's experience in AI and data",
-        "End-to-end product portfolio management",
-        "Location matches candidate's preference",
-        "Senior role with leadership responsibilities"
-      ],
-      "cons": [
-        "Limited information on company culture and values",
-        "Unclear expectations on coaching and mentoring opportunities"
-      ],
-      "postedAt": "2026-07-07",
-      "firstSeen": "2026-07-09"
-    },
     {
       "hash": "j1tl53vp",
       "company": "MSD",
@@ -280,52 +235,6 @@
       "firstSeen": "2026-07-14"
     },
     {
-      "hash": "jkygfu",
-      "company": "MSD",
-      "title": "Dir , Technical Product Management",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/land/ad/5790410781?se=QNb3j7t78RGm9YHvQ8XokQ&utm_medium=api&utm_source=6fcf31f9&v=EB05CD1740E67288116B8AA8D3182E9784F2F2CC",
-      "source": "adzuna",
-      "score": 80,
-      "seniorityFit": "good",
-      "verdict": "The job is a strong fit due to its focus on product and platform strategy, but may lack the direct end-to-end product ownership the candidate prefers.",
-      "pros": [
-        "Senior role with significant responsibility",
-        "Located in Hyderabad, matching the candidate's preference",
-        "Involves platform strategy, which could align with the candidate's experience in digital banking and fintech"
-      ],
-      "cons": [
-        "May not offer direct end-to-end product ownership",
-        "Focus on enterprise data and digital capabilities might be broader than the candidate's experience"
-      ],
-      "postedAt": "2026-07-07",
-      "firstSeen": "2026-07-09"
-    },
-    {
-      "hash": "j1dr23r3",
-      "company": "Cigna Group",
-      "title": "Agile Product Owner Advisor - HIH - Evernorth",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/details/5793206461?utm_medium=api&utm_source=6fcf31f9",
-      "source": "adzuna",
-      "score": 80,
-      "seniorityFit": "good",
-      "verdict": "The job is a good fit due to its focus on product ownership and agile development, but may lack the desired level of AI-focused product work.",
-      "pros": [
-        "Location matches the candidate's preference",
-        "Role involves end-to-end product ownership",
-        "Regulated environment experience is relevant",
-        "Agile development experience is a good match"
-      ],
-      "cons": [
-        "Lack of explicit AI-focused product work",
-        "May not offer the desired level of coaching and mentoring opportunities",
-        "Company culture and values are not explicitly mentioned"
-      ],
-      "postedAt": "2026-07-09",
-      "firstSeen": "2026-07-09"
-    },
-    {
       "hash": "jwoeeo2",
       "company": "MSD",
       "title": "Dir , Technical Product Management",
@@ -436,53 +345,6 @@
       ],
       "postedAt": "2026-07-07",
       "firstSeen": "2026-07-13"
-    },
-    {
-      "hash": "jwjwa39",
-      "company": "Interactly.ai",
-      "title": "Sr. Product Manager – AI & Healthcare",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/land/ad/5770622426?se=QNb3j7t78RGm9YHvQ8XokQ&utm_medium=api&utm_source=6fcf31f9&v=A6F09247F4E47455FA1A899313B708DB7BA6DB3A",
-      "source": "adzuna",
-      "score": 70,
-      "seniorityFit": "good",
-      "verdict": "The job is a good fit due to its focus on AI and product management, but it may not fully align with the candidate's experience in digital banking and fintech.",
-      "pros": [
-        "AI-focused product management role",
-        "Location matches the candidate's preference",
-        "Opportunity for end-to-end product ownership"
-      ],
-      "cons": [
-        "Industry mismatch: healthcare instead of digital banking or fintech",
-        "Lack of explicit mention of regulated environments or compliance",
-        "Unclear scope of product ownership and accountability"
-      ],
-      "postedAt": "2026-06-20",
-      "firstSeen": "2026-07-09"
-    },
-    {
-      "hash": "j1wutjq6",
-      "company": "Interactly.ai",
-      "title": "Sr. Product Manager – AI & Healthcare",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/land/ad/5770622426?se=hA8akbt78RGeKYDwYWEj0Q&utm_medium=api&utm_source=6fcf31f9&v=A6F09247F4E47455FA1A899313B708DB7BA6DB3A",
-      "source": "adzuna",
-      "score": 70,
-      "seniorityFit": "good",
-      "verdict": "The job is a good fit due to its focus on AI and product management, but it may not fully align with the candidate's experience in digital banking and fintech.",
-      "pros": [
-        "AI-focused product",
-        "Product management role",
-        "Location matches candidate's preference",
-        "Opportunity for end-to-end product ownership"
-      ],
-      "cons": [
-        "Industry mismatch (healthcare instead of fintech or digital banking)",
-        "Lack of explicit mention of regulated environment or change governance",
-        "Unclear scope of product ownership and accountability"
-      ],
-      "postedAt": "2026-06-20",
-      "firstSeen": "2026-07-09"
     },
     {
       "hash": "j1snc8bh",
@@ -1030,6 +892,29 @@
       ],
       "postedAt": "2026-06-20",
       "firstSeen": "2026-07-18"
+    },
+    {
+      "hash": "j7vvuw2",
+      "company": "Ideagen",
+      "title": "Technical Product Owner",
+      "location": "Kyasaram, Hyderabad",
+      "url": "https://www.adzuna.in/details/5806895714?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 70,
+      "seniorityFit": "good",
+      "verdict": "The job is a good fit due to its focus on product ownership, but lacks specific details on AI-focused products and regulated fintech environment.",
+      "pros": [
+        "Technical Product Owner role aligns with candidate's target roles",
+        "Location is in Hyderabad, which is one of the candidate's preferred locations",
+        "Agile development team environment matches candidate's experience"
+      ],
+      "cons": [
+        "Lack of explicit mention of AI-focused products or regulated fintech environment",
+        "Work pattern is work from office, which may not be ideal for a candidate open to remote work",
+        "No clear information on company culture or product accountability"
+      ],
+      "postedAt": "2026-07-19",
+      "firstSeen": "2026-07-19"
     },
     {
       "hash": "jgplxp",

@@ -1,57 +1,13 @@
 {
   "meta": {
-    "lastRun": "2026-07-20",
-    "generatedAt": "2026-07-20T16:51:04.562Z",
+    "lastRun": "2026-07-21",
+    "generatedAt": "2026-07-21T16:51:48.101Z",
     "scanned": 150,
-    "newlyScored": 4,
-    "newMatches": 2,
-    "onBoard": 37
+    "newlyScored": 1,
+    "newMatches": 1,
+    "onBoard": 33
   },
   "jobs": [
-    {
-      "hash": "j1nmivio",
-      "company": "MSD",
-      "title": "Director – Group Product Manager, Data & AI Studio Capability",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/land/ad/5790410724?se=XjZqjkN98RGowsQLJXNc_Q&utm_medium=api&utm_source=6fcf31f9&v=14E2B0257F31477F889A165CAE821D44B70D8FBC",
-      "source": "adzuna",
-      "score": 92,
-      "seniorityFit": "good",
-      "verdict": "The job is a strong fit due to its focus on AI and data, end-to-end product ownership, and senior leadership role.",
-      "pros": [
-        "Senior leadership role aligns with candidate's experience and seniority",
-        "Focus on AI and data aligns with candidate's skills and interests",
-        "End-to-end product ownership matches candidate's preferences",
-        "Location in Hyderabad matches candidate's preferred location"
-      ],
-      "cons": [
-        "Company is not explicitly a fintech or digital banking company, which is the candidate's preferred domain"
-      ],
-      "postedAt": "2026-07-07",
-      "firstSeen": "2026-07-11"
-    },
-    {
-      "hash": "j139m3wx",
-      "company": "MSD",
-      "title": "Director – Group Product Manager, Data & AI Studio Capability",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/land/ad/5790410724?se=kDPBj0N98RG1-IwfRWwy_Q&utm_medium=api&utm_source=6fcf31f9&v=14E2B0257F31477F889A165CAE821D44B70D8FBC",
-      "source": "adzuna",
-      "score": 92,
-      "seniorityFit": "good",
-      "verdict": "The job is a strong fit due to its focus on AI and data, end-to-end product ownership, and senior leadership role.",
-      "pros": [
-        "Senior leadership role aligns with candidate's experience and seniority",
-        "Focus on AI and data aligns with candidate's skills and interests",
-        "End-to-end product ownership matches candidate's preferences",
-        "Location in Hyderabad matches candidate's desired location"
-      ],
-      "cons": [
-        "Company is not explicitly a fintech or digital banking company, which is the candidate's preferred domain"
-      ],
-      "postedAt": "2026-07-07",
-      "firstSeen": "2026-07-11"
-    },
     {
       "hash": "jchxnsg",
       "company": "MSD",
@@ -212,28 +168,6 @@
       "firstSeen": "2026-07-20"
     },
     {
-      "hash": "jqps6b1",
-      "company": "MSD",
-      "title": "Dir , Technical Product Management",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/land/ad/5790410781?se=XjZqjkN98RGowsQLJXNc_Q&utm_medium=api&utm_source=6fcf31f9&v=EB05CD1740E67288116B8AA8D3182E9784F2F2CC",
-      "source": "adzuna",
-      "score": 80,
-      "seniorityFit": "good",
-      "verdict": "The job is a strong fit due to its seniority level and product strategy focus, but may lack the direct end-to-end product ownership the candidate prefers.",
-      "pros": [
-        "Senior role aligns with candidate's experience and seniority",
-        "Location matches candidate's preference",
-        "Involves product and platform strategy, which aligns with candidate's skills"
-      ],
-      "cons": [
-        "May not offer direct end-to-end product ownership",
-        "Could involve more governance and less hands-on product development"
-      ],
-      "postedAt": "2026-07-07",
-      "firstSeen": "2026-07-11"
-    },
-    {
       "hash": "j1emb0jx",
       "company": "MSD",
       "title": "Dir , Technical Product Management",
@@ -300,51 +234,6 @@
       ],
       "postedAt": "2026-07-07",
       "firstSeen": "2026-07-13"
-    },
-    {
-      "hash": "j1mopzyg",
-      "company": "Interactly.ai",
-      "title": "Sr. Product Manager – AI & Healthcare",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/land/ad/5770622426?se=XjZqjkN98RGowsQLJXNc_Q&utm_medium=api&utm_source=6fcf31f9&v=A6F09247F4E47455FA1A899313B708DB7BA6DB3A",
-      "source": "adzuna",
-      "score": 70,
-      "seniorityFit": "good",
-      "verdict": "The job is a good fit due to its focus on AI and product management, but may not fully align with the candidate's fintech background and desire for end-to-end product ownership.",
-      "pros": [
-        "Hyderabad location matches candidate preference",
-        "AI-focused product management role aligns with candidate skills and interests",
-        "Regulated industry experience is relevant, albeit in a different domain"
-      ],
-      "cons": [
-        "Healthcare industry may be outside candidate's preferred fintech domain",
-        "Lack of explicit mention of end-to-end product ownership and genuine product accountability",
-        "Unclear if the role involves coaching, mentoring, and clear product accountability as valued by the candidate"
-      ],
-      "postedAt": "2026-06-20",
-      "firstSeen": "2026-07-11"
-    },
-    {
-      "hash": "j12bt8cp",
-      "company": "Interactly.ai",
-      "title": "Sr. Product Manager – AI & Healthcare",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/land/ad/5770622426?se=kDPBj0N98RG1-IwfRWwy_Q&utm_medium=api&utm_source=6fcf31f9&v=A6F09247F4E47455FA1A899313B708DB7BA6DB3A",
-      "source": "adzuna",
-      "score": 70,
-      "seniorityFit": "good",
-      "verdict": "The job is a good fit due to its focus on AI and product management, but may not fully align with the candidate's fintech background.",
-      "pros": [
-        "AI-focused product role",
-        "Located in Hyderabad, matching the candidate's preferred location",
-        "Opportunity for end-to-end product ownership in a growing company"
-      ],
-      "cons": [
-        "Healthcare industry may be outside the candidate's primary experience in fintech and digital banking",
-        "Lack of explicit mention of regulated environments or core banking migration, which are key areas of the candidate's expertise"
-      ],
-      "postedAt": "2026-06-20",
-      "firstSeen": "2026-07-11"
     },
     {
       "hash": "jbk4s88",
@@ -847,6 +736,28 @@
       ],
       "postedAt": "2026-07-20",
       "firstSeen": "2026-07-20"
+    },
+    {
+      "hash": "j1fu83pp",
+      "company": "AVP Vigilant Technology Pvt Ltd",
+      "title": "Senior Manager, Digital Commerce (Technical Product Owner)",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5808701325?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 60,
+      "seniorityFit": "mismatch",
+      "verdict": "The job does not fit the candidate's desired seniority level and domain expertise.",
+      "pros": [
+        "Location matches the candidate's preference",
+        "Role involves technical product ownership"
+      ],
+      "cons": [
+        "Domain mismatch: candidate prefers fintech/digital banking, job is in bioscience digital commerce",
+        "Seniority level may not match the candidate's expectation of a Senior/AVP/Lead level role",
+        "Lack of clear AI-focused product involvement"
+      ],
+      "postedAt": "2026-07-21",
+      "firstSeen": "2026-07-21"
     }
   ]
 }

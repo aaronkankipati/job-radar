@@ -1,11 +1,11 @@
 {
   "meta": {
-    "lastRun": "2026-07-24",
-    "generatedAt": "2026-07-24T17:00:47.933Z",
+    "lastRun": "2026-07-25",
+    "generatedAt": "2026-07-25T16:24:33.617Z",
     "scanned": 150,
-    "newlyScored": 4,
-    "newMatches": 3,
-    "onBoard": 22
+    "newlyScored": 3,
+    "newMatches": 2,
+    "onBoard": 21
   },
   "jobs": [
     {
@@ -55,6 +55,30 @@
       "firstSeen": "2026-07-24"
     },
     {
+      "hash": "j41s407",
+      "company": "Experian",
+      "title": "Director of Product Ownership",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5804122056?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 92,
+      "seniorityFit": "good",
+      "verdict": "The job is a strong fit due to its focus on AI adoption, leadership, and end-to-end product ownership in a regulated environment.",
+      "pros": [
+        "Aligns with candidate's experience in digital banking and fintech",
+        "Offers hands-on leadership role with a focus on AI adoption",
+        "Provides opportunity for coaching and mentoring",
+        "Location matches candidate's preference",
+        "Company has a healthy and well-regarded culture"
+      ],
+      "cons": [
+        "May require additional effort to build AI-enabled workflows",
+        "Line management responsibilities may add to workload"
+      ],
+      "postedAt": "2026-07-17",
+      "firstSeen": "2026-07-25"
+    },
+    {
       "hash": "jkb38im",
       "company": "Google",
       "title": "Product Manager, AI Platform Operations and Tooling",
@@ -76,6 +100,29 @@
       ],
       "postedAt": "2026-07-23",
       "firstSeen": "2026-07-23"
+    },
+    {
+      "hash": "j1ry8s3m",
+      "company": "TMUS Global Solutions",
+      "title": "Product Owner",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5813411141?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 90,
+      "seniorityFit": "good",
+      "verdict": "The job posting matches the candidate's profile well, offering a product ownership role in a regulated fintech environment with potential for end-to-end product ownership.",
+      "pros": [
+        "Location matches the candidate's preference",
+        "Role aligns with the candidate's target roles",
+        "Company operates in a regulated fintech environment",
+        "Potential for end-to-end product ownership"
+      ],
+      "cons": [
+        "Lack of explicit mention of AI-focused products",
+        "Unclear details about the company culture and values"
+      ],
+      "postedAt": "2026-07-24",
+      "firstSeen": "2026-07-25"
     },
     {
       "hash": "j7n3c3q",
@@ -122,74 +169,6 @@
       ],
       "postedAt": "2026-07-09",
       "firstSeen": "2026-07-24"
-    },
-    {
-      "hash": "jidypej",
-      "company": "Interactly.ai",
-      "title": "Sr. Product Manager – AI & Healthcare",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/land/ad/5770622426?se=_FnYE22A8RGZhr6wCWr2Kg&utm_medium=api&utm_source=6fcf31f9&v=A6F09247F4E47455FA1A899313B708DB7BA6DB3A",
-      "source": "adzuna",
-      "score": 70,
-      "seniorityFit": "good",
-      "verdict": "The job is a good fit due to its focus on AI and product management, but may not fully align with the candidate's fintech background and desire for end-to-end product ownership.",
-      "pros": [
-        "AI-focused product role",
-        "Location matches candidate's preference",
-        "Senior Product Manager title aligns with candidate's seniority"
-      ],
-      "cons": [
-        "Healthcare industry may be outside candidate's domain expertise",
-        "Lack of explicit mention of end-to-end product ownership",
-        "Regulated fintech experience may not be fully utilized"
-      ],
-      "postedAt": "2026-06-20",
-      "firstSeen": "2026-07-15"
-    },
-    {
-      "hash": "j73pl8u",
-      "company": "Cigna Group",
-      "title": "Agile Product Owner Advisor - HIH - Evernorth",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/details/5800409806?utm_medium=api&utm_source=6fcf31f9",
-      "source": "adzuna",
-      "score": 70,
-      "seniorityFit": "stretch",
-      "verdict": "The job is a decent fit, but the title 'Agile Product Owner Advisor' may not fully utilize the candidate's seniority and experience.",
-      "pros": [
-        "Location matches the candidate's preference",
-        "Regulated environment is a good fit for the candidate's experience",
-        "Opportunity to work in a health care company with a strong mission"
-      ],
-      "cons": [
-        "Title 'Advisor' may imply a more junior or consultative role",
-        "Lack of explicit mention of end-to-end product ownership",
-        "Industry shift from fintech to healthcare may require some adaptation"
-      ],
-      "postedAt": "2026-07-15",
-      "firstSeen": "2026-07-15"
-    },
-    {
-      "hash": "j17p1hnn",
-      "company": "Interactly.ai",
-      "title": "Sr. Product Manager – AI & Healthcare",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/land/ad/5770622426?se=vPVcFW2A8RGCUYE-F6ElsQ&utm_medium=api&utm_source=6fcf31f9&v=A6F09247F4E47455FA1A899313B708DB7BA6DB3A",
-      "source": "adzuna",
-      "score": 70,
-      "seniorityFit": "good",
-      "verdict": "The job is a good fit due to its focus on AI and product management, but may not fully align with the candidate's fintech background.",
-      "pros": [
-        "AI-focused product role",
-        "Hyderabad location matches candidate preference",
-        "End-to-end product ownership potential"
-      ],
-      "cons": [
-        "Healthcare industry may be outside candidate's fintech expertise",
-        "Lack of explicit mention of regulated environment or digital banking"
-      ],
-      "postedAt": "2026-06-20",
-      "firstSeen": "2026-07-15"
     },
     {
       "hash": "j1gtgjub",

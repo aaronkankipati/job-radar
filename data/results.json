@@ -1,11 +1,11 @@
 {
   "meta": {
-    "lastRun": "2026-07-26",
-    "generatedAt": "2026-07-26T16:27:41.268Z",
+    "lastRun": "2026-07-27",
+    "generatedAt": "2026-07-27T17:14:38.058Z",
     "scanned": 150,
-    "newlyScored": 3,
-    "newMatches": 1,
-    "onBoard": 17
+    "newlyScored": 5,
+    "newMatches": 2,
+    "onBoard": 16
   },
   "jobs": [
     {
@@ -171,74 +171,6 @@
       "firstSeen": "2026-07-24"
     },
     {
-      "hash": "j3gmxyj",
-      "company": "Interactly.ai",
-      "title": "Sr. Product Manager – AI & Healthcare",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/land/ad/5770622426?se=zHXr5v2B8RGFMa6bWHzthQ&utm_medium=api&utm_source=6fcf31f9&v=A6F09247F4E47455FA1A899313B708DB7BA6DB3A",
-      "source": "adzuna",
-      "score": 70,
-      "seniorityFit": "good",
-      "verdict": "The job is a good fit due to its focus on AI and product management, but it may not fully align with the candidate's experience in digital banking and fintech.",
-      "pros": [
-        "AI-focused product management role",
-        "Location matches the candidate's preference",
-        "Opportunity for end-to-end product ownership"
-      ],
-      "cons": [
-        "Industry mismatch: healthcare instead of digital banking or fintech",
-        "Lack of explicit mention of regulated environments or compliance",
-        "Unclear if the role offers genuine end-to-end product ownership"
-      ],
-      "postedAt": "2026-06-20",
-      "firstSeen": "2026-07-17"
-    },
-    {
-      "hash": "jwqotyp",
-      "company": "Amgen",
-      "title": "Digital Product Manager",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/details/5804445097?utm_medium=api&utm_source=6fcf31f9",
-      "source": "adzuna",
-      "score": 70,
-      "seniorityFit": "good",
-      "verdict": "The role is a good fit due to its focus on AI and product management, but may lack the desired level of end-to-end product ownership and regulated fintech environment.",
-      "pros": [
-        "AI-focused product management role",
-        "Location matches candidate's preference",
-        "Opportunity to work on a large-scale AI initiative"
-      ],
-      "cons": [
-        "Lack of clear end-to-end product ownership",
-        "Not a regulated fintech environment",
-        "May require adaptation to a new industry (pharmaceuticals)"
-      ],
-      "postedAt": "2026-07-17",
-      "firstSeen": "2026-07-17"
-    },
-    {
-      "hash": "j1v31e4b",
-      "company": "Interactly.ai",
-      "title": "Sr. Product Manager – AI & Healthcare",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/land/ad/5770622426?se=Mtoa6P2B8RG64bpm-6Bw6w&utm_medium=api&utm_source=6fcf31f9&v=A6F09247F4E47455FA1A899313B708DB7BA6DB3A",
-      "source": "adzuna",
-      "score": 70,
-      "seniorityFit": "good",
-      "verdict": "The job is a good fit due to its focus on AI and product management, but may not fully align with the candidate's fintech background.",
-      "pros": [
-        "AI-focused product management role",
-        "Located in Hyderabad, matching the candidate's preferred location",
-        "End-to-end product ownership potential"
-      ],
-      "cons": [
-        "Healthcare industry, which may be outside the candidate's preferred fintech domain",
-        "Lack of explicit mention of regulated environments or digital banking"
-      ],
-      "postedAt": "2026-06-20",
-      "firstSeen": "2026-07-17"
-    },
-    {
       "hash": "j1bf3swb",
       "company": "Interactly.ai",
       "title": "Sr. Product Manager – AI & Healthcare",
@@ -397,6 +329,50 @@
       ],
       "postedAt": "2026-07-26",
       "firstSeen": "2026-07-26"
+    },
+    {
+      "hash": "j1ygaao6",
+      "company": "Freshworks",
+      "title": "Staff Product Manager",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5817217244?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 60,
+      "seniorityFit": "stretch",
+      "verdict": "The role is a partial match due to the domain mismatch and potential lack of end-to-end product ownership.",
+      "pros": [
+        "Location matches the candidate's preference",
+        "Senior role with potential for leadership"
+      ],
+      "cons": [
+        "Domain mismatch: ITSM vs digital banking/fintech",
+        "Unclear extent of end-to-end product ownership",
+        "Lack of explicit AI product focus"
+      ],
+      "postedAt": "2026-07-27",
+      "firstSeen": "2026-07-27"
+    },
+    {
+      "hash": "jkemadr",
+      "company": "Ideagen",
+      "title": "Technical Product Owner L1",
+      "location": "Kyasaram, Hyderabad",
+      "url": "https://www.adzuna.in/details/5806895714?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 60,
+      "seniorityFit": "mismatch",
+      "verdict": "The job posting does not match the candidate's seniority level and lacks clear indications of end-to-end product ownership.",
+      "pros": [
+        "Location matches the candidate's preference",
+        "Involvement in Agile development team"
+      ],
+      "cons": [
+        "Seniority level may be lower than the candidate's current role",
+        "Lack of clear information on end-to-end product ownership",
+        "No mention of AI-focused products or regulated fintech/digital banking"
+      ],
+      "postedAt": "2026-07-19",
+      "firstSeen": "2026-07-27"
     }
   ]
 }

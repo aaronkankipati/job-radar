@@ -1,11 +1,11 @@
 {
   "meta": {
-    "lastRun": "2026-07-28",
-    "generatedAt": "2026-07-28T16:55:49.070Z",
+    "lastRun": "2026-07-29",
+    "generatedAt": "2026-07-29T16:45:22.636Z",
     "scanned": 150,
     "newlyScored": 4,
     "newMatches": 2,
-    "onBoard": 16
+    "onBoard": 17
   },
   "jobs": [
     {
@@ -77,6 +77,28 @@
       ],
       "postedAt": "2026-07-17",
       "firstSeen": "2026-07-25"
+    },
+    {
+      "hash": "jt2tyh2",
+      "company": "TMUS Global Solutions",
+      "title": "Sr Product Owner",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5819374160?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 92,
+      "seniorityFit": "good",
+      "verdict": "The job posting aligns well with the candidate's experience, skills, and preferences, offering a strong fit for a Senior Product Owner role in a regulated fintech environment.",
+      "pros": [
+        "Job location matches the candidate's preferred location",
+        "Role involves genuine end-to-end product ownership",
+        "AI-focused products align with the candidate's interests and skills",
+        "Company operates in the regulated fintech space, which the candidate values"
+      ],
+      "cons": [
+        "Limited information about the company culture, which is important to the candidate"
+      ],
+      "postedAt": "2026-07-29",
+      "firstSeen": "2026-07-29"
     },
     {
       "hash": "jkb38im",
@@ -216,29 +238,6 @@
       "firstSeen": "2026-07-24"
     },
     {
-      "hash": "j7vvuw2",
-      "company": "Ideagen",
-      "title": "Technical Product Owner",
-      "location": "Kyasaram, Hyderabad",
-      "url": "https://www.adzuna.in/details/5806895714?utm_medium=api&utm_source=6fcf31f9",
-      "source": "adzuna",
-      "score": 70,
-      "seniorityFit": "good",
-      "verdict": "The job is a good fit due to its focus on product ownership, but lacks specific details on AI-focused products and regulated fintech environment.",
-      "pros": [
-        "Technical Product Owner role aligns with candidate's target roles",
-        "Location is in Hyderabad, which is one of the candidate's preferred locations",
-        "Agile development team environment matches candidate's experience"
-      ],
-      "cons": [
-        "Lack of explicit mention of AI-focused products or regulated fintech environment",
-        "Work pattern is work from office, which may not be ideal for a candidate open to remote work",
-        "No clear information on company culture or product accountability"
-      ],
-      "postedAt": "2026-07-19",
-      "firstSeen": "2026-07-19"
-    },
-    {
       "hash": "j10s6t0w",
       "company": "State Street",
       "title": "Equity Swap Financing Solutions Operations Product Owner - AVP",
@@ -371,6 +370,28 @@
       ],
       "postedAt": "2026-07-19",
       "firstSeen": "2026-07-27"
+    },
+    {
+      "hash": "j1cz70l7",
+      "company": "TMUS Global Solutions",
+      "title": "Product Manager - Technical Project Manager [T500-27498]",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/land/ad/5798139141?se=_v6922yL8RGzQa4pljvFHQ&utm_medium=api&utm_source=6fcf31f9&v=90233796284D02C2869F7015082BD07D9CC79637",
+      "source": "adzuna",
+      "score": 60,
+      "seniorityFit": "stretch",
+      "verdict": "The job posting lacks clear indications of end-to-end product ownership and seniority level, making it a less ideal fit for the candidate.",
+      "pros": [
+        "Location matches the candidate's preference",
+        "Company is in the telecom sector which might have fintech overlaps"
+      ],
+      "cons": [
+        "Job title suggests a mix of product management and technical project management which may not offer pure product ownership",
+        "Seniority level of the role is not explicitly stated, potentially being a stretch or mismatch",
+        "Lack of clear AI-focused product or regulated fintech/digital banking aspects in the job description"
+      ],
+      "postedAt": "2026-07-13",
+      "firstSeen": "2026-07-29"
     }
   ]
 }

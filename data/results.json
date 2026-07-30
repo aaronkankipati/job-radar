@@ -1,36 +1,13 @@
 {
   "meta": {
-    "lastRun": "2026-07-29",
-    "generatedAt": "2026-07-29T16:45:22.636Z",
+    "lastRun": "2026-07-30",
+    "generatedAt": "2026-07-30T16:57:09.616Z",
     "scanned": 150,
-    "newlyScored": 4,
-    "newMatches": 2,
-    "onBoard": 17
+    "newlyScored": 5,
+    "newMatches": 1,
+    "onBoard": 16
   },
   "jobs": [
-    {
-      "hash": "jbacymm",
-      "company": "TMUS Global Solutions",
-      "title": "Sr Product Owner",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/details/5778689068?utm_medium=api&utm_source=6fcf31f9",
-      "source": "adzuna",
-      "score": 92,
-      "seniorityFit": "good",
-      "verdict": "The job is a strong fit due to its focus on AI-powered products, end-to-end product ownership, and regulated environment, aligning with the candidate's experience and preferences.",
-      "pros": [
-        "Aligns with candidate's experience in digital banking and fintech",
-        "Involves end-to-end product ownership, including defining and prioritizing user stories",
-        "Focuses on AI-powered products, matching the candidate's interest in AI product building",
-        "Located in Hyderabad, which is one of the candidate's preferred locations",
-        "Offers a senior role, matching the candidate's seniority level"
-      ],
-      "cons": [
-        "May require some adaptation to the telecom industry, which is not explicitly mentioned in the candidate's profile"
-      ],
-      "postedAt": "2026-06-27",
-      "firstSeen": "2026-07-20"
-    },
     {
       "hash": "j1klny6h",
       "company": "JPMorganChase",
@@ -99,6 +76,29 @@
       ],
       "postedAt": "2026-07-29",
       "firstSeen": "2026-07-29"
+    },
+    {
+      "hash": "jbvsxdq",
+      "company": "ServiceNow",
+      "title": "Principal Inbound Product Manager",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5820554563?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 92,
+      "seniorityFit": "good",
+      "verdict": "This role is a strong fit due to its focus on AI and product ownership, aligning with the candidate's experience and preferences.",
+      "pros": [
+        "Aligns with candidate's AI product experience",
+        "Offers end-to-end product ownership",
+        "Location matches candidate's preference",
+        "Company has a healthy and well-regarded culture"
+      ],
+      "cons": [
+        "May require adaptation to a new industry outside of fintech",
+        "Unclear if the role involves significant change governance and compliance responsibilities"
+      ],
+      "postedAt": "2026-07-30",
+      "firstSeen": "2026-07-30"
     },
     {
       "hash": "jkb38im",
@@ -259,29 +259,6 @@
       ],
       "postedAt": "2026-06-25",
       "firstSeen": "2026-07-24"
-    },
-    {
-      "hash": "j1enh0qb",
-      "company": "Oracle",
-      "title": "Principal Product Manager",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/details/5807497600?utm_medium=api&utm_source=6fcf31f9",
-      "source": "adzuna",
-      "score": 60,
-      "seniorityFit": "good",
-      "verdict": "The job does not fully align with the candidate's desire for end-to-end product ownership and AI-focused products.",
-      "pros": [
-        "Location matches the candidate's preference",
-        "Seniority level aligns with the candidate's experience",
-        "Regulated environment experience is relevant"
-      ],
-      "cons": [
-        "Lack of clear end-to-end product ownership",
-        "Role seems to focus more on sales and customer support",
-        "No explicit mention of AI-focused products"
-      ],
-      "postedAt": "2026-07-20",
-      "firstSeen": "2026-07-20"
     },
     {
       "hash": "j1fu83pp",

@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastRun": "2026-07-30",
-    "generatedAt": "2026-07-30T16:57:09.616Z",
+    "lastRun": "2026-07-31",
+    "generatedAt": "2026-07-31T17:00:05.511Z",
     "scanned": 150,
-    "newlyScored": 5,
+    "newlyScored": 3,
     "newMatches": 1,
     "onBoard": 16
   },
@@ -170,6 +170,29 @@
       "firstSeen": "2026-07-28"
     },
     {
+      "hash": "ju6c2cf",
+      "company": "Publicis Sapient",
+      "title": "Senior Product Manager",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5822276302?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 90,
+      "seniorityFit": "good",
+      "verdict": "The job matches the candidate's profile well due to its focus on digital products and product ownership in a regulated environment.",
+      "pros": [
+        "Senior Product Manager role aligns with the candidate's target roles",
+        "Location is Hyderabad, which is one of the candidate's preferred locations",
+        "Job description implies end-to-end product ownership and accountability",
+        "Company is a well-regarded digital transformation firm"
+      ],
+      "cons": [
+        "Lack of explicit mention of AI-focused products or fintech/digital banking domain",
+        "Unclear if the role involves coaching and mentoring, which the candidate values"
+      ],
+      "postedAt": "2026-07-31",
+      "firstSeen": "2026-07-31"
+    },
+    {
       "hash": "j1cpt6p3",
       "company": "Cutshort Lightning",
       "title": "Senior Product Manager",
@@ -259,28 +282,6 @@
       ],
       "postedAt": "2026-06-25",
       "firstSeen": "2026-07-24"
-    },
-    {
-      "hash": "j1fu83pp",
-      "company": "AVP Vigilant Technology Pvt Ltd",
-      "title": "Senior Manager, Digital Commerce (Technical Product Owner)",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/details/5808701325?utm_medium=api&utm_source=6fcf31f9",
-      "source": "adzuna",
-      "score": 60,
-      "seniorityFit": "mismatch",
-      "verdict": "The job does not fit the candidate's desired seniority level and domain expertise.",
-      "pros": [
-        "Location matches the candidate's preference",
-        "Role involves technical product ownership"
-      ],
-      "cons": [
-        "Domain mismatch: candidate prefers fintech/digital banking, job is in bioscience digital commerce",
-        "Seniority level may not match the candidate's expectation of a Senior/AVP/Lead level role",
-        "Lack of clear AI-focused product involvement"
-      ],
-      "postedAt": "2026-07-21",
-      "firstSeen": "2026-07-21"
     },
     {
       "hash": "jzp5udh",

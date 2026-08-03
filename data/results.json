@@ -1,36 +1,13 @@
 {
   "meta": {
-    "lastRun": "2026-08-02",
-    "generatedAt": "2026-08-02T16:27:07.632Z",
+    "lastRun": "2026-08-03",
+    "generatedAt": "2026-08-03T17:22:19.962Z",
     "scanned": 150,
-    "newlyScored": 8,
-    "newMatches": 4,
-    "onBoard": 27
+    "newlyScored": 6,
+    "newMatches": 1,
+    "onBoard": 25
   },
   "jobs": [
-    {
-      "hash": "j1klny6h",
-      "company": "JPMorganChase",
-      "title": "Technical Product Manager",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/details/5812851629?utm_medium=api&utm_source=6fcf31f9",
-      "source": "adzuna",
-      "score": 92,
-      "seniorityFit": "good",
-      "verdict": "The job is a strong fit due to its focus on end-to-end product ownership and innovation in consumer and community banking, aligning with the candidate's experience and preferences.",
-      "pros": [
-        "Regulated fintech environment matches candidate's domain expertise",
-        "End-to-end product life cycle responsibility aligns with candidate's experience",
-        "Location in Hyderabad matches candidate's preferred location",
-        "Opportunity for innovation and leadership fits candidate's seniority and skills"
-      ],
-      "cons": [
-        "Lack of explicit mention of AI-focused products, which is a candidate preference",
-        "Unclear if the role involves significant coaching and mentoring opportunities"
-      ],
-      "postedAt": "2026-07-24",
-      "firstSeen": "2026-07-24"
-    },
     {
       "hash": "j41s407",
       "company": "Experian",
@@ -329,30 +306,6 @@
       "firstSeen": "2026-07-28"
     },
     {
-      "hash": "j1j8uk45",
-      "company": "Wells Fargo",
-      "title": "Digital Product Manager",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/details/5793787479?utm_medium=api&utm_source=6fcf31f9",
-      "source": "adzuna",
-      "score": 80,
-      "seniorityFit": "good",
-      "verdict": "The role is a good fit due to its relevance to the candidate's experience in digital banking and product management, but may lack the desired level of end-to-end product ownership.",
-      "pros": [
-        "Relevant industry and domain",
-        "Alignment with candidate's current role and experience",
-        "Location matches candidate's preference",
-        "Opportunity to work on digital business plans and initiatives"
-      ],
-      "cons": [
-        "Lack of explicit mention of end-to-end product ownership",
-        "May involve more basic content strategy and analysis",
-        "Unclear level of autonomy and independence in decision-making"
-      ],
-      "postedAt": "2026-07-09",
-      "firstSeen": "2026-07-24"
-    },
-    {
       "hash": "j18bmhb8",
       "company": "Google",
       "title": "Product Manager, User Voice AI and Agentic Experiences",
@@ -399,27 +352,27 @@
       "firstSeen": "2026-08-01"
     },
     {
-      "hash": "j10s6t0w",
-      "company": "State Street",
-      "title": "Equity Swap Financing Solutions Operations Product Owner - AVP",
+      "hash": "jmtavpl",
+      "company": "Monster - xshruthix",
+      "title": "Product Manager",
       "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/details/5775402716?utm_medium=api&utm_source=6fcf31f9",
+      "url": "https://www.adzuna.in/details/5826269114?utm_medium=api&utm_source=6fcf31f9",
       "source": "adzuna",
-      "score": 70,
+      "score": 80,
       "seniorityFit": "good",
-      "verdict": "The job is a good fit due to the candidate's experience in regulated environments and product ownership, but may lack genuine end-to-end product ownership.",
+      "verdict": "The job matches the candidate's target roles and location, but lacks explicit mention of AI-focused products or regulated fintech environment.",
       "pros": [
-        "Location matches the candidate's preference",
-        "Role involves product ownership, which aligns with the candidate's experience",
-        "Regulated environment, which the candidate is familiar with"
+        "Location matches candidate's preference",
+        "Job title matches candidate's target roles",
+        "Involves strategic planning and execution, which aligns with candidate's experience"
       ],
       "cons": [
-        "Lack of clear AI-focused product involvement",
-        "Unclear extent of end-to-end product ownership",
-        "Operations-focused role may not fully utilize the candidate's product management skills"
+        "Lack of explicit mention of AI-focused products",
+        "No clear indication of regulated fintech environment",
+        "Unclear extent of end-to-end product ownership"
       ],
-      "postedAt": "2026-06-25",
-      "firstSeen": "2026-07-24"
+      "postedAt": "2026-08-03",
+      "firstSeen": "2026-08-03"
     },
     {
       "hash": "jokqib9",

@@ -1,37 +1,13 @@
 {
   "meta": {
-    "lastRun": "2026-08-03",
-    "generatedAt": "2026-08-03T17:22:19.962Z",
+    "lastRun": "2026-08-04",
+    "generatedAt": "2026-08-04T17:10:23.602Z",
     "scanned": 150,
-    "newlyScored": 6,
-    "newMatches": 1,
-    "onBoard": 25
+    "newlyScored": 7,
+    "newMatches": 3,
+    "onBoard": 26
   },
   "jobs": [
-    {
-      "hash": "j41s407",
-      "company": "Experian",
-      "title": "Director of Product Ownership",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/details/5804122056?utm_medium=api&utm_source=6fcf31f9",
-      "source": "adzuna",
-      "score": 92,
-      "seniorityFit": "good",
-      "verdict": "The job is a strong fit due to its focus on AI adoption, leadership, and end-to-end product ownership in a regulated environment.",
-      "pros": [
-        "Aligns with candidate's experience in digital banking and fintech",
-        "Offers hands-on leadership role with a focus on AI adoption",
-        "Provides opportunity for coaching and mentoring",
-        "Location matches candidate's preference",
-        "Company has a healthy and well-regarded culture"
-      ],
-      "cons": [
-        "May require additional effort to build AI-enabled workflows",
-        "Line management responsibilities may add to workload"
-      ],
-      "postedAt": "2026-07-17",
-      "firstSeen": "2026-07-25"
-    },
     {
       "hash": "jt2tyh2",
       "company": "TMUS Global Solutions",
@@ -98,29 +74,6 @@
       ],
       "postedAt": "2026-08-02",
       "firstSeen": "2026-08-02"
-    },
-    {
-      "hash": "j1ry8s3m",
-      "company": "TMUS Global Solutions",
-      "title": "Product Owner",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/details/5813411141?utm_medium=api&utm_source=6fcf31f9",
-      "source": "adzuna",
-      "score": 90,
-      "seniorityFit": "good",
-      "verdict": "The job posting matches the candidate's profile well, offering a product ownership role in a regulated fintech environment with potential for end-to-end product ownership.",
-      "pros": [
-        "Location matches the candidate's preference",
-        "Role aligns with the candidate's target roles",
-        "Company operates in a regulated fintech environment",
-        "Potential for end-to-end product ownership"
-      ],
-      "cons": [
-        "Lack of explicit mention of AI-focused products",
-        "Unclear details about the company culture and values"
-      ],
-      "postedAt": "2026-07-24",
-      "firstSeen": "2026-07-25"
     },
     {
       "hash": "jblmsbr",
@@ -375,6 +328,29 @@
       "firstSeen": "2026-08-03"
     },
     {
+      "hash": "jp67e9h",
+      "company": "Oracle",
+      "title": "Principal Product Manager",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5806901739?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 80,
+      "seniorityFit": "good",
+      "verdict": "The job is a good fit due to its focus on product management and the candidate's experience in digital banking and fintech, but may lack the desired AI-focused product aspect.",
+      "pros": [
+        "Principal Product Manager role matches the candidate's target roles",
+        "Location is in Hyderabad, which is one of the candidate's preferred locations",
+        "Oracle is a well-regarded company with a healthy culture",
+        "Role involves end-to-end product ownership"
+      ],
+      "cons": [
+        "Lack of explicit AI-focused product aspect in the job description",
+        "May not be directly related to regulated fintech or digital banking"
+      ],
+      "postedAt": "2026-07-19",
+      "firstSeen": "2026-08-04"
+    },
+    {
       "hash": "jokqib9",
       "company": "UnitedHealth Group",
       "title": "Technical Product Manager",
@@ -442,6 +418,52 @@
       ],
       "postedAt": "2026-08-02",
       "firstSeen": "2026-08-02"
+    },
+    {
+      "hash": "j1oxozu",
+      "company": "r3 Consultant",
+      "title": "Product Manager",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5826314048?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 70,
+      "seniorityFit": "stretch",
+      "verdict": "The job is a potential fit but may not fully utilize the candidate's seniority and experience.",
+      "pros": [
+        "Location matches the candidate's preference",
+        "Involves AI-first products, aligning with the candidate's interests",
+        "Offers end-to-end product ownership"
+      ],
+      "cons": [
+        "Seniority level may be lower than the candidate's current role",
+        "Experience requirement is less than the candidate's years of experience",
+        "No clear indication of a healthy, well-regarded company culture"
+      ],
+      "postedAt": "2026-08-03",
+      "firstSeen": "2026-08-04"
+    },
+    {
+      "hash": "juh8lz6",
+      "company": "UnitedHealth Group",
+      "title": "Product Manager",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5825362956?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 70,
+      "seniorityFit": "stretch",
+      "verdict": "The job is a potential fit, but the seniority level and industry may not perfectly align with the candidate's experience and preferences.",
+      "pros": [
+        "Location matches the candidate's preference",
+        "Job title is one of the target roles",
+        "Company has a healthy and well-regarded culture"
+      ],
+      "cons": [
+        "Industry is healthcare, not fintech or digital banking",
+        "Seniority level may be a stretch, candidate has 7+ years of experience",
+        "Lack of explicit mention of end-to-end product ownership and AI-focused products"
+      ],
+      "postedAt": "2026-08-02",
+      "firstSeen": "2026-08-04"
     },
     {
       "hash": "jzp5udh",

@@ -1,11 +1,11 @@
 {
   "meta": {
-    "lastRun": "2026-08-05",
-    "generatedAt": "2026-08-05T16:57:41.559Z",
+    "lastRun": "2026-08-07",
+    "generatedAt": "2026-08-07T16:13:53.865Z",
     "scanned": 150,
-    "newlyScored": 2,
-    "newMatches": 0,
-    "onBoard": 25
+    "newlyScored": 9,
+    "newMatches": 3,
+    "onBoard": 24
   },
   "jobs": [
     {
@@ -76,27 +76,27 @@
       "firstSeen": "2026-08-02"
     },
     {
-      "hash": "jblmsbr",
-      "company": "The Depository Trust Clearing Corp",
-      "title": "Product Owner Associate Director",
+      "hash": "j1b7kqz0",
+      "company": "Hexagon Capability Center India Private Limited",
+      "title": "Senior Product Owner",
       "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/details/5817916777?utm_medium=api&utm_source=6fcf31f9",
+      "url": "https://www.adzuna.in/details/5831396214?utm_medium=api&utm_source=6fcf31f9",
       "source": "adzuna",
-      "score": 90,
+      "score": 92,
       "seniorityFit": "good",
-      "verdict": "The job is a strong fit due to its alignment with the candidate's experience in regulated fintech and product ownership.",
+      "verdict": "The job posting matches the candidate's profile and preferences, offering a senior product ownership role in a regulated fintech environment with end-to-end product ownership.",
       "pros": [
-        "Location matches the candidate's preference",
-        "Role involves product ownership, which is a key skill of the candidate",
-        "Company operates in the regulated fintech space, aligning with the candidate's domain expertise",
-        "Opportunity for professional development and growth"
+        "Senior Product Owner role matches the candidate's target roles",
+        "Location in Hyderabad aligns with the candidate's preferred locations",
+        "Job description implies genuine end-to-end product ownership",
+        "Regulated fintech environment aligns with the candidate's domain expertise"
       ],
       "cons": [
-        "Title includes 'Associate Director', which may imply some managerial responsibilities beyond pure product ownership",
-        "Lack of explicit mention of AI-focused products or conversational AI, which are areas of interest for the candidate"
+        "Limited information about the company culture and values",
+        "Unclear whether the role involves AI-focused products, a key preference for the candidate"
       ],
-      "postedAt": "2026-07-28",
-      "firstSeen": "2026-07-28"
+      "postedAt": "2026-08-07",
+      "firstSeen": "2026-08-07"
     },
     {
       "hash": "ju6c2cf",
@@ -237,26 +237,27 @@
       "firstSeen": "2026-08-02"
     },
     {
-      "hash": "j1cpt6p3",
-      "company": "Cutshort Lightning",
-      "title": "Senior Product Manager",
+      "hash": "j1ljzn1h",
+      "company": "TMUS Global Solutions",
+      "title": "Sr Product Owner",
       "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/details/5818241920?utm_medium=api&utm_source=6fcf31f9",
+      "url": "https://www.adzuna.in/details/5778688956?utm_medium=api&utm_source=6fcf31f9",
       "source": "adzuna",
       "score": 88,
       "seniorityFit": "good",
-      "verdict": "The job is a strong fit due to its focus on end-to-end product ownership and AI product management, aligning with the candidate's experience and preferences.",
+      "verdict": "The job is a strong fit due to its focus on AI and product ownership in a regulated environment, aligning with the candidate's experience and preferences.",
       "pros": [
         "Location matches the candidate's preference",
-        "Job title and seniority align with the candidate's current role and expectations",
-        "End-to-end product ownership is explicitly mentioned",
-        "AI product management experience is preferred, matching the candidate's skills"
+        "Role involves AI-focused products, aligning with the candidate's interests",
+        "End-to-end product ownership is implied, fitting the candidate's experience",
+        "Regulated environment matches the candidate's background"
       ],
       "cons": [
-        "The job posting mentions HR product management as a preferred experience, which is not directly related to the candidate's background in digital banking and fintech"
+        "Limited information on company culture and values",
+        "Unclear if the role allows for coaching and mentoring, which the candidate values"
       ],
-      "postedAt": "2026-07-28",
-      "firstSeen": "2026-07-28"
+      "postedAt": "2026-06-27",
+      "firstSeen": "2026-08-07"
     },
     {
       "hash": "j18bmhb8",
@@ -466,48 +467,27 @@
       "firstSeen": "2026-08-04"
     },
     {
-      "hash": "j1ygaao6",
-      "company": "Freshworks",
-      "title": "Staff Product Manager",
+      "hash": "j2rdp5f",
+      "company": "UnitedHealth Group",
+      "title": "Product Manager - Product Management, Data Science/Machine Learning/Cloud",
       "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/details/5817217244?utm_medium=api&utm_source=6fcf31f9",
+      "url": "https://www.adzuna.in/details/5796583840?utm_medium=api&utm_source=6fcf31f9",
       "source": "adzuna",
-      "score": 60,
+      "score": 70,
       "seniorityFit": "stretch",
-      "verdict": "The role is a partial match due to the domain mismatch and potential lack of end-to-end product ownership.",
+      "verdict": "The job is a potential fit due to its focus on product management and data science, but may not fully align with the candidate's seniority and desire for end-to-end product ownership.",
       "pros": [
         "Location matches the candidate's preference",
-        "Senior role with potential for leadership"
+        "Involvement in data science and machine learning aligns with the candidate's AI-focused interests",
+        "Company culture values inclusion and career development"
       ],
       "cons": [
-        "Domain mismatch: ITSM vs digital banking/fintech",
-        "Unclear extent of end-to-end product ownership",
-        "Lack of explicit AI product focus"
+        "Job title is 'Product Manager' which may not fully reflect the candidate's seniority",
+        "Lack of explicit mention of end-to-end product ownership and regulated fintech environment",
+        "Unclear if the role involves genuine product ownership beyond project management"
       ],
-      "postedAt": "2026-07-27",
-      "firstSeen": "2026-07-27"
-    },
-    {
-      "hash": "jkemadr",
-      "company": "Ideagen",
-      "title": "Technical Product Owner L1",
-      "location": "Kyasaram, Hyderabad",
-      "url": "https://www.adzuna.in/details/5806895714?utm_medium=api&utm_source=6fcf31f9",
-      "source": "adzuna",
-      "score": 60,
-      "seniorityFit": "mismatch",
-      "verdict": "The job posting does not match the candidate's seniority level and lacks clear indications of end-to-end product ownership.",
-      "pros": [
-        "Location matches the candidate's preference",
-        "Involvement in Agile development team"
-      ],
-      "cons": [
-        "Seniority level may be lower than the candidate's current role",
-        "Lack of clear information on end-to-end product ownership",
-        "No mention of AI-focused products or regulated fintech/digital banking"
-      ],
-      "postedAt": "2026-07-19",
-      "firstSeen": "2026-07-27"
+      "postedAt": "2026-07-11",
+      "firstSeen": "2026-08-07"
     },
     {
       "hash": "j1cz70l7",

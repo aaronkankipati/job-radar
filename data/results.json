@@ -1,11 +1,11 @@
 {
   "meta": {
-    "lastRun": "2026-08-12",
-    "generatedAt": "2026-08-12T16:15:34.169Z",
+    "lastRun": "2026-08-13",
+    "generatedAt": "2026-08-13T16:15:02.165Z",
     "scanned": 150,
-    "newlyScored": 15,
-    "newMatches": 7,
-    "onBoard": 21
+    "newlyScored": 11,
+    "newMatches": 4,
+    "onBoard": 24
   },
   "jobs": [
     {
@@ -102,6 +102,29 @@
       "firstSeen": "2026-08-12"
     },
     {
+      "hash": "j53emvf",
+      "company": "Google",
+      "title": "Senior Product Manager, AI Garage",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5840376009?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 90,
+      "seniorityFit": "good",
+      "verdict": "The job is a strong fit due to its focus on AI and product management, aligning with the candidate's experience and interests.",
+      "pros": [
+        "Location matches the candidate's preference",
+        "Role involves end-to-end product ownership",
+        "Company culture is healthy and well-regarded",
+        "AI-focused product management aligns with candidate's skills and interests"
+      ],
+      "cons": [
+        "Candidate has 7 years of experience, while the job requires 8 years",
+        "Some aspects of the job may involve HR product management, which is not explicitly mentioned in the candidate's profile"
+      ],
+      "postedAt": "2026-08-13",
+      "firstSeen": "2026-08-13"
+    },
+    {
       "hash": "j1ljzn1h",
       "company": "TMUS Global Solutions",
       "title": "Sr Product Owner",
@@ -146,29 +169,6 @@
       ],
       "postedAt": "2026-08-10",
       "firstSeen": "2026-08-10"
-    },
-    {
-      "hash": "jmtavpl",
-      "company": "Monster - xshruthix",
-      "title": "Product Manager",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/details/5826269114?utm_medium=api&utm_source=6fcf31f9",
-      "source": "adzuna",
-      "score": 80,
-      "seniorityFit": "good",
-      "verdict": "The job matches the candidate's target roles and location, but lacks explicit mention of AI-focused products or regulated fintech environment.",
-      "pros": [
-        "Location matches candidate's preference",
-        "Job title matches candidate's target roles",
-        "Involves strategic planning and execution, which aligns with candidate's experience"
-      ],
-      "cons": [
-        "Lack of explicit mention of AI-focused products",
-        "No clear indication of regulated fintech environment",
-        "Unclear extent of end-to-end product ownership"
-      ],
-      "postedAt": "2026-08-03",
-      "firstSeen": "2026-08-03"
     },
     {
       "hash": "jp67e9h",
@@ -283,6 +283,28 @@
       ],
       "postedAt": "2026-08-12",
       "firstSeen": "2026-08-12"
+    },
+    {
+      "hash": "j1oi8wfj",
+      "company": "Oracle",
+      "title": "Principal Product Manager",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5807492731?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 80,
+      "seniorityFit": "good",
+      "verdict": "The job is a good fit due to the senior role and location match, but may lack the desired end-to-end product ownership in regulated fintech/digital banking.",
+      "pros": [
+        "Principal Product Manager role matches the candidate's target roles",
+        "Location is Hyderabad, which is one of the candidate's preferred locations",
+        "Involves AI-assisted development, aligning with the candidate's AI product building experience"
+      ],
+      "cons": [
+        "Lack of explicit mention of regulated fintech/digital banking, which is the candidate's preferred domain",
+        "Unclear extent of end-to-end product ownership, which is crucial for the candidate"
+      ],
+      "postedAt": "2026-07-20",
+      "firstSeen": "2026-08-13"
     },
     {
       "hash": "j1oxozu",
@@ -400,6 +422,29 @@
       "firstSeen": "2026-08-12"
     },
     {
+      "hash": "j8sruyv",
+      "company": "Reputation",
+      "title": "Product Manager",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5839099592?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 70,
+      "seniorityFit": "stretch",
+      "verdict": "The job is a potential fit, but the company and role may not fully leverage the candidate's seniority and experience in regulated fintech environments.",
+      "pros": [
+        "Location matches the candidate's preference",
+        "Involves AI-powered products, aligning with the candidate's interests",
+        "Product management role with potential for end-to-end ownership"
+      ],
+      "cons": [
+        "Lack of explicit mention of regulated environment or fintech focus",
+        "Unclear if the role offers genuine end-to-end product ownership",
+        "Seniority level may not be fully utilized in this position"
+      ],
+      "postedAt": "2026-08-13",
+      "firstSeen": "2026-08-13"
+    },
+    {
       "hash": "j1gz9w6d",
       "company": "Salesforce",
       "title": "Senior Product Manager - Tableau",
@@ -486,6 +531,28 @@
       ],
       "postedAt": "2026-08-12",
       "firstSeen": "2026-08-12"
+    },
+    {
+      "hash": "j43zh0j",
+      "company": "Cornerstone OnDemand",
+      "title": "Manager, Product Management",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5840387536?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 60,
+      "seniorityFit": "mismatch",
+      "verdict": "The job posting does not perfectly align with the candidate's seniority and domain expertise.",
+      "pros": [
+        "Location matches the candidate's preference",
+        "Product management role which is one of the target roles"
+      ],
+      "cons": [
+        "Seniority level may not match the candidate's expectation",
+        "Domain expertise in HR technology may not align with the candidate's experience in digital banking and fintech",
+        "Lack of clear information on end-to-end product ownership and AI-focused products"
+      ],
+      "postedAt": "2026-08-13",
+      "firstSeen": "2026-08-13"
     }
   ]
 }

@@ -1,11 +1,11 @@
 {
   "meta": {
-    "lastRun": "2026-08-13",
-    "generatedAt": "2026-08-13T16:15:02.165Z",
+    "lastRun": "2026-08-14",
+    "generatedAt": "2026-08-14T16:11:58.211Z",
     "scanned": 150,
-    "newlyScored": 11,
-    "newMatches": 4,
-    "onBoard": 24
+    "newlyScored": 15,
+    "newMatches": 1,
+    "onBoard": 22
   },
   "jobs": [
     {
@@ -102,6 +102,29 @@
       "firstSeen": "2026-08-12"
     },
     {
+      "hash": "jaarzru",
+      "company": "Google",
+      "title": "Senior Product Manager, AI Garage",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5841420180?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 92,
+      "seniorityFit": "good",
+      "verdict": "The job is a strong fit due to its focus on AI and product management, aligning with the candidate's experience and interests.",
+      "pros": [
+        "AI-focused product role aligns with candidate's experience and interests",
+        "Location in Hyderabad matches candidate's preference",
+        "Google is a well-regarded company with a healthy culture",
+        "Role involves end-to-end product ownership and technical decision making"
+      ],
+      "cons": [
+        "Candidate has 7 years of experience, while the job requires 8 years",
+        "Unclear if the role allows for coaching and mentoring, which the candidate values"
+      ],
+      "postedAt": "2026-08-14",
+      "firstSeen": "2026-08-14"
+    },
+    {
       "hash": "j53emvf",
       "company": "Google",
       "title": "Senior Product Manager, AI Garage",
@@ -169,29 +192,6 @@
       ],
       "postedAt": "2026-08-10",
       "firstSeen": "2026-08-10"
-    },
-    {
-      "hash": "jp67e9h",
-      "company": "Oracle",
-      "title": "Principal Product Manager",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/details/5806901739?utm_medium=api&utm_source=6fcf31f9",
-      "source": "adzuna",
-      "score": 80,
-      "seniorityFit": "good",
-      "verdict": "The job is a good fit due to its focus on product management and the candidate's experience in digital banking and fintech, but may lack the desired AI-focused product aspect.",
-      "pros": [
-        "Principal Product Manager role matches the candidate's target roles",
-        "Location is in Hyderabad, which is one of the candidate's preferred locations",
-        "Oracle is a well-regarded company with a healthy culture",
-        "Role involves end-to-end product ownership"
-      ],
-      "cons": [
-        "Lack of explicit AI-focused product aspect in the job description",
-        "May not be directly related to regulated fintech or digital banking"
-      ],
-      "postedAt": "2026-07-19",
-      "firstSeen": "2026-08-04"
     },
     {
       "hash": "j1vynbzi",
@@ -305,52 +305,6 @@
       ],
       "postedAt": "2026-07-20",
       "firstSeen": "2026-08-13"
-    },
-    {
-      "hash": "j1oxozu",
-      "company": "r3 Consultant",
-      "title": "Product Manager",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/details/5826314048?utm_medium=api&utm_source=6fcf31f9",
-      "source": "adzuna",
-      "score": 70,
-      "seniorityFit": "stretch",
-      "verdict": "The job is a potential fit but may not fully utilize the candidate's seniority and experience.",
-      "pros": [
-        "Location matches the candidate's preference",
-        "Involves AI-first products, aligning with the candidate's interests",
-        "Offers end-to-end product ownership"
-      ],
-      "cons": [
-        "Seniority level may be lower than the candidate's current role",
-        "Experience requirement is less than the candidate's years of experience",
-        "No clear indication of a healthy, well-regarded company culture"
-      ],
-      "postedAt": "2026-08-03",
-      "firstSeen": "2026-08-04"
-    },
-    {
-      "hash": "juh8lz6",
-      "company": "UnitedHealth Group",
-      "title": "Product Manager",
-      "location": "Hyderabad, Telangana",
-      "url": "https://www.adzuna.in/details/5825362956?utm_medium=api&utm_source=6fcf31f9",
-      "source": "adzuna",
-      "score": 70,
-      "seniorityFit": "stretch",
-      "verdict": "The job is a potential fit, but the seniority level and industry may not perfectly align with the candidate's experience and preferences.",
-      "pros": [
-        "Location matches the candidate's preference",
-        "Job title is one of the target roles",
-        "Company has a healthy and well-regarded culture"
-      ],
-      "cons": [
-        "Industry is healthcare, not fintech or digital banking",
-        "Seniority level may be a stretch, candidate has 7+ years of experience",
-        "Lack of explicit mention of end-to-end product ownership and AI-focused products"
-      ],
-      "postedAt": "2026-08-02",
-      "firstSeen": "2026-08-04"
     },
     {
       "hash": "j2rdp5f",

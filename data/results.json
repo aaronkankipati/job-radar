@@ -1,11 +1,11 @@
 {
   "meta": {
-    "lastRun": "2026-08-14",
-    "generatedAt": "2026-08-14T16:11:58.211Z",
+    "lastRun": "2026-08-15",
+    "generatedAt": "2026-08-15T15:42:04.574Z",
     "scanned": 150,
-    "newlyScored": 15,
-    "newMatches": 1,
-    "onBoard": 22
+    "newlyScored": 9,
+    "newMatches": 3,
+    "onBoard": 25
   },
   "jobs": [
     {
@@ -307,6 +307,29 @@
       "firstSeen": "2026-08-13"
     },
     {
+      "hash": "j1n5bc9b",
+      "company": "TMUS Global Solutions",
+      "title": "Sr Product Owner",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5837789240?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 80,
+      "seniorityFit": "good",
+      "verdict": "The job matches the candidate's experience and skills, but may lack genuine end-to-end product ownership.",
+      "pros": [
+        "Location matches the candidate's preference",
+        "Role title matches the candidate's target roles",
+        "Job description mentions product ownership and mentorship",
+        "Regulated environment is implied, aligning with the candidate's experience"
+      ],
+      "cons": [
+        "Job description focuses on integration requests and validation, which may not be full product ownership",
+        "Mentorship and support roles may indicate less autonomy than the candidate prefers"
+      ],
+      "postedAt": "2026-08-12",
+      "firstSeen": "2026-08-15"
+    },
+    {
       "hash": "j2rdp5f",
       "company": "UnitedHealth Group",
       "title": "Product Manager - Product Management, Data Science/Machine Learning/Cloud",
@@ -507,6 +530,50 @@
       ],
       "postedAt": "2026-08-13",
       "firstSeen": "2026-08-13"
+    },
+    {
+      "hash": "j1dws3u3",
+      "company": "Inspire Brands Hyderabad Support Center",
+      "title": "Data Product Manager",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5842747258?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 60,
+      "seniorityFit": "mismatch",
+      "verdict": "The job posting does not explicitly mention regulated fintech or digital banking, and the title Data Product Manager may not fully align with the candidate's seniority and experience.",
+      "pros": [
+        "Location matches the candidate's preference",
+        "Product management role which aligns with the candidate's skills"
+      ],
+      "cons": [
+        "Lack of explicit mention of regulated fintech or digital banking",
+        "Seniority level may not match the candidate's 7+ years of experience",
+        "Unclear if the role offers genuine end-to-end product ownership"
+      ],
+      "postedAt": "2026-08-15",
+      "firstSeen": "2026-08-15"
+    },
+    {
+      "hash": "j18doww",
+      "company": "TJX India",
+      "title": "Staff Product Owner",
+      "location": "Hyderabad, Telangana",
+      "url": "https://www.adzuna.in/details/5839570009?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna",
+      "score": 60,
+      "seniorityFit": "mismatch",
+      "verdict": "The job posting does not fit the candidate's seniority level and desired role.",
+      "pros": [
+        "Location matches the candidate's preference",
+        "Company has a strong reputation"
+      ],
+      "cons": [
+        "Seniority level of the job posting is lower than the candidate's current role",
+        "Job description lacks details on end-to-end product ownership and AI-focused products",
+        "Company's industry does not align with the candidate's preferred domain of fintech or digital banking"
+      ],
+      "postedAt": "2026-08-13",
+      "firstSeen": "2026-08-15"
     }
   ]
 }

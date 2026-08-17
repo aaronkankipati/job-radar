@@ -1,70 +1,75 @@
 {
-  "generatedAt": "2026-08-16",
+  "generatedAt": "sample",
   "trends": [
     {
-      "label": "AI in Fintech",
-      "detail": "The integration of AI in fintech is on the rise, with companies like Paytm and PhonePe leveraging AI for personalized customer experiences. This trend matters for the candidate as it highlights the growing need for AI product managers in the Indian fintech sector."
+      "label": "AI-native banking PM demand up",
+      "detail": "UK and Singapore fintechs are prioritising PMs who can work alongside LLM pipelines, not just manage roadmaps. Candidates with shipped AI products (even personal ones) are advancing further in rounds."
     },
     {
-      "label": "Digital Banking",
-      "detail": "Digital banking is becoming increasingly popular in India, driven by the government's push for digitalization and the COVID-19 pandemic. This trend is crucial for the candidate as it emphasizes the importance of digital banking expertise in product management roles."
+      "label": "Core banking migration roles proliferating",
+      "detail": "Legacy-to-cloud core banking migrations are accelerating across European and APAC banks. PMs with direct migration ownership — not just adjacent programme management — are in short supply."
     },
     {
-      "label": "Conversational AI",
-      "detail": "Conversational AI is gaining traction in the Indian market, with companies like HDFC Bank and ICICI Bank using chatbots to enhance customer service. This trend is significant for the candidate as it underscores the need for conversational AI skills in product management."
-    },
-    {
-      "label": "Core Banking Migration",
-      "detail": "Core banking migration is a significant trend in the Indian banking sector, with banks like SBI and Axis Bank migrating to new core banking systems. This trend matters for the candidate as it highlights the need for product managers with expertise in core banking migration."
-    },
-    {
-      "label": "Regulatory Compliance",
-      "detail": "Regulatory compliance is a critical aspect of product management in the fintech sector, with regulations like RBI's Digital Lending Guidelines and GDPR impacting product development. This trend is essential for the candidate as it emphasizes the importance of regulatory compliance expertise in product management roles."
-    }
-  ],
-  "certifications": [
-    {
-      "name": "Certified Product Manager (CPM)",
-      "provider": "Association of International Product Marketing and Management (AIPMM)",
-      "why": "The CPM certification is valued by hiring managers as it demonstrates expertise in product management, and is particularly relevant for senior product professionals in the Indian market."
-    },
-    {
-      "name": "Certified Scrum Master (CSM)",
-      "provider": "Scrum Alliance",
-      "why": "The CSM certification is highly regarded in the industry, and is essential for product managers who want to demonstrate their expertise in Scrum framework and Agile methodologies."
-    },
-    {
-      "name": "Certified Information Systems Security Professional (CISSP)",
-      "provider": "International Information Systems Security Certification Consortium (ISC)²",
-      "why": "The CISSP certification is crucial for product managers in the fintech sector, as it demonstrates expertise in information security and regulatory compliance."
-    },
-    {
-      "name": "Certified Data Scientist (CDS)",
-      "provider": "Data Science Council of America (DASCA)",
-      "why": "The CDS certification is highly valued by hiring managers, as it demonstrates expertise in data science and AI, and is particularly relevant for product managers in the AI product space."
-    },
-    {
-      "name": "Certified Fintech Professional (CFP)",
-      "provider": "Fintech Association of India",
-      "why": "The CFP certification is a relatively new certification that is gaining traction in the Indian market, and demonstrates expertise in fintech and digital payments."
+      "label": "Regulated fintech overtaking pure tech PM hiring",
+      "detail": "Post-2024 macro environment has shifted hiring toward fintechs operating under banking licences. Change governance and compliance experience is now a differentiator, not a liability."
     }
   ],
   "news": [
     {
-      "headline": "RBI Launches Digital Rupee",
-      "summary": "The Reserve Bank of India (RBI) has launched the Digital Rupee, a central bank digital currency (CBDC) that aims to promote digital payments and financial inclusion. This development is significant for product managers in the fintech sector, as it highlights the growing importance of digital payments and CBDCs in the Indian market."
+      "headline": "UK Skilled Worker visa salary threshold raised",
+      "summary": "The minimum salary for Skilled Worker visa sponsorship in the UK was raised to £38,700 in 2024. Senior PM roles typically clear this threshold comfortably, making the route accessible for Indian candidates with 7+ years experience."
     },
     {
-      "headline": "Paytm Expands AI-Powered Lending",
-      "summary": "Paytm has expanded its AI-powered lending platform, which uses machine learning algorithms to provide personalized loan offers to customers. This development is relevant for product managers in the AI product space, as it demonstrates the growing use of AI in lending and credit scoring."
+      "headline": "Singapore MAS fast-tracking fintech talent visas",
+      "summary": "MAS expanded the Tech.Pass and Employment Pass schemes for senior fintech professionals, with processing times now under 3 weeks for applicants with demonstrable product track records."
     },
     {
-      "headline": "Google Launches AI-Powered Banking",
-      "summary": "Google has launched an AI-powered banking platform in partnership with several Indian banks, which aims to provide personalized banking services to customers. This development is significant for product managers in the fintech sector, as it highlights the growing importance of AI in banking and financial services."
+      "headline": "Australia PR pathway eased for fintech PMs",
+      "summary": "Senior Product Manager is on Australia's Skills in Demand list, enabling employer-sponsored 482 visas with a direct pathway to permanent residence for Indian nationals with relevant banking experience."
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Cloud Practitioner",
+      "provider": "Amazon Web Services",
+      "why": "Cloud-native architecture language is expected in core banking migration roles in UK and German banks — this cert signals you speak the same language as the engineering team."
     },
     {
-      "headline": "PhonePe Acquires AI Startup",
-      "summary": "PhonePe has acquired an AI startup that specializes in conversational AI and chatbots, which will be used to enhance customer service and provide personalized experiences to customers. This development is relevant for product managers in the AI product space, as it demonstrates the growing use of AI in customer service and support."
+      "name": "SAFe 6 Product Owner / Product Manager",
+      "provider": "Scaled Agile",
+      "why": "SAFe certification is explicitly listed in a large proportion of senior PM JDs at UK and Australian banks. Takes 2 days and directly addresses the 'scaled agile' requirement many JDs carry."
+    },
+    {
+      "name": "PMP (Project Management Professional)",
+      "provider": "PMI",
+      "why": "PMP is visa-adjacent: immigration points-based systems in Australia and Canada award points for internationally recognised professional certifications."
+    }
+  ],
+  "visaIntel": [
+    {
+      "country": "United Kingdom",
+      "trend": "Skilled Worker visa is the primary route. Senior PM roles at banks and fintechs typically clear the £38,700 salary threshold. Companies with Sponsor Licences are searchable on the UK Home Office register.",
+      "topSponsors": ["HSBC", "Revolut", "Monzo", "Barclays", "NatWest", "Lloyds", "Starling Bank", "OakNorth"]
+    },
+    {
+      "country": "Singapore",
+      "trend": "Employment Pass (EP) is accessible for senior product professionals with 7+ years. MAS-regulated fintechs and regional HQ banks are the most active sponsors. Tech.Pass is an alternative for independent builders.",
+      "topSponsors": ["GovTech", "Grab Financial", "Sea Group", "DBS Bank", "Standard Chartered", "Wise"]
+    },
+    {
+      "country": "Germany",
+      "trend": "EU Blue Card is the primary route — requires a recognised degree and a salary above ~€58k. German is not required for most tech PM roles at international companies. Berlin and Munich are the strongest markets.",
+      "topSponsors": ["N26", "Trade Republic", "SAP", "Celonis", "ING Germany", "Deutsche Bank Tech"]
+    },
+    {
+      "country": "Australia",
+      "trend": "Employer-Sponsored 482 visa (Skills in Demand) is the entry route. Senior PM is on the skills list. PR pathway is a clear 2-year trajectory for most sponsored hires. Sydney and Melbourne are the main hiring hubs.",
+      "topSponsors": ["CommBank", "ANZ", "NAB", "Afterpay", "Airwallex", "Macquarie"]
+    },
+    {
+      "country": "USA",
+      "trend": "H-1B is a lottery — low odds for 2025/26 cycle. L-1 (intracompany transfer) or O-1A (extraordinary ability) are more reliable routes for senior candidates. Large banks and established fintechs are more reliable sponsors.",
+      "topSponsors": ["JP Morgan", "Goldman Sachs", "Stripe", "Plaid", "Block", "Wells Fargo (transfer)"]
     }
   ]
 }

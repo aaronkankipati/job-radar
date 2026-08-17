@@ -1,11 +1,609 @@
 {
   "meta": {
     "lastRun": "2026-08-17",
-    "generatedAt": "2026-08-17T10:01:05.128Z",
+    "generatedAt": "2026-08-17T10:34:28.808Z",
     "scanned": 400,
-    "newlyScored": 0,
-    "newMatches": 0,
-    "onBoard": 0
+    "newlyScored": 23,
+    "newMatches": 23,
+    "onBoard": 23
   },
-  "jobs": []
+  "jobs": [
+    {
+      "hash": "86ce2cbe112e",
+      "company": "Westpac Group",
+      "title": "Product Owner",
+      "location": "The Rocks, Sydney",
+      "country": "Australia",
+      "url": "https://www.adzuna.com.au/details/5841064825?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna-au",
+      "score": 75,
+      "seniorityFit": "stretch",
+      "verdict": "Good domain fit but location and seniority slightly misaligned for the candidate.",
+      "pros": [
+        "Digital banking domain aligns with candidate’s fintech experience",
+        "Product ownership responsibilities match candidate’s core skill set",
+        "Experience in regulated environments fits Westpac’s compliance focus"
+      ],
+      "cons": [
+        "Role based in Sydney, candidate prefers Hyderabad or remote",
+        "Position likely mid-level, below candidate’s senior/lead level"
+      ],
+      "sponsorshipSignal": "likely",
+      "sponsorshipEvidence": "",
+      "visaType": "",
+      "postedAt": "2026-08-14",
+      "firstSeen": "2026-08-17"
+    },
+    {
+      "hash": "5bd4769a4b72",
+      "company": "Micron",
+      "title": "Senior Product Owner",
+      "location": "Singapore",
+      "country": "Singapore",
+      "url": "https://www.adzuna.sg/details/5843282163?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna-sg",
+      "score": 65,
+      "seniorityFit": "good",
+      "verdict": "Senior Product Owner role aligns with experience but domain differs.",
+      "pros": [
+        "Senior level experience",
+        "Product ownership expertise",
+        "AI product building"
+      ],
+      "cons": [
+        "Domain mismatch",
+        "Location outside Hyderabad"
+      ],
+      "sponsorshipSignal": "likely",
+      "sponsorshipEvidence": "",
+      "visaType": "Singapore Employment Pass",
+      "postedAt": "2026-08-15",
+      "firstSeen": "2026-08-17"
+    },
+    {
+      "hash": "de4491818ad8",
+      "company": "Reputation",
+      "title": "Product Manager",
+      "location": "Hyderabad, Telangana",
+      "country": "India",
+      "url": "https://www.adzuna.in/details/5839099592?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna-in",
+      "score": 90,
+      "seniorityFit": "good",
+      "verdict": "Strong fit for senior product manager role in Hyderabad.",
+      "pros": [
+        "AI product building experience",
+        "Product ownership and backlog management",
+        "Cross-geo Scrum leadership"
+      ],
+      "cons": [
+        "Domain mismatch: banking vs reputation",
+        "No direct reputation or customer feedback experience"
+      ],
+      "sponsorshipSignal": "local",
+      "sponsorshipEvidence": "",
+      "visaType": "",
+      "postedAt": "2026-08-13",
+      "firstSeen": "2026-08-17"
+    },
+    {
+      "hash": "230a07ad0c48",
+      "company": "Techdome",
+      "title": "Technical Product Owner",
+      "location": "Hyderabad, Telangana",
+      "country": "India",
+      "url": "https://www.adzuna.in/details/5825816830?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna-in",
+      "score": 90,
+      "seniorityFit": "good",
+      "verdict": "Excellent match: senior PO with fintech and AI experience fits Techdome's AI-first product ownership in Hyderabad.",
+      "pros": [
+        "AI product building experience",
+        "FinTech domain expertise",
+        "Cross-geo Scrum leadership"
+      ],
+      "cons": [
+        "Limited healthcare domain exposure"
+      ],
+      "sponsorshipSignal": "local",
+      "sponsorshipEvidence": "",
+      "visaType": "",
+      "postedAt": "2026-08-02",
+      "firstSeen": "2026-08-17"
+    },
+    {
+      "hash": "b9be2ab76958",
+      "company": "[x]cube LABS",
+      "title": "Product Manager",
+      "location": "Hyderabad, Telangana",
+      "country": "India",
+      "url": "https://www.adzuna.in/details/3873655842?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna-in",
+      "score": 78,
+      "seniorityFit": "stretch",
+      "verdict": "Good fit but slightly less experience than required.",
+      "pros": [
+        "7+ years product ownership in regulated fintech",
+        "Cross‑geo Scrum leadership and AI product delivery",
+        "Strong backlog and roadmap execution skills"
+      ],
+      "cons": [
+        "Does not meet 8‑year minimum requirement",
+        "Domain focus (core banking migration) may differ from job scope"
+      ],
+      "sponsorshipSignal": "local",
+      "sponsorshipEvidence": "",
+      "visaType": "",
+      "postedAt": "2023-01-25",
+      "firstSeen": "2026-08-17"
+    },
+    {
+      "hash": "16299796359c",
+      "company": "Amgen",
+      "title": "Product Manager",
+      "location": "Hyderabad, Telangana",
+      "country": "India",
+      "url": "https://www.adzuna.in/details/5695268465?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna-in",
+      "score": 78,
+      "seniorityFit": "stretch",
+      "verdict": "Strong AI product ownership, but pharma domain mismatch limits fit.",
+      "pros": [
+        "AI product building experience",
+        "Cross‑geo Scrum leadership",
+        "Regulated environment expertise"
+      ],
+      "cons": [
+        "Pharma/biotech domain unfamiliar",
+        "Senior level may exceed role expectations"
+      ],
+      "sponsorshipSignal": "local",
+      "sponsorshipEvidence": "",
+      "visaType": "",
+      "postedAt": "2026-04-10",
+      "firstSeen": "2026-08-17"
+    },
+    {
+      "hash": "be0785833dff",
+      "company": "Monster - xshruthix",
+      "title": "Product Manager",
+      "location": "Hyderabad, Telangana",
+      "country": "India",
+      "url": "https://www.adzuna.in/details/5826269114?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna-in",
+      "score": 78,
+      "seniorityFit": "good",
+      "verdict": "Standard Product Manager role located in Hyderabad, though job description details remain relatively generic.",
+      "pros": [
+        "Matches target role title and location (Hyderabad)",
+        "Aligns with core product strategy and execution experience",
+        "No relocation needed as candidate is local to Hyderabad"
+      ],
+      "cons": [
+        "Generic job description with few domain-specific details",
+        "Posted via a recruitment agency listing"
+      ],
+      "sponsorshipSignal": "local",
+      "sponsorshipEvidence": "",
+      "visaType": "",
+      "postedAt": "2026-08-03",
+      "firstSeen": "2026-08-17"
+    },
+    {
+      "hash": "235913cf0918",
+      "company": "Talent Pro",
+      "title": "Senior Product Manager",
+      "location": "Hyderabad, Telangana",
+      "country": "India",
+      "url": "https://www.adzuna.in/details/5675801117?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna-in",
+      "score": 78,
+      "seniorityFit": "good",
+      "verdict": "Good fit but lacks early‑stage product experience.",
+      "pros": [
+        "7+ years senior product ownership",
+        "Strong regulated environment and compliance expertise",
+        "AI product building and prompt engineering"
+      ],
+      "cons": [
+        "No explicit early‑stage startup experience",
+        "Domain focus on fintech vs generic B2B"
+      ],
+      "sponsorshipSignal": "local",
+      "sponsorshipEvidence": "",
+      "visaType": "",
+      "postedAt": "2026-03-23",
+      "firstSeen": "2026-08-17"
+    },
+    {
+      "hash": "3d23f53a9d3d",
+      "company": "Publicis Sapient",
+      "title": "Senior Product Manager",
+      "location": "Hyderabad, Telangana",
+      "country": "India",
+      "url": "https://www.adzuna.in/details/5822276302?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna-in",
+      "score": 78,
+      "seniorityFit": "good",
+      "verdict": "Strong fit for senior product role, but domain differs slightly.",
+      "pros": [
+        "7+ years product ownership with end-to-end delivery",
+        "Cross‑geo Scrum leadership and agile expertise",
+        "Experience building AI products and API integrations"
+      ],
+      "cons": [
+        "Job focused on consulting digital products, not banking/fintech",
+        "No explicit consulting or client‑facing experience mentioned"
+      ],
+      "sponsorshipSignal": "local",
+      "sponsorshipEvidence": "",
+      "visaType": "",
+      "postedAt": "2026-07-31",
+      "firstSeen": "2026-08-17"
+    },
+    {
+      "hash": "7ad8f963b404",
+      "company": "Cutshort Lightning",
+      "title": "Senior Product Manager",
+      "location": "Hyderabad, Telangana",
+      "country": "India",
+      "url": "https://www.adzuna.in/details/5818241920?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna-in",
+      "score": 78,
+      "seniorityFit": "good",
+      "verdict": "Strong product ownership fits senior PM role, but slightly below the 8‑year experience requirement.",
+      "pros": [
+        "End‑to‑end product ownership",
+        "AI product building experience",
+        "Cross‑geo Scrum leadership"
+      ],
+      "cons": [
+        "Experience slightly below 8 years",
+        "No explicit HR product experience"
+      ],
+      "sponsorshipSignal": "local",
+      "sponsorshipEvidence": "",
+      "visaType": "",
+      "postedAt": "2026-07-28",
+      "firstSeen": "2026-08-17"
+    },
+    {
+      "hash": "4bf586aef29d",
+      "company": "Cornerstone OnDemand",
+      "title": "Manager, Product Management",
+      "location": "Hyderabad, Telangana",
+      "country": "India",
+      "url": "https://www.adzuna.in/land/ad/5837843555?se=MnML8SWa8RGUiq14ohrRew&utm_medium=api&utm_source=6fcf31f9&v=D33EE479B056605B8AF1F3C74523C0EE0C13A2F6",
+      "source": "adzuna-in",
+      "score": 75,
+      "seniorityFit": "good",
+      "verdict": "Good senior product role in Hyderabad, but domain differs from candidate’s fintech focus.",
+      "pros": [
+        "Senior-level product ownership required",
+        "Hyderabad location matches candidate preference",
+        "Manager role implies product ownership responsibilities"
+      ],
+      "cons": [
+        "HR/learning tech domain not aligned with candidate’s fintech experience",
+        "Limited AI product focus in JD"
+      ],
+      "sponsorshipSignal": "local",
+      "sponsorshipEvidence": "",
+      "visaType": "",
+      "postedAt": "2026-08-12",
+      "firstSeen": "2026-08-17"
+    },
+    {
+      "hash": "b74da28c4359",
+      "company": "r3 Consultant",
+      "title": "Product Manager",
+      "location": "Hyderabad, Telangana",
+      "country": "India",
+      "url": "https://www.adzuna.in/details/5826314048?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna-in",
+      "score": 75,
+      "seniorityFit": "stretch",
+      "verdict": "Senior candidate likely overqualified for mid-level PM role.",
+      "pros": [
+        "AI product ownership experience",
+        "End-to-end product ownership",
+        "Cross-geo Scrum leadership"
+      ],
+      "cons": [
+        "Role seniority lower than candidate's level",
+        "WFO requirement may conflict with remote preference"
+      ],
+      "sponsorshipSignal": "local",
+      "sponsorshipEvidence": "",
+      "visaType": "",
+      "postedAt": "2026-08-03",
+      "firstSeen": "2026-08-17"
+    },
+    {
+      "hash": "0bfa5c082601",
+      "company": "TMUS Global Solutions",
+      "title": "Product Owner",
+      "location": "Hyderabad, Telangana",
+      "country": "India",
+      "url": "https://www.adzuna.in/details/5813411141?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna-in",
+      "score": 75,
+      "seniorityFit": "good",
+      "verdict": "Senior PO with fintech experience fits role, though telecom domain differs.",
+      "pros": [
+        "Strong senior PO and team lead experience",
+        "Cross‑geo Scrum leadership",
+        "AI product building expertise"
+      ],
+      "cons": [
+        "Domain mismatch: telecom vs fintech",
+        "Company not known for telecom product ownership"
+      ],
+      "sponsorshipSignal": "local",
+      "sponsorshipEvidence": "",
+      "visaType": "",
+      "postedAt": "2026-07-24",
+      "firstSeen": "2026-08-17"
+    },
+    {
+      "hash": "e9320e8243b4",
+      "company": "TMUS Global Solutions",
+      "title": "Sr Product Owner",
+      "location": "Hyderabad, Telangana",
+      "country": "India",
+      "url": "https://www.adzuna.in/details/5837789240?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna-in",
+      "score": 75,
+      "seniorityFit": "good",
+      "verdict": "Good fit for senior product ownership, but domain differs from banking/fintech.",
+      "pros": [
+        "Strong senior product ownership and backlog management",
+        "Cross���geo Scrum leadership and mentoring experience",
+        "AI product building and prompt engineering skills"
+      ],
+      "cons": [
+        "Domain mismatch: telecom vs banking/fintech",
+        "Limited exposure to regulated banking environments"
+      ],
+      "sponsorshipSignal": "local",
+      "sponsorshipEvidence": "",
+      "visaType": "",
+      "postedAt": "2026-08-12",
+      "firstSeen": "2026-08-17"
+    },
+    {
+      "hash": "80126728d48a",
+      "company": "Scremer",
+      "title": "Product Manager",
+      "location": "Hyderabad, Telangana",
+      "country": "India",
+      "url": "https://www.adzuna.in/details/4548373015?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna-in",
+      "score": 72,
+      "seniorityFit": "stretch",
+      "verdict": "Good fit for product ownership but seniority slightly above role",
+      "pros": [
+        "Extensive product ownership experience",
+        "Cross‑geo Scrum leadership",
+        "AI product building expertise"
+      ],
+      "cons": [
+        "Senior level may exceed role expectations",
+        "Domain focus on fintech vs analytics"
+      ],
+      "sponsorshipSignal": "local",
+      "sponsorshipEvidence": "",
+      "visaType": "",
+      "postedAt": "2024-01-29",
+      "firstSeen": "2026-08-17"
+    },
+    {
+      "hash": "ea5c597b1ba9",
+      "company": "TJX India",
+      "title": "Staff Product Owner",
+      "location": "Hyderabad, Telangana",
+      "country": "India",
+      "url": "https://www.adzuna.in/details/5839570009?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna-in",
+      "score": 68,
+      "seniorityFit": "good",
+      "verdict": "Senior PO role fits seniority, but domain mismatch with retail tech reduces fit.",
+      "pros": [
+        "Senior PO experience",
+        "Cross-geo Scrum leadership",
+        "AI product building"
+      ],
+      "cons": [
+        "Domain mismatch: retail vs banking",
+        "No explicit AI or fintech focus"
+      ],
+      "sponsorshipSignal": "local",
+      "sponsorshipEvidence": "",
+      "visaType": "",
+      "postedAt": "2026-08-13",
+      "firstSeen": "2026-08-17"
+    },
+    {
+      "hash": "005117e7e679",
+      "company": "IoT Research Labs",
+      "title": "Product Manager",
+      "location": "Hyderabad, Telangana",
+      "country": "India",
+      "url": "https://www.adzuna.in/details/1207726452?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna-in",
+      "score": 65,
+      "seniorityFit": "good",
+      "verdict": "Moderate fit; domain mismatch but product ownership transferable.",
+      "pros": [
+        "7+ years product ownership and leadership",
+        "Strong technical background in cloud and AI",
+        "Experience managing cross‑geo Scrum teams"
+      ],
+      "cons": [
+        "No IoT domain experience",
+        "Job focuses on IoT, mobile, web, cloud architecture"
+      ],
+      "sponsorshipSignal": "local",
+      "sponsorshipEvidence": "",
+      "visaType": "",
+      "postedAt": "2019-07-14",
+      "firstSeen": "2026-08-17"
+    },
+    {
+      "hash": "15c5495fd698",
+      "company": "Freshworks",
+      "title": "Staff Product Manager",
+      "location": "Hyderabad, Telangana",
+      "country": "India",
+      "url": "https://www.adzuna.in/details/5817217244?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna-in",
+      "score": 65,
+      "seniorityFit": "good",
+      "verdict": "Potential fit, but domain mismatch with ITSM product focus.",
+      "pros": [
+        "Extensive product ownership and backlog management",
+        "Cross‑geo Scrum leadership",
+        "Experience in regulated environments"
+      ],
+      "cons": [
+        "Lack of ITSM/enterprise service delivery experience",
+        "Domain shift from fintech to IT service management"
+      ],
+      "sponsorshipSignal": "local",
+      "sponsorshipEvidence": "",
+      "visaType": "",
+      "postedAt": "2026-07-27",
+      "firstSeen": "2026-08-17"
+    },
+    {
+      "hash": "140fc310f14e",
+      "company": "Anaqua",
+      "title": "Product Owner",
+      "location": "Kyasaram, Hyderabad",
+      "country": "India",
+      "url": "https://www.adzuna.in/details/5760434649?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna-in",
+      "score": 65,
+      "seniorityFit": "stretch",
+      "verdict": "Moderate fit; product ownership aligns but domain and seniority mismatch.",
+      "pros": [
+        "Product ownership experience matches role requirements",
+        "Delivery-focused nature suits candidate’s execution background",
+        "Hyderabad location aligns with candidate’s preferred location"
+      ],
+      "cons": [
+        "Domain mismatch: fintech vs platform SaaS",
+        "Senior level candidate may be overqualified for mid-level PO role"
+      ],
+      "sponsorshipSignal": "local",
+      "sponsorshipEvidence": "",
+      "visaType": "",
+      "postedAt": "2026-06-12",
+      "firstSeen": "2026-08-17"
+    },
+    {
+      "hash": "4b7e469b4b02",
+      "company": "GHX",
+      "title": "Product Owner",
+      "location": "Hyderabad, Telangana",
+      "country": "India",
+      "url": "https://www.adzuna.in/details/5844140119?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna-in",
+      "score": 65,
+      "seniorityFit": "stretch",
+      "verdict": "Potential fit but domain mismatch and unclear seniority.",
+      "pros": [
+        "Hyderabad location matches candidate's preference",
+        "Product Owner title aligns with candidate's target roles",
+        "Technical focus may suit candidate's AI product experience"
+      ],
+      "cons": [
+        "Domain likely healthcare supply chain, not digital banking/fintech",
+        "Seniority level unclear, possibly mid-level rather than senior"
+      ],
+      "sponsorshipSignal": "local",
+      "sponsorshipEvidence": "",
+      "visaType": "",
+      "postedAt": "2026-08-16",
+      "firstSeen": "2026-08-17"
+    },
+    {
+      "hash": "dbd14f4e0cdb",
+      "company": "Softobiz Technologies Private limited",
+      "title": "Product Owner",
+      "location": "Hyderabad, Telangana",
+      "country": "India",
+      "url": "https://www.adzuna.in/details/3803195416?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna-in",
+      "score": 65,
+      "seniorityFit": "mismatch",
+      "verdict": "Role lacks fintech focus and senior-level responsibilities.",
+      "pros": [
+        "Backlog management",
+        "Stakeholder engagement",
+        "Risk management"
+      ],
+      "cons": [
+        "No fintech domain",
+        "Unclear seniority"
+      ],
+      "sponsorshipSignal": "local",
+      "sponsorshipEvidence": "",
+      "visaType": "",
+      "postedAt": "2022-12-27",
+      "firstSeen": "2026-08-17"
+    },
+    {
+      "hash": "fcef33d136c6",
+      "company": "Simba Technologies",
+      "title": "Product Owner",
+      "location": "Hyderabad, Telangana",
+      "country": "India",
+      "url": "https://www.adzuna.in/details/5797508817?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna-in",
+      "score": 65,
+      "seniorityFit": "stretch",
+      "verdict": "Senior PO fits role but seniority slightly above",
+      "pros": [
+        "7+ years product ownership",
+        "backlog & release management expertise",
+        "cross‑geo Scrum leadership"
+      ],
+      "cons": [
+        "Role likely mid‑level",
+        "No explicit fintech or regulated domain focus"
+      ],
+      "sponsorshipSignal": "local",
+      "sponsorshipEvidence": "",
+      "visaType": "",
+      "postedAt": "2026-07-12",
+      "firstSeen": "2026-08-17"
+    },
+    {
+      "hash": "e076630556e5",
+      "company": "Techwave Inc",
+      "title": "Product Owner",
+      "location": "Hyderabad, Telangana",
+      "country": "India",
+      "url": "https://www.adzuna.in/details/4987812593?utm_medium=api&utm_source=6fcf31f9",
+      "source": "adzuna-in",
+      "score": 60,
+      "seniorityFit": "stretch",
+      "verdict": "Role requires 9 years, candidate has 7; domain mismatch.",
+      "pros": [
+        "Product ownership experience",
+        "Cross-geo Scrum leadership",
+        "AI product building"
+      ],
+      "cons": [
+        "Less experience than required",
+        "Domain mismatch"
+      ],
+      "sponsorshipSignal": "local",
+      "sponsorshipEvidence": "",
+      "visaType": "",
+      "postedAt": "2024-12-24",
+      "firstSeen": "2026-08-17"
+    }
+  ]
 }

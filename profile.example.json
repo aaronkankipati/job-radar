@@ -1,0 +1,92 @@
+{
+  "_comment": "Paste this entire file (edited) into a GitHub Actions secret called PROFILE_JSON. It stays out of the public repo. Locally, copy to profile.json — it is gitignored.",
+  "profile": {
+    "name": "Aaron Kankipati",
+    "currentRole": "Senior Digital Product Manager, Wells Fargo (Hyderabad)",
+    "yearsExperience": 7,
+    "portfolio": "https://aaronkankipati.netlify.app/",
+    "summary": "Senior Digital Product Manager with 7 years in digital banking and fintech. Currently leading core banking migration at Wells Fargo — improved platform availability from 99.9% to 99.999%, cutting downtime from 8.7 hours/year to under 6 minutes. Previously owned the Small Business Digital Deposit Application end-to-end: cut onboarding from 18 to 9 minutes, achieved 66.5% fully digital completion rate. Earlier delivered a COVID-era loan origination platform that disbursed ₹500 crore (~$60M) in its first year. Strong in regulated environments: change governance, release management, compliance, business readiness. Has independently shipped 4 live apps to Google Play and the web — including a monetised film recommender (Claude API + Play Billing + subscriptions), an autonomous trading simulator, a children's learning app (106 illustrated lessons, offline-first, Play Families certified), and a mobile arcade game (600+ assertion test suite).",
+    "domains": [
+      "digital banking",
+      "fintech",
+      "core banking migration",
+      "legacy modernisation",
+      "digital onboarding",
+      "KYC / loan origination",
+      "conversational AI",
+      "WhatsApp bots / IVR",
+      "regulated environments"
+    ],
+    "skills": [
+      "product ownership",
+      "backlog management",
+      "user story definition",
+      "acceptance criteria",
+      "roadmap contribution",
+      "cross-geo Scrum leadership",
+      "change governance",
+      "release management",
+      "UAT",
+      "Jira",
+      "AI product building",
+      "prompt engineering",
+      "LLM integration (Claude API)",
+      "React Native",
+      "JavaScript",
+      "serverless (Cloudflare Workers)",
+      "REST APIs and webhooks",
+      "Google Play (Billing, Families compliance)",
+      "Salesforce",
+      "test automation",
+      "production debugging"
+    ],
+    "achievements": [
+      "Platform availability 99.9% → 99.999%, downtime 8.7hr/yr → under 6 min (Wells Fargo core banking)",
+      "Onboarding time halved 18 min → 9 min, 66.5% fully digital completion (Wells Fargo Small Business Deposit App)",
+      "J.D. Power Small Business Banking mobile app ranking #5 → #2 during tenure",
+      "₹500 crore (~$60M) disbursed in year 1 (COVID-era loan origination platform, Piramal Finance)",
+      "WhatsApp bot: 60% lead conversion rate, 30% loan disbursement rate (IDFC First Bank)",
+      "KYC turnaround reduced to under 3 minutes via automation (Piramal Finance)",
+      "4 apps independently shipped: Moodfilm (Android + PWA, monetised), Neon Bull (autonomous trading), Little Disciples (children's learning, Play Families), Trap Tap (arcade game)",
+      "Wells Fargo Spotlight Award — Small Business Deposit Application launch",
+      "Disha Champions of Change Award — Loan Onboarding Platform launch"
+    ],
+    "seniority": "Senior / AVP / Lead level, 7+ years. NOT interested in junior, associate, intern, graduate, or entry-level roles."
+  },
+  "preferences": {
+    "targetRoles": [
+      "Product Manager",
+      "Senior Product Manager",
+      "Product Owner",
+      "Senior Product Owner",
+      "AI Product Manager",
+      "AI Product Lead",
+      "Product Lead",
+      "Principal Product Manager",
+      "Group Product Manager",
+      "VP Product",
+      "VP of Product"
+    ],
+    "locations": [
+      "Hyderabad",
+      "Remote",
+      "United Kingdom",
+      "Singapore",
+      "Germany",
+      "Australia",
+      "USA"
+    ],
+    "values": "Prefers regulated fintech / digital banking, genuine end-to-end product ownership, AI-focused products, and companies with a healthy culture. Values coaching, mentoring, and clear product accountability. Open to any domain for international sponsored roles.",
+    "dealbreakers": "Pure delivery / project-management-only roles with no product ownership; heavy sales roles; junior or associate titles."
+  },
+  "visaProfile": {
+    "nationality": "Indian",
+    "currentLocation": "Hyderabad, India",
+    "willingToRelocate": true,
+    "visaHistory": [],
+    "targetCountries": ["United Kingdom", "Singapore", "Germany", "Australia", "USA"],
+    "timeline": "3-6 months",
+    "minSponsorshipSignal": "likely",
+    "notes": "No existing visa history. Full relocation acceptable. Prioritise confirmed and likely sponsors. Local Hyderabad roles also of interest."
+  }
+}

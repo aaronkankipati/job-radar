@@ -439,10 +439,10 @@ Seniority: "good" = correct level, "stretch" = slightly above/below, "mismatch" 
 
 async function scoreWithGemini(systemPrompt, userPrompt) {
   if (!GEMINI_KEY) throw new Error('No Gemini key');
-  // Use gemini-2.0-flash as the stable free-tier model; override with GEMINI_MODEL secret if set
-  const model = (GEMINI_MODEL && GEMINI_MODEL !== 'gemini-2.5-flash')
+  // gemini-3.6-flash is current stable model (2.0-flash deprecated Aug 2026)
+  const model = (GEMINI_MODEL && !['gemini-2.5-flash','gemini-2.0-flash','gemini-3.6-flash'].includes(GEMINI_MODEL))
     ? GEMINI_MODEL
-    : 'gemini-2.0-flash';
+    : 'gemini-3.6-flash';
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${GEMINI_KEY}`;
   const res = await httpsPost(url, {
     system_instruction: { parts: [{ text: systemPrompt }] },
@@ -459,8 +459,8 @@ async function scoreWithGemini(systemPrompt, userPrompt) {
 
 async function scoreWithGroq(systemPrompt, userPrompt) {
   if (!GROQ_KEY) throw new Error('No Groq key');
-  // llama-3.3-70b-versatile was deprecated — use llama-3.1-8b-instant as stable fallback
-  const model = 'llama-3.1-8b-instant';
+  // llama-3.1-8b-instant deprecated June 2026; use openai/gpt-oss-20b
+  const model = 'openai/gpt-oss-20b';
   const res = await httpsPost('https://api.groq.com/openai/v1/chat/completions', {
     model,
     messages: [
@@ -493,81 +493,20 @@ async function scoreJob(job) {
   }
 }
 
-// ─── LLM: insights brief ─────────────────────────────────────────────────────
-
-async function generateInsights(scoredJobs) {
-  const vp = profile.visaProfile || {};
-  const countries = (vp.targetCountries || []).join(', ');
-  const topJobs = scoredJobs.slice(0, 5).map(j =>
-    `- ${j.title} at ${j.company} (${j.location}, score: ${j.score}, sponsorship: ${j.sponsorshipSignal})`
-  ).join('\n');
-
-  const prompt = `You are a career intelligence analyst for a senior product manager from India actively seeking visa-sponsored roles in ${countries}.
-
-Candidate: ${profile.profile.name}, ${profile.profile.yearsExperience} years, digital banking and fintech PM, also independently shipped 4 Android/web apps.
-
-Today's top matched roles:
-${topJobs || 'No roles scored yet.'}
-
-Generate a JSON insights brief with this exact structure (no markdown, no preamble):
-{
-  "generatedAt": "${today()}",
-  "trends": [
-    { "label": "<short trend name>", "detail": "<2 sentences, specific and actionable>" },
-    { "label": "...", "detail": "..." },
-    { "label": "...", "detail": "..." }
-  ],
-  "news": [
-    { "headline": "<punchy headline>", "summary": "<1-2 sentences relevant to this candidate>" },
-    { "headline": "...", "summary": "..." },
-    { "headline": "...", "summary": "..." }
-  ],
-  "certifications": [
-    { "name": "<cert name>", "provider": "<provider>", "why": "<1 sentence why relevant for visa-sponsored PM roles>" },
-    { "name": "...", "provider": "...", "why": "..." },
-    { "name": "...", "provider": "...", "why": "..." }
-  ],
-  "visaIntel": [
-    { "country": "<country>", "trend": "<1 sentence on PM hiring + visa climate>", "topSponsors": ["<company>", "<company>", "<company>"] },
-    { "country": "...", "trend": "...", "topSponsors": [] }
-  ]
-}
-
-Rules:
-- trends: focus on PM job market in ${countries}, AI product roles, fintech hiring
-- news: hiring trends, visa policy changes, notable company expansions into target countries
-- certifications: prioritise those that help with visa applications (e.g. AWS, PMP, SAFE) or AI product roles
-- visaIntel: one entry per target country, name real companies known to sponsor Indian PMs
-- Be specific, not generic. Avoid filler sentences.`;
-
-  const insightsSystem = 'You are a career intelligence analyst. Return ONLY valid JSON, no markdown, no preamble.';
-  try {
-    const raw = await scoreWithGemini(insightsSystem, prompt);
-    return raw;
-  } catch (e) {
-    log('Insights Gemini failed, trying Groq:', e.message);
-    try {
-      return await scoreWithGroq(insightsSystem, prompt);
-    } catch (e2) {
-      log('Insights generation failed:', e2.message);
-      return null;
-    }
-  }
-}
-
 // ─── Load existing board ──────────────────────────────────────────────────────
 
 function loadExistingJobs() {
-  if (!fs.existsSync(RESULTS_PATH)) return [];
+  if (!fs.existsSync(RESULTS_PATH)) return { regular: [], starred: [] };
   try {
     const data = JSON.parse(fs.readFileSync(RESULTS_PATH, 'utf8'));
-    // Drop sample rows and expired rows
     const retention = config.matching.retentionDays || 10;
     const cutoff = new Date(Date.now() - retention * 86400000).toISOString().slice(0, 10);
-    return (data.jobs || []).filter(j =>
-      j.firstSeen && j.firstSeen !== '2000-01-01' && j.firstSeen >= cutoff
-    );
-  } catch { return []; }
+    const all = (data.jobs || []).filter(j => j.firstSeen && j.firstSeen !== '2000-01-01');
+    const starred = all.filter(j => j.starred === true);
+    const regular = all.filter(j => !j.starred && j.firstSeen >= cutoff);
+    log('Loaded ' + starred.length + ' starred + ' + regular.length + ' regular existing jobs');
+    return { regular, starred };
+  } catch { return { regular: [], starred: [] }; }
 }
 
 // ─── Write outputs ────────────────────────────────────────────────────────────
@@ -578,12 +517,6 @@ function writeResults(allJobs, meta) {
   log(`Wrote ${allJobs.length} jobs to ${RESULTS_PATH}`);
 }
 
-function writeInsights(insights) {
-  if (!insights) return;
-  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-  fs.writeFileSync(INSIGHTS_PATH, JSON.stringify(insights, null, 2));
-  log(`Wrote insights to ${INSIGHTS_PATH}`);
-}
 
 // ─── Main ─────────────────────────────────────────────────────────────────────
 
@@ -673,20 +606,32 @@ async function main() {
     log(`  → score ${result.score}, sponsorship: ${sig} ✓`);
   }
 
-  // 6. Merge with existing board
+  // 6. Merge: starred jobs survive forever, regular jobs respect retention window
   const existing = loadExistingJobs();
-  // Remove any that were re-fetched (update in place)
-  const existingFiltered = existing.filter(e => !newlyScored.find(n => n.hash === e.hash));
-  const allJobs = [...newlyScored, ...existingFiltered];
 
-  // Sort: confirmed first, then likely, then local, then by score
-  const sigOrder = { confirmed: 0, likely: 1, local: 2, unclear: 3, no: 4 };
+  // Starred jobs from previous runs — never drop these
+  const preservedStarred = existing.starred.filter(e => !newlyScored.find(n => n.hash === e.hash));
+
+  // Regular existing jobs within retention window (excluding anything newly scored)
+  const preservedRegular = existing.regular.filter(e => !newlyScored.find(n => n.hash === e.hash));
+
+  // New jobs default to unstarred; agent does not know starred state (that lives in browser)
+  // But if a job was starred in previous results.json, carry that flag forward
+  const starredHashes = new Set([...existing.starred.map(j => j.hash)]);
+  newlyScored.forEach(j => { if (starredHashes.has(j.hash)) j.starred = true; });
+
+  const allJobs = [...preservedStarred, ...newlyScored, ...preservedRegular];
+
+  // Sort: confirmed sponsorship first, then by score
+  const _sigOrder = { confirmed: 0, likely: 1, local: 2, unclear: 3, no: 4 };
   allJobs.sort((a, b) => {
-    const sA = sigOrder[a.sponsorshipSignal] ?? 3;
-    const sB = sigOrder[b.sponsorshipSignal] ?? 3;
+    const sA = _sigOrder[a.sponsorshipSignal] ?? 3;
+    const sB = _sigOrder[b.sponsorshipSignal] ?? 3;
     if (sA !== sB) return sA - sB;
     return b.score - a.score;
   });
+
+  log('Board: ' + preservedStarred.length + ' starred preserved + ' + newlyScored.length + ' new + ' + preservedRegular.length + ' existing = ' + allJobs.length + ' total');
 
   // 7. Write results
   const meta = {
@@ -699,19 +644,7 @@ async function main() {
   };
   writeResults(allJobs, meta);
 
-  // 8. Generate insights (once per day)
-  const existingInsights = fs.existsSync(INSIGHTS_PATH)
-    ? JSON.parse(fs.readFileSync(INSIGHTS_PATH, 'utf8'))
-    : null;
-  if (!existingInsights || existingInsights.generatedAt !== today()) {
-    log('Generating insights brief...');
-    const insights = await generateInsights(newlyScored.length ? newlyScored : allJobs);
-    writeInsights(insights);
-  } else {
-    log('Insights already fresh for today — skipping');
-  }
-
-  // 9. Save seen
+  // 8. Save seen
   saveSeen(seen);
 
   log(`Done. ${newlyScored.length} new matches. ${allJobs.length} total on board.`);

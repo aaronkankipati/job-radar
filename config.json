@@ -2,6 +2,7 @@
   "matching": {
     "minScore": 60,
     "retentionDays": 10,
+    "minSponsorshipSignal": ["confirmed", "likely", "local"],
     "titleKeywords": [
       "product manager",
       "product owner",
@@ -11,7 +12,9 @@
       "principal product",
       "group product",
       "director of product",
-      "ai product"
+      "ai product",
+      "vp product",
+      "vp of product"
     ],
     "titleExclude": [
       "intern",
@@ -35,29 +38,81 @@
       "remote",
       "telangana",
       "india",
-      "hyd"
+      "hyd",
+      "united kingdom",
+      "london",
+      "uk",
+      "singapore",
+      "germany",
+      "berlin",
+      "munich",
+      "frankfurt",
+      "australia",
+      "sydney",
+      "melbourne",
+      "united states",
+      "usa",
+      "new york",
+      "san francisco"
     ]
   },
   "sources": {
-    "_comment": "Adzuna + JSearch are the primary engines for India coverage. Greenhouse/Lever are an optional targeted layer - add tokens (the company slug from their careers-page URL) for firms that actually hire in Hyderabad. Bad tokens are skipped gracefully.",
+    "_comment": "Adzuna supports multi-country with the same API key. JSearch aggregates LinkedIn/Indeed globally. MyCareersFuture is Singapore govt (free). Greenhouse/Lever for targeted companies.",
     "jsearch": {
       "enabled": true,
       "queries": [
-        "product manager jobs in Hyderabad, India",
-        "product owner jobs in Hyderabad, India",
-        "AI product manager jobs in Hyderabad, India"
+        "product manager visa sponsorship UK",
+        "product owner fintech Singapore",
+        "senior product manager banking Germany",
+        "AI product manager visa sponsored Australia",
+        "product manager digital banking USA visa sponsorship",
+        "product manager jobs in Hyderabad India"
       ],
       "datePosted": "week"
     },
     "adzuna": {
       "enabled": true,
-      "country": "in",
-      "where": "hyderabad",
       "queries": [
         "product manager",
         "product owner",
         "AI product manager"
+      ],
+      "countries": [
+        {
+          "code": "in",
+          "where": "hyderabad",
+          "countryName": "India"
+        },
+        {
+          "code": "gb",
+          "where": "london",
+          "countryName": "United Kingdom"
+        },
+        {
+          "code": "sg",
+          "where": "singapore",
+          "countryName": "Singapore"
+        },
+        {
+          "code": "de",
+          "where": "berlin",
+          "countryName": "Germany"
+        },
+        {
+          "code": "au",
+          "where": "sydney",
+          "countryName": "Australia"
+        },
+        {
+          "code": "us",
+          "where": "new york",
+          "countryName": "USA"
+        }
       ]
+    },
+    "mycareers": {
+      "enabled": true,
+      "_comment": "MyCareersFuture is Singapore's government job portal — free, no key needed."
     },
     "greenhouse": [],
     "lever": []

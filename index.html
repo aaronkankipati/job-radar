@@ -23,6 +23,8 @@
     --amber-light: #FBF3E6;
     --red:         #7A1E1E;
     --red-light:   #FAF0F0;
+    --blue:        #1A3A5C;
+    --blue-light:  #EBF0F7;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { background: var(--bg); scroll-behavior: smooth; }
@@ -36,199 +38,102 @@
 
   /* ── Header ── */
   header { padding-bottom: 18px; border-bottom: 2px solid var(--ink); margin-bottom: 20px; }
-  .hdr-row1 {
-    display: flex; justify-content: space-between;
-    align-items: center; margin-bottom: 6px;
-  }
-  .logo-eyebrow {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 11px; font-weight: 500; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--ink-2);
-  }
-  .logo {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 30px; font-weight: 600; font-style: italic;
-    letter-spacing: -0.01em; color: var(--ink); line-height: 1.1;
-    margin-bottom: 8px;
-  }
-  .logo-sub {
-    font-size: 10.5px; font-weight: 500; letter-spacing: 0.09em;
-    text-transform: uppercase; color: var(--ink-3); line-height: 1.6;
-  }
+  .hdr-row1 { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+  .logo-eyebrow { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); }
+  .logo { font-family: 'Times New Roman', Times, serif; font-size: 30px; font-weight: 600; font-style: italic; letter-spacing: -0.01em; color: var(--ink); line-height: 1.1; margin-bottom: 8px; }
+  .logo-sub { font-size: 10.5px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-3); line-height: 1.6; }
+
   /* ── Status pill ── */
-  .status-pill {
-    display: inline-flex; align-items: center; gap: 5px;
-    font-size: 10px; font-weight: 600; letter-spacing: 0.07em;
-    text-transform: uppercase; padding: 5px 11px; border-radius: 20px;
-    flex-shrink: 0; white-space: nowrap;
-    transition: background .3s, color .3s;
-  }
-  .status-pill.ok     { background: var(--green-light); color: var(--green); }
+  .status-pill { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; padding: 5px 11px; border-radius: 20px; flex-shrink: 0; white-space: nowrap; transition: background .3s, color .3s; }
+  .status-pill.ok      { background: var(--green-light); color: var(--green); }
   .status-pill.pending { background: var(--amber-light); color: var(--amber); }
   .status-pill.waiting { background: var(--surface-2); color: var(--ink-3); }
-  .status-dot {
-    width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
-    animation: breathe 2.4s ease-in-out infinite;
-  }
+  .status-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; animation: breathe 2.4s ease-in-out infinite; }
   .status-pill.ok      .status-dot { background: var(--green); }
   .status-pill.pending .status-dot { background: var(--amber); }
   .status-pill.waiting .status-dot { background: var(--ink-3); animation: none; }
   @keyframes breathe { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
 
   /* ── Stats bar ── */
-  .stats-bar {
-    display: flex; border: 1px solid var(--border-mid);
-    background: var(--surface); margin-bottom: 0;
-  }
-  .stat {
-    flex: 1; padding: 13px 10px; text-align: center;
-    border-right: 1px solid var(--border);
-  }
+  .stats-bar { display: flex; border: 1px solid var(--border-mid); background: var(--surface); margin-bottom: 0; }
+  .stat { flex: 1; padding: 13px 10px; text-align: center; border-right: 1px solid var(--border); }
   .stat:last-child { border-right: none; }
-  .stat-val {
-    font-family: 'Fraunces', serif; font-size: 24px; font-weight: 600;
-    color: var(--ink); line-height: 1; font-variation-settings: 'opsz' 24;
-  }
-  .stat-lbl {
-    font-size: 9.5px; font-weight: 500; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--ink-3); margin-top: 4px;
-  }
+  .stat-val { font-family: 'Fraunces', serif; font-size: 24px; font-weight: 600; color: var(--ink); line-height: 1; font-variation-settings: 'opsz' 24; }
+  .stat-lbl { font-size: 9.5px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-top: 4px; }
 
-  /* ── Sticky quick nav ── */
-  .quick-nav {
-    position: sticky; top: 0; z-index: 50;
-    background: var(--bg);
-    border-bottom: 1px solid var(--border);
-    display: flex; overflow-x: auto; scrollbar-width: none;
-    margin: 0 -20px; padding: 0 20px;
-    margin-bottom: 24px;
-  }
+  /* ── Sticky nav ── */
+  .quick-nav { position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: 1px solid var(--border); display: flex; overflow-x: auto; scrollbar-width: none; margin: 0 -20px; padding: 0 20px; margin-bottom: 24px; }
   .quick-nav::-webkit-scrollbar { display: none; }
-  .qnav-item {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 12px; font-weight: 500; letter-spacing: 0.03em;
-    color: var(--ink-3); text-decoration: none;
-    white-space: nowrap; padding: 13px 16px 11px;
-    min-height: 44px; display: flex; align-items: center;
-    border-bottom: 2px solid transparent;
-    transition: color .15s, border-color .15s;
-    flex-shrink: 0;
-  }
+  .qnav-item { font-size: 12px; font-weight: 500; letter-spacing: 0.03em; color: var(--ink-3); text-decoration: none; white-space: nowrap; padding: 13px 16px 11px; min-height: 44px; display: flex; align-items: center; border-bottom: 2px solid transparent; transition: color .15s, border-color .15s; flex-shrink: 0; }
   .qnav-item.active { color: var(--ink); border-bottom-color: var(--ink); }
   .qnav-item:hover { color: var(--ink-2); }
 
-  /* ── Section headings ── */
+  /* ── Section ── */
   .section-block { margin-bottom: 32px; }
-  .sec-head {
-    display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
-  }
-  .sec-title {
-    font-size: 10.5px; font-weight: 600; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--ink-2); white-space: nowrap;
-  }
+  .sec-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .sec-title { font-size: 10.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); white-space: nowrap; }
   .sec-rule { flex: 1; height: 1px; background: var(--border); }
   .sec-actions { display: flex; gap: 4px; }
-  .sort-btn {
-    font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px;
-    font-weight: 500; background: var(--surface); color: var(--ink-3);
-    border: 1px solid var(--border); padding: 5px 11px;
-    cursor: pointer; transition: all .15s; min-height: 32px;
-  }
+  .sort-btn { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 500; background: var(--surface); color: var(--ink-3); border: 1px solid var(--border); padding: 5px 11px; cursor: pointer; transition: all .15s; min-height: 32px; }
   .sort-btn.active { color: var(--ink); border-color: var(--ink); }
 
-  /* ── Board (Matched Roles) ── */
-  .board-wrap {
-    position: relative; background: var(--surface);
-    border: 1px solid var(--border); padding: 12px 12px 0;
-  }
-  .board-wrap::after {
-    content: ''; pointer-events: none;
-    position: sticky; bottom: 0; display: block;
-    height: 48px; margin-top: -48px;
-    background: linear-gradient(to top, var(--surface) 40%, transparent);
-  }
-  #board { max-height: 660px; overflow-y: auto; }
+  /* ── Country filter tabs ── */
+  .country-tabs { display: flex; gap: 6px; margin-bottom: 12px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+  .country-tabs::-webkit-scrollbar { display: none; }
+  .ctab { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; padding: 5px 12px; border: 1px solid var(--border); background: var(--surface); color: var(--ink-3); cursor: pointer; white-space: nowrap; transition: all .15s; flex-shrink: 0; }
+  .ctab.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .ctab:hover:not(.active) { border-color: var(--ink-2); color: var(--ink-2); }
+
+  /* ── Board ── */
+  .board-wrap { position: relative; background: var(--surface); border: 1px solid var(--border); padding: 12px 12px 0; }
+  .board-wrap::after { content: ''; pointer-events: none; position: sticky; bottom: 0; display: block; height: 48px; margin-top: -48px; background: linear-gradient(to top, var(--surface) 40%, transparent); }
+  #board { max-height: 680px; overflow-y: auto; }
   #board::-webkit-scrollbar { width: 3px; }
   #board::-webkit-scrollbar-track { background: transparent; }
   #board::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 2px; }
 
   /* ── Job card ── */
-  .card {
-    background: var(--surface); border: 1px solid var(--border);
-    border-left: 3px solid var(--border-mid);
-    padding: 16px 16px 13px; margin-bottom: 10px;
-    cursor: pointer; opacity: 0; animation: fadein .35s ease forwards;
-    transition: border-color .15s, box-shadow .2s; position: relative;
-  }
+  .card { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--border-mid); padding: 16px 16px 13px; margin-bottom: 10px; cursor: pointer; opacity: 0; animation: fadein .35s ease forwards; transition: border-color .15s, box-shadow .2s; position: relative; }
   @keyframes fadein { to { opacity: 1; } }
   .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
   .card.score-green { border-left-color: var(--green); }
   .card.score-amber { border-left-color: var(--amber); }
   .card.score-red   { border-left-color: var(--red); }
+
   .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 9px; }
   .card-header-left { flex: 1; min-width: 0; }
-  .card-company {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px; font-weight: 500; letter-spacing: 0.08em;
-    text-transform: uppercase; color: var(--ink-3); margin-bottom: 5px;
-    display: flex; align-items: center; gap: 8px;
-  }
-  .card-src {
-    font-size: 9px; color: var(--ink-3); border: 1px solid var(--border);
-    padding: 1px 5px; font-family: 'JetBrains Mono', monospace;
-  }
-  .card-title {
-    font-family: 'Fraunces', serif; font-size: 19px; font-weight: 500;
-    line-height: 1.25; font-variation-settings: 'opsz' 19;
-    color: var(--ink); padding-right: 64px;
-  }
+  .card-company { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 5px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .card-src { font-size: 9px; color: var(--ink-3); border: 1px solid var(--border); padding: 1px 5px; font-family: 'JetBrains Mono', monospace; }
+  .card-title { font-family: 'Fraunces', serif; font-size: 19px; font-weight: 500; line-height: 1.25; font-variation-settings: 'opsz' 19; color: var(--ink); padding-right: 64px; }
   .card-score-block { text-align: right; flex-shrink: 0; }
-  .card-score-num {
-    font-family: 'Fraunces', serif; font-size: 32px; font-weight: 600;
-    line-height: 1; font-variation-settings: 'opsz' 32;
-  }
+  .card-score-num { font-family: 'Fraunces', serif; font-size: 32px; font-weight: 600; line-height: 1; font-variation-settings: 'opsz' 32; }
   .card-score-num.green { color: var(--green); }
   .card-score-num.amber { color: var(--amber); }
   .card-score-num.red   { color: var(--red); }
-  .card-score-lbl {
-    font-size: 9px; font-weight: 500; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--ink-3); margin-top: 2px;
-  }
-  .card-meta {
-    font-family: 'JetBrains Mono', monospace; font-size: 11px;
-    color: var(--ink-3); margin-bottom: 9px;
-    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-  }
-  .card-verdict {
-    font-family: 'Fraunces', serif; font-size: 13.5px; font-style: italic;
-    color: var(--ink-2); line-height: 1.6; margin-bottom: 12px;
-    padding-left: 11px; border-left: 2px solid var(--border-mid);
-  }
-  .card-footer {
-    display: flex; align-items: center; justify-content: space-between;
-    gap: 10px; padding-top: 10px; border-top: 1px solid var(--border);
-  }
-  .apply-btn {
-    font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px;
-    font-weight: 600; background: var(--ink); color: #fff;
-    border: none; padding: 10px 18px; text-decoration: none;
-    display: inline-block; cursor: pointer; transition: opacity .15s;
-    flex-shrink: 0; min-height: 40px; display: flex; align-items: center;
-  }
+  .card-score-lbl { font-size: 9px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-top: 2px; }
+
+  .card-meta { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-3); margin-bottom: 9px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+
+  /* ── Sponsorship badge ── */
+  .sponsor-badge { display: inline-flex; align-items: center; gap: 4px; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 7px; border-radius: 2px; flex-shrink: 0; }
+  .sponsor-badge.confirmed { background: var(--green-light); color: var(--green); }
+  .sponsor-badge.likely    { background: var(--amber-light); color: var(--amber); }
+  .sponsor-badge.local     { background: var(--blue-light);  color: var(--blue); }
+  .sponsor-badge.unclear   { background: var(--surface-2);   color: var(--ink-3); }
+  .sponsor-badge::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: currentColor; display: inline-block; flex-shrink: 0; }
+
+  .card-verdict { font-family: 'Fraunces', serif; font-size: 13.5px; font-style: italic; color: var(--ink-2); line-height: 1.6; margin-bottom: 12px; padding-left: 11px; border-left: 2px solid var(--border-mid); }
+
+  .card-footer { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .apply-btn { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; font-weight: 600; background: var(--ink); color: #fff; border: none; padding: 10px 18px; text-decoration: none; cursor: pointer; transition: opacity .15s; flex-shrink: 0; min-height: 40px; display: flex; align-items: center; }
   .apply-btn:hover { opacity: 0.82; }
-  .expand-hint {
-    font-size: 11px; font-weight: 500; color: var(--ink-3);
-    display: flex; align-items: center; gap: 5px; user-select: none;
-  }
+  .expand-hint { font-size: 11px; font-weight: 500; color: var(--ink-3); display: flex; align-items: center; gap: 5px; user-select: none; }
   .expand-hint svg { flex-shrink: 0; transition: transform .2s; }
   .card.open .expand-hint svg { transform: rotate(180deg); }
+
   .card-detail { display: none; margin-top: 13px; padding-top: 13px; border-top: 1px solid var(--border); }
   .card.open .card-detail { display: block; }
-  .fit-label {
-    font-size: 10.5px; font-weight: 600; letter-spacing: 0.08em;
-    text-transform: uppercase; margin-bottom: 11px;
-    display: flex; align-items: center; gap: 6px;
-  }
+  .fit-label { font-size: 10.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 11px; display: flex; align-items: center; gap: 6px; }
   .fit-label::before { content: ''; width: 6px; height: 6px; flex-shrink: 0; border-radius: 50%; }
   .fit-label.good    { color: var(--green); }
   .fit-label.good::before    { background: var(--green); }
@@ -236,152 +141,92 @@
   .fit-label.stretch::before { background: var(--amber); }
   .fit-label.mismatch { color: var(--red); }
   .fit-label.mismatch::before { background: var(--red); }
+
+  .sponsor-evidence { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-2); background: var(--surface-2); border-left: 2px solid var(--amber); padding: 8px 10px; margin-bottom: 12px; line-height: 1.5; }
+  .sponsor-evidence-label { font-size: 9px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber); margin-bottom: 4px; }
+
+  .visa-type-row { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: var(--blue); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+  .visa-type-row::before { content: '✦'; font-size: 8px; }
+
   .plist { list-style: none; margin-bottom: 10px; }
-  .plist li {
-    font-size: 13px; line-height: 1.55; color: var(--ink-2);
-    padding: 4px 0 4px 18px; position: relative;
-    border-bottom: 1px solid var(--surface-2);
-  }
+  .plist li { font-size: 13px; line-height: 1.55; color: var(--ink-2); padding: 4px 0 4px 18px; position: relative; border-bottom: 1px solid var(--surface-2); }
   .plist li:last-child { border-bottom: none; }
   .plist.pro li::before { content: '+'; font-weight: 700; color: var(--green); position: absolute; left: 2px; }
-  .plist.con li::before { content: '–'; font-weight: 700; color: var(--red); position: absolute; left: 4px; }
+  .plist.con li::before { content: '\2013'; font-weight: 700; color: var(--red); position: absolute; left: 4px; }
 
-  /* ── Certifications section ── */
-  .certs-panel {
-    background: var(--surface); border: 1px solid var(--border);
-    border-top: 3px solid var(--amber);
-    padding: 16px 16px 0; position: relative;
-  }
-  .certs-panel::after {
-    content: ''; position: absolute; bottom: 0; left: 0; right: 0;
-    height: 36px; pointer-events: none;
-    background: linear-gradient(to top, var(--surface) 25%, transparent);
-  }
-  .certs-items {
-    overflow-y: auto; max-height: 222px;
-    -webkit-overflow-scrolling: touch; padding-bottom: 16px;
-  }
+  /* ── Certifications ── */
+  .certs-panel { background: var(--surface); border: 1px solid var(--border); border-top: 3px solid var(--amber); padding: 16px 16px 0; position: relative; }
+  .certs-panel::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 36px; pointer-events: none; background: linear-gradient(to top, var(--surface) 25%, transparent); }
+  .certs-items { overflow-y: auto; max-height: 222px; -webkit-overflow-scrolling: touch; padding-bottom: 16px; }
   .certs-items::-webkit-scrollbar { width: 3px; }
   .certs-items::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 2px; }
   .cert-item { padding: 10px 0; border-bottom: 1px solid var(--surface-2); }
   .cert-item:last-child { border-bottom: none; }
-  .cert-name {
-    font-family: 'Fraunces', serif; font-size: 14px; font-weight: 500;
-    color: var(--ink); font-variation-settings: 'opsz' 14;
-  }
-  .cert-provider {
-    font-size: 9.5px; font-weight: 500; letter-spacing: 0.07em;
-    text-transform: uppercase; color: var(--amber); margin: 2px 0 4px;
-  }
+  .cert-name { font-family: 'Fraunces', serif; font-size: 14px; font-weight: 500; color: var(--ink); font-variation-settings: 'opsz' 14; }
+  .cert-provider { font-size: 9.5px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: var(--amber); margin: 2px 0 4px; }
   .cert-why { font-size: 12px; color: var(--ink-2); line-height: 1.5; }
 
-  /* ── Orbit Intel section (2-col) ── */
-  .orbit-intel-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
-  }
-  .orbit-col {
-    background: var(--surface); border: 1px solid var(--border);
-    padding: 14px 14px 0; position: relative;
-    opacity: 0; animation: fadein .4s ease forwards;
-  }
+  /* ── Orbit Intel: 3-col ── */
+  .orbit-intel-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  .orbit-col { background: var(--surface); border: 1px solid var(--border); padding: 14px 14px 0; position: relative; opacity: 0; animation: fadein .4s ease forwards; }
   .orbit-col.trends { border-top: 3px solid var(--green); }
   .orbit-col.news   { border-top: 3px solid var(--ink-3); animation-delay: 80ms; }
-  .orbit-col::after {
-    content: ''; position: absolute; bottom: 0; left: 0; right: 0;
-    height: 32px; pointer-events: none;
-    background: linear-gradient(to top, var(--surface) 25%, transparent);
-  }
-  .orbit-col-title {
-    font-size: 9.5px; font-weight: 600; letter-spacing: 0.12em;
-    text-transform: uppercase; padding-bottom: 9px;
-    border-bottom: 1px solid var(--border); margin-bottom: 10px;
-  }
+  .orbit-col.visa   { border-top: 3px solid var(--blue); animation-delay: 160ms; }
+  .orbit-col::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 32px; pointer-events: none; background: linear-gradient(to top, var(--surface) 25%, transparent); }
+  .orbit-col-title { font-size: 9.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding-bottom: 9px; border-bottom: 1px solid var(--border); margin-bottom: 10px; }
   .orbit-col.trends .orbit-col-title { color: var(--green); }
   .orbit-col.news   .orbit-col-title { color: var(--ink-2); }
-  .orbit-items {
-    overflow-y: auto; max-height: 156px; /* 2 paragraphs */
-    -webkit-overflow-scrolling: touch; padding-bottom: 14px;
-  }
+  .orbit-col.visa   .orbit-col-title { color: var(--blue); }
+  .orbit-items { overflow-y: auto; max-height: 180px; -webkit-overflow-scrolling: touch; padding-bottom: 14px; }
   .orbit-items::-webkit-scrollbar { width: 3px; }
   .orbit-items::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 2px; }
   .orbit-item { padding: 8px 0; border-bottom: 1px solid var(--surface-2); }
   .orbit-item:last-child { border-bottom: none; }
-  .trend-label {
-    font-size: 11px; font-weight: 600; color: var(--ink); margin-bottom: 2px;
-  }
+  .trend-label { font-size: 11px; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
   .trend-detail { font-size: 11.5px; color: var(--ink-2); line-height: 1.5; }
-  .news-headline {
-    font-family: 'Fraunces', serif; font-size: 13px; font-style: italic;
-    color: var(--ink); margin-bottom: 3px; line-height: 1.3;
-  }
+  .news-headline { font-family: 'Fraunces', serif; font-size: 13px; font-style: italic; color: var(--ink); margin-bottom: 3px; line-height: 1.3; }
   .news-summary { font-size: 11.5px; color: var(--ink-2); line-height: 1.5; }
+  .visa-country { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue); margin-bottom: 3px; }
+  .visa-trend { font-size: 11px; color: var(--ink-2); line-height: 1.5; margin-bottom: 5px; }
+  .visa-sponsors { display: flex; flex-wrap: wrap; gap: 4px; }
+  .visa-sponsor-tag { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: var(--ink-2); background: var(--surface-2); padding: 2px 6px; border: 1px solid var(--border); }
 
-  /* ── Loading states ── */
-  .skel {
-    background: linear-gradient(90deg, var(--surface) 25%, var(--surface-2) 50%, var(--surface) 75%);
-    background-size: 200% 100%; animation: skel-move 1.5s infinite;
-    height: 110px; margin-bottom: 10px; border: 1px solid var(--border);
-  }
+  /* ── Loading / empty ── */
+  .skel { background: linear-gradient(90deg, var(--surface) 25%, var(--surface-2) 50%, var(--surface) 75%); background-size: 200% 100%; animation: skel-move 1.5s infinite; height: 110px; margin-bottom: 10px; border: 1px solid var(--border); }
   @keyframes skel-move { to { background-position: -200% 0; } }
   .empty-msg { text-align: center; padding: 48px 20px; color: var(--ink-3); }
-  .empty-msg strong {
-    font-family: 'Fraunces', serif; font-size: 20px; font-weight: 500;
-    font-style: italic; color: var(--ink-2); display: block; margin-bottom: 7px;
-  }
-
+  .empty-msg strong { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 500; font-style: italic; color: var(--ink-2); display: block; margin-bottom: 7px; }
 
   /* ── Back to top ── */
-  .back-top {
-    display: flex; align-items: center; justify-content: center; gap: 6px;
-    width: 100%; margin-top: 24px; padding: 13px 0;
-    background: transparent; border: 1px solid var(--border);
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--ink-3);
-    cursor: pointer; transition: all .2s;
-  }
+  .back-top { display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; margin-top: 24px; padding: 13px 0; background: transparent; border: 1px solid var(--border); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); cursor: pointer; transition: all .2s; }
   .back-top:hover { border-color: var(--ink); color: var(--ink); }
   .back-top svg { transition: transform .2s; }
   .back-top:hover svg { transform: translateY(-2px); }
 
-  /* ── Footer ── */
-  footer {
-    margin-top: 40px; text-align: center; font-size: 11px;
-    letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3);
-    border-top: 1px solid var(--border); padding-top: 20px;
-  }
+  footer { margin-top: 40px; text-align: center; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); border-top: 1px solid var(--border); padding-top: 20px; }
 
-  /* ── Mobile overrides ── */
+  /* ── Mobile ── */
   @media (max-width: 640px) {
     .wrap { padding: 20px 16px 70px; }
     .logo { font-size: 26px; }
-    .logo-eyebrow { font-size: 10px; }
-    .logo-sub { font-size: 9.5px; }
-    .stat { padding: 11px 8px; }
-    .stat-val { font-size: 21px; }
-    .stat-lbl { font-size: 9px; }
     .card { padding: 13px 12px 11px; }
     .card-title { font-size: 17px; padding-right: 52px; }
     .card-score-num { font-size: 26px; }
-    .card-verdict { font-size: 13px; }
     .card-footer { flex-direction: column; align-items: stretch; gap: 8px; }
     .apply-btn { justify-content: center; padding: 11px 0; }
     .expand-hint { justify-content: center; }
     #board { max-height: 580px; }
-    /* 2-col orbit stays as-is on mobile — works at ~165px per col */
-    .orbit-col { padding: 12px 11px 0; }
-    .orbit-col-title { font-size: 8.5px; }
-    .trend-detail, .news-summary { font-size: 11px; }
-  }
-  @media (max-width: 380px) {
     .orbit-intel-grid { grid-template-columns: 1fr; }
+  }
+  @media (min-width: 641px) and (max-width: 820px) {
+    .orbit-intel-grid { grid-template-columns: 1fr 1fr; }
+    .orbit-col.visa { grid-column: span 2; }
   }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <!-- Header -->
   <header>
     <div class="hdr-row1">
       <div class="logo-eyebrow">Aaron Kankipati</div>
@@ -390,11 +235,10 @@
       </div>
     </div>
     <div class="logo">Career Orbit</div>
-    <div class="logo-sub">Senior PM roles, scored daily against your profile</div>
-    <div class="logo-sub" style="margin-top:3px;opacity:0.7;">Market trends &middot; Certifications in demand &middot; Industry news</div>
+    <div class="logo-sub">Senior PM &middot; Visa-sponsored roles &middot; Scored daily</div>
+    <div class="logo-sub" style="margin-top:3px;opacity:0.7;">🇬🇧 UK &nbsp;&middot;&nbsp; 🇸🇬 Singapore &nbsp;&middot;&nbsp; 🇩🇪 Germany &nbsp;&middot;&nbsp; 🇦🇺 Australia &nbsp;&middot;&nbsp; 🇺🇸 USA &nbsp;&middot;&nbsp; 🇮🇳 Hyderabad</div>
   </header>
 
-  <!-- Stats bar -->
   <div class="stats-bar">
     <div class="stat">
       <div class="stat-val" id="stat-scanned">&mdash;</div>
@@ -405,15 +249,18 @@
       <div class="stat-lbl">Matched</div>
     </div>
     <div class="stat">
+      <div class="stat-val" id="stat-confirmed">&mdash;</div>
+      <div class="stat-lbl">Confirmed</div>
+    </div>
+    <div class="stat">
       <div class="stat-val" id="stat-last">&mdash;</div>
       <div class="stat-lbl">Last Scan</div>
     </div>
   </div>
 
-  <!-- Quick nav -->
   <nav class="quick-nav" id="quick-nav">
-    <a href="#roles" class="qnav-item active">Matched Roles</a>
-    <a href="#certs" class="qnav-item">Certifications</a>
+    <a href="#roles"       class="qnav-item active">Matched Roles</a>
+    <a href="#certs"       class="qnav-item">Certifications</a>
     <a href="#orbit-intel" class="qnav-item">Orbit Intel</a>
   </nav>
 
@@ -423,10 +270,23 @@
       <span class="sec-title">Matched Roles</span>
       <div class="sec-rule"></div>
       <div class="sec-actions">
-        <button class="sort-btn active" data-s="score">Match</button>
+        <button class="sort-btn active" data-s="sponsor">Sponsorship</button>
+        <button class="sort-btn" data-s="score">Match</button>
         <button class="sort-btn" data-s="new">Latest</button>
       </div>
     </div>
+
+    <!-- Country filter tabs -->
+    <div class="country-tabs" id="country-tabs">
+      <button class="ctab active" data-country="all">All</button>
+      <button class="ctab" data-country="United Kingdom">🇬🇧 UK</button>
+      <button class="ctab" data-country="Singapore">🇸🇬 Singapore</button>
+      <button class="ctab" data-country="Germany">🇩🇪 Germany</button>
+      <button class="ctab" data-country="Australia">🇦🇺 Australia</button>
+      <button class="ctab" data-country="USA">🇺🇸 USA</button>
+      <button class="ctab" data-country="India">🇮🇳 Hyderabad</button>
+    </div>
+
     <div class="board-wrap">
       <main id="board">
         <div class="skel"></div>
@@ -458,6 +318,7 @@
     <div class="orbit-intel-grid" id="orbit-intel-grid">
       <div class="skel" style="height:160px;margin:0"></div>
       <div class="skel" style="height:160px;margin:0"></div>
+      <div class="skel" style="height:160px;margin:0"></div>
     </div>
   </section>
 
@@ -467,31 +328,38 @@
     </svg>
     Back to top
   </button>
-  <footer>Career Orbit &middot; Scans daily at 9 PM IST &middot; Hyderabad</footer>
+  <footer>Career Orbit &middot; Scans daily at 9 PM IST &middot; Hyderabad → 🌏</footer>
 </div>
 
 <script>
-  const esc = s => String(s ?? '').replace(/[&<>"]/g,
-    c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-
+  const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   const fmtDate = iso => {
-    if (!iso || iso === '2000-01-01' || iso === 'sample') return '\u2014';
+    if (!iso || iso === '2000-01-01') return '\u2014';
     const d = new Date(iso);
     return isNaN(d) ? '\u2014' : d.toLocaleDateString('en-IN', {day:'numeric', month:'short'});
   };
-
   const scoreClass = s => s >= 85 ? 'green' : s >= 70 ? 'amber' : 'red';
   const scoreLabel = s => s >= 85 ? 'Strong Match' : s >= 70 ? 'Good Match' : 'Weak Match';
 
-  let JOBS = [], sortMode = 'score';
+  const SPONSOR_LABEL = { confirmed: 'Confirmed', likely: 'Likely', local: 'Local', unclear: 'Unclear', no: 'No Sponsorship' };
+  const COUNTRY_FLAG  = { 'United Kingdom': '🇬🇧', 'UK': '🇬🇧', 'Singapore': '🇸🇬', 'Germany': '🇩🇪', 'Australia': '🇦🇺', 'USA': '🇺🇸', 'United States': '🇺🇸', 'India': '🇮🇳' };
 
-  /* --- dynamic status pill --- */
+  function countryFlag(country) {
+    for (const [k, v] of Object.entries(COUNTRY_FLAG)) {
+      if ((country || '').toLowerCase().includes(k.toLowerCase())) return v;
+    }
+    return '🌐';
+  }
+
+  let JOBS = [], sortMode = 'sponsor', countryFilter = 'all';
+
+  // ── Status pill ──
   function updateStatusPill(meta) {
     const pill = document.getElementById('status-pill');
     const txt  = document.getElementById('status-text');
     if (!pill || !txt) return;
     const todayStr = new Date().toISOString().slice(0, 10);
-    const lastRun  = meta && meta.lastRun;
+    const lastRun  = meta?.lastRun;
     if (lastRun && lastRun >= todayStr) {
       pill.className = 'status-pill ok';
       txt.textContent = 'Scanned \u00b7 ' + fmtDate(lastRun);
@@ -504,34 +372,43 @@
     }
   }
 
-  /* --- stats --- */
-  function renderStatus(meta) {
+  function renderStats(meta) {
     updateStatusPill(meta);
-    document.getElementById('stat-scanned').textContent =
-      (meta && meta.scanned != null) ? meta.scanned : '\u2014';
+    document.getElementById('stat-scanned').textContent = meta?.scanned ?? '\u2014';
     document.getElementById('stat-acquired').textContent = JOBS.length;
-    document.getElementById('stat-last').textContent =
-      (meta && meta.lastRun) ? fmtDate(meta.lastRun) : '\u2014';
-    document.querySelectorAll('.sort-btn').forEach(b => {
-      b.classList.toggle('active', b.dataset.s === sortMode);
-      b.onclick = () => { sortMode = b.dataset.s; renderBoard(); };
-    });
+    const confirmed = JOBS.filter(j => j.sponsorshipSignal === 'confirmed').length;
+    document.getElementById('stat-confirmed').textContent = confirmed || '\u2014';
+    document.getElementById('stat-last').textContent = meta?.lastRun ? fmtDate(meta.lastRun) : '\u2014';
   }
 
-  /* --- card --- */
-  const chevronDown = '<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  // ── Card ──
+  const chevron = '<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
   function cardHTML(j, idx) {
-    const cls = scoreClass(j.score);
-    const fit = ['good','stretch','mismatch'].includes(j.seniorityFit) ? j.seniorityFit : 'stretch';
+    const cls  = scoreClass(j.score);
+    const fit  = ['good','stretch','mismatch'].includes(j.seniorityFit) ? j.seniorityFit : 'stretch';
     const fitTxt = {good:'Good Fit', stretch:'Stretch', mismatch:'Mismatch'}[fit];
+    const sig  = j.sponsorshipSignal || 'unclear';
+    const flag = countryFlag(j.country || j.location);
     const pros = (j.pros || []).map(p => '<li>' + esc(p) + '</li>').join('');
     const cons = (j.cons || []).map(c => '<li>' + esc(c) + '</li>').join('');
-    const num = String(idx + 1).padStart(2, '0');
-    return `<article class="card score-${cls}" data-hash="${esc(j.hash)}" style="animation-delay:${idx * 45}ms">
+    const num  = String(idx + 1).padStart(2, '0');
+
+    const evidenceHtml = (sig !== 'local' && j.sponsorshipEvidence)
+      ? `<div class="sponsor-evidence"><div class="sponsor-evidence-label">Sponsorship signal</div>${esc(j.sponsorshipEvidence)}</div>`
+      : '';
+
+    const visaHtml = j.visaType
+      ? `<div class="visa-type-row">${esc(j.visaType)}</div>`
+      : '';
+
+    return `<article class="card score-${cls}" data-hash="${esc(j.hash)}" data-country="${esc(j.country||'')}" style="animation-delay:${idx * 45}ms">
       <div class="card-header">
         <div class="card-header-left">
-          <div class="card-company"><span>${num} &nbsp; ${esc(j.company)}</span><span class="card-src">${esc(j.source)}</span></div>
+          <div class="card-company">
+            <span>${num} &nbsp; ${flag} ${esc(j.company)}</span>
+            <span class="card-src">${esc(j.source)}</span>
+          </div>
           <div class="card-title">${esc(j.title)}</div>
         </div>
         <div class="card-score-block">
@@ -539,34 +416,66 @@
           <div class="card-score-lbl">${scoreLabel(j.score)}</div>
         </div>
       </div>
-      <div class="card-meta"><span>${esc(j.location || '\u2014')}</span><span>Posted ${fmtDate(j.postedAt)}</span></div>
+      <div class="card-meta">
+        <span class="sponsor-badge ${sig}">${SPONSOR_LABEL[sig] || sig}</span>
+        <span>${esc(j.location || '\u2014')}</span>
+        <span>Posted ${fmtDate(j.postedAt)}</span>
+      </div>
       <div class="card-verdict">${esc(j.verdict)}</div>
       <div class="card-footer">
         <a class="apply-btn" href="${esc(j.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Apply Now &rarr;</a>
-        <span class="expand-hint">Details ${chevronDown}</span>
+        <span class="expand-hint">Details ${chevron}</span>
       </div>
       <div class="card-detail">
         <div class="fit-label ${fit}">${esc(fitTxt)} &mdash; Seniority</div>
+        ${visaHtml}
+        ${evidenceHtml}
         ${pros ? '<ul class="plist pro">' + pros + '</ul>' : ''}
         ${cons ? '<ul class="plist con">' + cons + '</ul>' : ''}
       </div>
     </article>`;
   }
 
+  // ── Sort + filter ──
+  const sigOrder = { confirmed: 0, likely: 1, local: 2, unclear: 3, no: 4 };
+
   function sortJobs(list) {
-    return [...list].sort(sortMode === 'score'
-      ? (a, b) => b.score - a.score
-      : (a, b) => String(b.firstSeen).localeCompare(String(a.firstSeen)) || b.score - a.score);
+    return [...list].sort((a, b) => {
+      if (sortMode === 'score') return b.score - a.score;
+      if (sortMode === 'new')   return String(b.firstSeen).localeCompare(String(a.firstSeen)) || b.score - a.score;
+      // sponsor (default): confirmed first, then by score
+      const sA = sigOrder[a.sponsorshipSignal] ?? 3;
+      const sB = sigOrder[b.sponsorshipSignal] ?? 3;
+      if (sA !== sB) return sA - sB;
+      return b.score - a.score;
+    });
+  }
+
+  function filterByCountry(list) {
+    if (countryFilter === 'all') return list;
+    return list.filter(j => {
+      const c = (j.country || j.location || '').toLowerCase();
+      const f = countryFilter.toLowerCase();
+      if (f === 'india') return c.includes('india') || c.includes('hyderabad') || c.includes('hyd');
+      if (f === 'usa') return c.includes('usa') || c.includes('united states') || c.includes('us ') || c.endsWith(' us');
+      if (f === 'united kingdom') return c.includes('united kingdom') || c.includes(' uk') || c.startsWith('uk ') || c.includes('london');
+      return c.includes(f);
+    });
   }
 
   function renderBoard() {
-    renderStatus(window.__meta);
+    renderStats(window.__meta);
     const board = document.getElementById('board');
+    const visible = filterByCountry(sortJobs(JOBS));
     if (!JOBS.length) {
       board.innerHTML = '<div class="empty-msg"><strong>No matches yet</strong>Run the workflow to populate this board.</div>';
       return;
     }
-    board.innerHTML = sortJobs(JOBS).map(cardHTML).join('');
+    if (!visible.length) {
+      board.innerHTML = '<div class="empty-msg"><strong>No roles in this country yet</strong>Try All, or wait for the next scan.</div>';
+      return;
+    }
+    board.innerHTML = visible.map(cardHTML).join('');
     board.querySelectorAll('.card').forEach(c => {
       c.addEventListener('click', e => {
         if (e.target.closest('.apply-btn')) return;
@@ -575,11 +484,29 @@
     });
   }
 
-  /* --- certifications (standalone) --- */
+  // ── Sort buttons ──
+  document.querySelectorAll('.sort-btn').forEach(b => {
+    b.addEventListener('click', () => {
+      sortMode = b.dataset.s;
+      document.querySelectorAll('.sort-btn').forEach(x => x.classList.toggle('active', x.dataset.s === sortMode));
+      renderBoard();
+    });
+  });
+
+  // ── Country tabs ──
+  document.querySelectorAll('.ctab').forEach(t => {
+    t.addEventListener('click', () => {
+      countryFilter = t.dataset.country;
+      document.querySelectorAll('.ctab').forEach(x => x.classList.toggle('active', x.dataset.country === countryFilter));
+      renderBoard();
+    });
+  });
+
+  // ── Certifications ──
   function renderCerts(d) {
     const panel = document.getElementById('certs-panel');
     if (!panel) return;
-    if (!d || !d.certifications || !d.certifications.length) {
+    if (!d?.certifications?.length) {
       panel.innerHTML = '<div class="certs-items"><div style="padding:16px 0;font-size:12px;color:var(--ink-3)">Run agent to generate certifications.</div></div>';
       return;
     }
@@ -591,36 +518,43 @@
     panel.innerHTML = '<div class="certs-items">' + items + '</div>';
   }
 
-  /* --- orbit intel (trends + news, 2-col) --- */
+  // ── Orbit Intel (3-col) ──
   function renderOrbitIntel(d) {
     const grid = document.getElementById('orbit-intel-grid');
     if (!grid) return;
     const empty = '<div style="padding:10px 0;font-size:12px;color:var(--ink-3)">Run agent to generate.</div>';
-    const trends = d && d.trends ? d.trends.map(t =>
+
+    const trends = d?.trends?.map(t =>
       '<div class="orbit-item"><div class="trend-label">' + esc(t.label) +
       '</div><div class="trend-detail">' + esc(t.detail) + '</div></div>'
-    ).join('') : '';
-    const news = d && d.news ? d.news.map(n =>
+    ).join('') || '';
+
+    const news = d?.news?.map(n =>
       '<div class="orbit-item"><div class="news-headline">' + esc(n.headline) +
       '</div><div class="news-summary">' + esc(n.summary) + '</div></div>'
-    ).join('') : '';
+    ).join('') || '';
+
+    const visa = d?.visaIntel?.map(v => {
+      const sponsors = (v.topSponsors || []).map(s =>
+        '<span class="visa-sponsor-tag">' + esc(s) + '</span>'
+      ).join('');
+      return '<div class="orbit-item"><div class="visa-country">' + esc(v.country) +
+        '</div><div class="visa-trend">' + esc(v.trend) +
+        '</div>' + (sponsors ? '<div class="visa-sponsors">' + sponsors + '</div>' : '') +
+        '</div>';
+    }).join('') || '';
+
     grid.innerHTML =
-      '<div class="orbit-col trends" style="animation-delay:0ms">' +
-        '<div class="orbit-col-title">Market Trends</div>' +
-        '<div class="orbit-items">' + (trends || empty) + '</div>' +
-      '</div>' +
-      '<div class="orbit-col news" style="animation-delay:80ms">' +
-        '<div class="orbit-col-title">Industry News</div>' +
-        '<div class="orbit-items">' + (news || empty) + '</div>' +
-      '</div>';
+      '<div class="orbit-col trends"><div class="orbit-col-title">Market Trends</div><div class="orbit-items">' + (trends || empty) + '</div></div>' +
+      '<div class="orbit-col news" style="animation-delay:80ms"><div class="orbit-col-title">Industry News</div><div class="orbit-items">' + (news || empty) + '</div></div>' +
+      '<div class="orbit-col visa" style="animation-delay:160ms"><div class="orbit-col-title">Visa Intel</div><div class="orbit-items">' + (visa || empty) + '</div></div>';
   }
 
-  /* --- intersection observer for nav --- */
+  // ── Intersection observer for nav ──
   function initNav() {
     const items = {};
     document.querySelectorAll('.qnav-item').forEach(a => {
-      const id = a.getAttribute('href').slice(1);
-      items[id] = a;
+      items[a.getAttribute('href').slice(1)] = a;
     });
     const obs = new IntersectionObserver(entries => {
       entries.forEach(e => {
@@ -636,7 +570,7 @@
     });
   }
 
-  /* --- load --- */
+  // ── Load data ──
   fetch('./data/insights.json?t=' + Date.now())
     .then(r => r.ok ? r.json() : null)
     .then(d => { renderCerts(d); renderOrbitIntel(d); })
@@ -646,7 +580,7 @@
     .then(r => { if (!r.ok) throw new Error('no data'); return r.json(); })
     .then(data => {
       window.__meta = data.meta || {};
-      JOBS = (data.jobs || []).filter(j => j.firstSeen !== '2000-01-01');
+      JOBS = (data.jobs || []).filter(j => j.firstSeen && j.firstSeen !== '2000-01-01');
       renderBoard();
     })
     .catch(() => {

@@ -25,102 +25,100 @@
     --red-light:   #FAF0F0;
     --blue:        #1A3A5C;
     --blue-light:  #EBF0F7;
+    --star:        #B8860B;
+    --star-light:  #FDF8EC;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { background: var(--bg); scroll-behavior: smooth; }
-  body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    background: var(--bg); color: var(--ink);
-    font-size: 14.5px; line-height: 1.55;
-    -webkit-font-smoothing: antialiased;
-  }
+  body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--ink); font-size: 14.5px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
   .wrap { max-width: 700px; margin: 0 auto; padding: 28px 20px 80px; }
 
   /* ── Header ── */
   header { padding-bottom: 18px; border-bottom: 2px solid var(--ink); margin-bottom: 20px; }
   .hdr-row1 { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
-  .logo-eyebrow { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); }
+  .logo-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); }
   .logo { font-family: 'Times New Roman', Times, serif; font-size: 30px; font-weight: 600; font-style: italic; letter-spacing: -0.01em; color: var(--ink); line-height: 1.1; margin-bottom: 8px; }
   .logo-sub { font-size: 10.5px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-3); line-height: 1.6; }
 
   /* ── Status pill ── */
-  .status-pill { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; padding: 5px 11px; border-radius: 20px; flex-shrink: 0; white-space: nowrap; transition: background .3s, color .3s; }
+  .status-pill { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; padding: 5px 11px; border-radius: 20px; flex-shrink: 0; white-space: nowrap; }
   .status-pill.ok      { background: var(--green-light); color: var(--green); }
   .status-pill.pending { background: var(--amber-light); color: var(--amber); }
   .status-pill.waiting { background: var(--surface-2); color: var(--ink-3); }
   .status-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; animation: breathe 2.4s ease-in-out infinite; }
-  .status-pill.ok      .status-dot { background: var(--green); }
+  .status-pill.ok .status-dot { background: var(--green); }
   .status-pill.pending .status-dot { background: var(--amber); }
   .status-pill.waiting .status-dot { background: var(--ink-3); animation: none; }
-  @keyframes breathe { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+  @keyframes breathe { 0%,100%{opacity:1} 50%{opacity:.3} }
 
-  /* ── Stats bar ── */
-  .stats-bar { display: flex; border: 1px solid var(--border-mid); background: var(--surface); margin-bottom: 0; }
+  /* ── Stats ── */
+  .stats-bar { display: flex; border: 1px solid var(--border-mid); background: var(--surface); margin-bottom: 20px; }
   .stat { flex: 1; padding: 13px 10px; text-align: center; border-right: 1px solid var(--border); }
   .stat:last-child { border-right: none; }
   .stat-val { font-family: 'Fraunces', serif; font-size: 24px; font-weight: 600; color: var(--ink); line-height: 1; font-variation-settings: 'opsz' 24; }
   .stat-lbl { font-size: 9.5px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-top: 4px; }
 
-  /* ── Sticky nav ── */
-  .quick-nav { position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: 1px solid var(--border); display: flex; overflow-x: auto; scrollbar-width: none; margin: 0 -20px; padding: 0 20px; margin-bottom: 24px; }
-  .quick-nav::-webkit-scrollbar { display: none; }
-  .qnav-item { font-size: 12px; font-weight: 500; letter-spacing: 0.03em; color: var(--ink-3); text-decoration: none; white-space: nowrap; padding: 13px 16px 11px; min-height: 44px; display: flex; align-items: center; border-bottom: 2px solid transparent; transition: color .15s, border-color .15s; flex-shrink: 0; }
-  .qnav-item.active { color: var(--ink); border-bottom-color: var(--ink); }
-  .qnav-item:hover { color: var(--ink-2); }
+  /* ── Tab switcher ── */
+  .tab-bar { display: flex; border-bottom: 2px solid var(--border); margin-bottom: 16px; }
+  .tab-btn { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 13px; font-weight: 600; padding: 12px 20px; background: none; border: none; border-bottom: 2px solid transparent; margin-bottom: -2px; cursor: pointer; color: var(--ink-3); letter-spacing: 0.02em; transition: all .15s; display: flex; align-items: center; gap: 7px; }
+  .tab-btn.active { color: var(--ink); border-bottom-color: var(--ink); }
+  .tab-btn:hover:not(.active) { color: var(--ink-2); }
+  .tab-badge { font-size: 10px; font-weight: 700; background: var(--star-light); color: var(--star); border: 1px solid #e8d48a; padding: 1px 6px; border-radius: 10px; }
+  .tab-badge.hidden { display: none; }
 
-  /* ── Section ── */
-  .section-block { margin-bottom: 32px; }
-  .sec-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
-  .sec-title { font-size: 10.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); white-space: nowrap; }
-  .sec-rule { flex: 1; height: 1px; background: var(--border); }
-  .sec-actions { display: flex; gap: 4px; }
-  .sort-btn { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 500; background: var(--surface); color: var(--ink-3); border: 1px solid var(--border); padding: 5px 11px; cursor: pointer; transition: all .15s; min-height: 32px; }
-  .sort-btn.active { color: var(--ink); border-color: var(--ink); }
-
-  /* ── Country filter tabs ── */
+  /* ── Country filter ── */
   .country-tabs { display: flex; gap: 6px; margin-bottom: 12px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
   .country-tabs::-webkit-scrollbar { display: none; }
   .ctab { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 500; padding: 5px 12px; border: 1px solid var(--border); background: var(--surface); color: var(--ink-3); cursor: pointer; white-space: nowrap; transition: all .15s; flex-shrink: 0; }
   .ctab.active { background: var(--ink); color: #fff; border-color: var(--ink); }
-  .ctab:hover:not(.active) { border-color: var(--ink-2); color: var(--ink-2); }
+
+  /* ── Sort controls ── */
+  .board-controls { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .sort-group { display: flex; gap: 4px; }
+  .sort-btn { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 500; background: var(--surface); color: var(--ink-3); border: 1px solid var(--border); padding: 5px 11px; cursor: pointer; transition: all .15s; min-height: 32px; }
+  .sort-btn.active { color: var(--ink); border-color: var(--ink); }
+  .result-count { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-3); }
 
   /* ── Board ── */
   .board-wrap { position: relative; background: var(--surface); border: 1px solid var(--border); padding: 12px 12px 0; }
   .board-wrap::after { content: ''; pointer-events: none; position: sticky; bottom: 0; display: block; height: 48px; margin-top: -48px; background: linear-gradient(to top, var(--surface) 40%, transparent); }
-  #board { max-height: 680px; overflow-y: auto; }
-  #board::-webkit-scrollbar { width: 3px; }
-  #board::-webkit-scrollbar-track { background: transparent; }
-  #board::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 2px; }
+  .board-scroll { max-height: 680px; overflow-y: auto; }
+  .board-scroll::-webkit-scrollbar { width: 3px; }
+  .board-scroll::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 2px; }
 
-  /* ── Job card ── */
+  /* ── Card ── */
   .card { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--border-mid); padding: 16px 16px 13px; margin-bottom: 10px; cursor: pointer; opacity: 0; animation: fadein .35s ease forwards; transition: border-color .15s, box-shadow .2s; position: relative; }
   @keyframes fadein { to { opacity: 1; } }
   .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
   .card.score-green { border-left-color: var(--green); }
   .card.score-amber { border-left-color: var(--amber); }
   .card.score-red   { border-left-color: var(--red); }
+  .card.starred     { border-left-color: var(--star); background: var(--star-light); }
 
   .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 9px; }
   .card-header-left { flex: 1; min-width: 0; }
   .card-company { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 5px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-  .card-src { font-size: 9px; color: var(--ink-3); border: 1px solid var(--border); padding: 1px 5px; font-family: 'JetBrains Mono', monospace; }
-  .card-title { font-family: 'Fraunces', serif; font-size: 19px; font-weight: 500; line-height: 1.25; font-variation-settings: 'opsz' 19; color: var(--ink); padding-right: 64px; }
-  .card-score-block { text-align: right; flex-shrink: 0; }
+  .card-src { font-size: 9px; color: var(--ink-3); border: 1px solid var(--border); padding: 1px 5px; }
+  .card-title { font-family: 'Fraunces', serif; font-size: 19px; font-weight: 500; line-height: 1.25; font-variation-settings: 'opsz' 19; color: var(--ink); }
+  .card-score-block { text-align: right; flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
   .card-score-num { font-family: 'Fraunces', serif; font-size: 32px; font-weight: 600; line-height: 1; font-variation-settings: 'opsz' 32; }
   .card-score-num.green { color: var(--green); }
   .card-score-num.amber { color: var(--amber); }
   .card-score-num.red   { color: var(--red); }
-  .card-score-lbl { font-size: 9px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-top: 2px; }
+  .card-score-lbl { font-size: 9px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); }
+
+  /* ── Star button ── */
+  .star-btn { background: none; border: 1px solid var(--border); padding: 4px 8px; cursor: pointer; font-size: 14px; line-height: 1; transition: all .15s; color: var(--ink-3); flex-shrink: 0; }
+  .star-btn:hover { border-color: var(--star); color: var(--star); }
+  .star-btn.starred { background: var(--star-light); border-color: var(--star); color: var(--star); }
 
   .card-meta { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-3); margin-bottom: 9px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-
-  /* ── Sponsorship badge ── */
-  .sponsor-badge { display: inline-flex; align-items: center; gap: 4px; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 7px; border-radius: 2px; flex-shrink: 0; }
+  .sponsor-badge { display: inline-flex; align-items: center; gap: 4px; font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 7px; border-radius: 2px; }
+  .sponsor-badge::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: currentColor; display: inline-block; }
   .sponsor-badge.confirmed { background: var(--green-light); color: var(--green); }
   .sponsor-badge.likely    { background: var(--amber-light); color: var(--amber); }
-  .sponsor-badge.local     { background: var(--blue-light);  color: var(--blue); }
-  .sponsor-badge.unclear   { background: var(--surface-2);   color: var(--ink-3); }
-  .sponsor-badge::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: currentColor; display: inline-block; flex-shrink: 0; }
+  .sponsor-badge.local     { background: var(--blue-light); color: var(--blue); }
+  .sponsor-badge.unclear   { background: var(--surface-2); color: var(--ink-3); }
 
   .card-verdict { font-family: 'Fraunces', serif; font-size: 13.5px; font-style: italic; color: var(--ink-2); line-height: 1.6; margin-bottom: 12px; padding-left: 11px; border-left: 2px solid var(--border-mid); }
 
@@ -128,23 +126,20 @@
   .apply-btn { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; font-weight: 600; background: var(--ink); color: #fff; border: none; padding: 10px 18px; text-decoration: none; cursor: pointer; transition: opacity .15s; flex-shrink: 0; min-height: 40px; display: flex; align-items: center; }
   .apply-btn:hover { opacity: 0.82; }
   .expand-hint { font-size: 11px; font-weight: 500; color: var(--ink-3); display: flex; align-items: center; gap: 5px; user-select: none; }
-  .expand-hint svg { flex-shrink: 0; transition: transform .2s; }
+  .expand-hint svg { transition: transform .2s; }
   .card.open .expand-hint svg { transform: rotate(180deg); }
 
   .card-detail { display: none; margin-top: 13px; padding-top: 13px; border-top: 1px solid var(--border); }
   .card.open .card-detail { display: block; }
+
   .fit-label { font-size: 10.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 11px; display: flex; align-items: center; gap: 6px; }
-  .fit-label::before { content: ''; width: 6px; height: 6px; flex-shrink: 0; border-radius: 50%; }
-  .fit-label.good    { color: var(--green); }
-  .fit-label.good::before    { background: var(--green); }
-  .fit-label.stretch { color: var(--amber); }
-  .fit-label.stretch::before { background: var(--amber); }
-  .fit-label.mismatch { color: var(--red); }
-  .fit-label.mismatch::before { background: var(--red); }
+  .fit-label::before { content: ''; width: 6px; height: 6px; border-radius: 50%; }
+  .fit-label.good    { color: var(--green); } .fit-label.good::before    { background: var(--green); }
+  .fit-label.stretch { color: var(--amber); } .fit-label.stretch::before { background: var(--amber); }
+  .fit-label.mismatch{ color: var(--red); }   .fit-label.mismatch::before{ background: var(--red); }
 
   .sponsor-evidence { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-2); background: var(--surface-2); border-left: 2px solid var(--amber); padding: 8px 10px; margin-bottom: 12px; line-height: 1.5; }
   .sponsor-evidence-label { font-size: 9px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber); margin-bottom: 4px; }
-
   .visa-type-row { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: var(--blue); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
   .visa-type-row::before { content: '✦'; font-size: 8px; }
 
@@ -152,75 +147,71 @@
   .plist li { font-size: 13px; line-height: 1.55; color: var(--ink-2); padding: 4px 0 4px 18px; position: relative; border-bottom: 1px solid var(--surface-2); }
   .plist li:last-child { border-bottom: none; }
   .plist.pro li::before { content: '+'; font-weight: 700; color: var(--green); position: absolute; left: 2px; }
-  .plist.con li::before { content: '\2013'; font-weight: 700; color: var(--red); position: absolute; left: 4px; }
+  .plist.con li::before { content: '–'; font-weight: 700; color: var(--red); position: absolute; left: 4px; }
 
-  /* ── Certifications ── */
-  .certs-panel { background: var(--surface); border: 1px solid var(--border); border-top: 3px solid var(--amber); padding: 16px 16px 0; position: relative; }
-  .certs-panel::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 36px; pointer-events: none; background: linear-gradient(to top, var(--surface) 25%, transparent); }
-  .certs-items { overflow-y: auto; max-height: 222px; -webkit-overflow-scrolling: touch; padding-bottom: 16px; }
-  .certs-items::-webkit-scrollbar { width: 3px; }
-  .certs-items::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 2px; }
-  .cert-item { padding: 10px 0; border-bottom: 1px solid var(--surface-2); }
-  .cert-item:last-child { border-bottom: none; }
-  .cert-name { font-family: 'Fraunces', serif; font-size: 14px; font-weight: 500; color: var(--ink); font-variation-settings: 'opsz' 14; }
-  .cert-provider { font-size: 9.5px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: var(--amber); margin: 2px 0 4px; }
-  .cert-why { font-size: 12px; color: var(--ink-2); line-height: 1.5; }
+  /* ── Resume Match Panel ── */
+  .resume-match-wrap { margin-top: 16px; border-top: 2px solid var(--border); padding-top: 14px; }
+  .resume-match-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+  .resume-match-title { font-size: 10.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); }
 
-  /* ── Orbit Intel: 3-col ── */
-  .orbit-intel-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
-  .orbit-col { background: var(--surface); border: 1px solid var(--border); padding: 14px 14px 0; position: relative; opacity: 0; animation: fadein .4s ease forwards; }
-  .orbit-col.trends { border-top: 3px solid var(--green); }
-  .orbit-col.news   { border-top: 3px solid var(--ink-3); animation-delay: 80ms; }
-  .orbit-col.visa   { border-top: 3px solid var(--blue); animation-delay: 160ms; }
-  .orbit-col::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 32px; pointer-events: none; background: linear-gradient(to top, var(--surface) 25%, transparent); }
-  .orbit-col-title { font-size: 9.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding-bottom: 9px; border-bottom: 1px solid var(--border); margin-bottom: 10px; }
-  .orbit-col.trends .orbit-col-title { color: var(--green); }
-  .orbit-col.news   .orbit-col-title { color: var(--ink-2); }
-  .orbit-col.visa   .orbit-col-title { color: var(--blue); }
-  .orbit-items { overflow-y: auto; max-height: 180px; -webkit-overflow-scrolling: touch; padding-bottom: 14px; }
-  .orbit-items::-webkit-scrollbar { width: 3px; }
-  .orbit-items::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 2px; }
-  .orbit-item { padding: 8px 0; border-bottom: 1px solid var(--surface-2); }
-  .orbit-item:last-child { border-bottom: none; }
-  .trend-label { font-size: 11px; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
-  .trend-detail { font-size: 11.5px; color: var(--ink-2); line-height: 1.5; }
-  .news-headline { font-family: 'Fraunces', serif; font-size: 13px; font-style: italic; color: var(--ink); margin-bottom: 3px; line-height: 1.3; }
-  .news-summary { font-size: 11.5px; color: var(--ink-2); line-height: 1.5; }
-  .visa-country { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue); margin-bottom: 3px; }
-  .visa-trend { font-size: 11px; color: var(--ink-2); line-height: 1.5; margin-bottom: 5px; }
-  .visa-sponsors { display: flex; flex-wrap: wrap; gap: 4px; }
-  .visa-sponsor-tag { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; color: var(--ink-2); background: var(--surface-2); padding: 2px 6px; border: 1px solid var(--border); }
+  /* match bar */
+  .match-bar-wrap { margin-bottom: 16px; }
+  .match-bar-label { display: flex; justify-content: space-between; margin-bottom: 5px; }
+  .match-bar-label span:first-child { font-size: 11px; color: var(--ink-3); font-family: 'JetBrains Mono', monospace; }
+  .match-pct { font-family: 'Fraunces', serif; font-size: 28px; font-weight: 600; font-variation-settings: 'opsz' 28; }
+  .match-pct.high { color: var(--green); }
+  .match-pct.mid  { color: var(--amber); }
+  .match-pct.low  { color: var(--red); }
+  .match-bar-track { height: 6px; background: var(--surface-2); border: 1px solid var(--border); }
+  .match-bar-fill { height: 100%; transition: width 1s ease; }
+  .match-bar-fill.high { background: var(--green); }
+  .match-bar-fill.mid  { background: var(--amber); }
+  .match-bar-fill.low  { background: var(--red); }
 
-  /* ── Loading / empty ── */
-  .skel { background: linear-gradient(90deg, var(--surface) 25%, var(--surface-2) 50%, var(--surface) 75%); background-size: 200% 100%; animation: skel-move 1.5s infinite; height: 110px; margin-bottom: 10px; border: 1px solid var(--border); }
+  /* bullets */
+  .match-section-title { font-size: 9.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin: 14px 0 8px; }
+  .match-list { list-style: none; }
+  .match-list li { font-size: 12.5px; color: var(--ink-2); padding: 5px 0 5px 20px; position: relative; border-bottom: 1px solid var(--surface-2); line-height: 1.5; }
+  .match-list li:last-child { border-bottom: none; }
+  .match-list.covered li::before { content: '✓'; font-weight: 700; color: var(--green); position: absolute; left: 2px; }
+  .match-list.gaps li::before    { content: '✗'; font-weight: 700; color: var(--red);   position: absolute; left: 2px; }
+
+  /* rewrite suggestions */
+  .rewrite-block { margin-top: 16px; }
+  .rewrite-section { background: var(--surface-2); border: 1px solid var(--border); padding: 12px 14px; margin-bottom: 8px; }
+  .rewrite-section-label { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 6px; }
+  .rewrite-before { font-size: 12px; color: var(--red); background: var(--red-light); padding: 6px 8px; margin-bottom: 6px; line-height: 1.5; border-left: 2px solid var(--red); }
+  .rewrite-after  { font-size: 12px; color: var(--green); background: var(--green-light); padding: 6px 8px; line-height: 1.5; border-left: 2px solid var(--green); }
+  .rewrite-arrow  { font-size: 10px; color: var(--ink-3); text-align: center; padding: 3px 0; }
+
+  /* analyse button */
+  .analyse-btn { width: 100%; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; font-weight: 600; background: var(--ink); color: #fff; border: none; padding: 12px 0; cursor: pointer; transition: opacity .15s; margin-top: 4px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+  .analyse-btn:hover { opacity: 0.82; }
+  .analyse-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  .analyse-loading { display: flex; align-items: center; gap: 8px; padding: 12px; justify-content: center; color: var(--ink-3); font-size: 12px; }
+  .spinner { width: 14px; height: 14px; border: 2px solid var(--border); border-top-color: var(--ink); border-radius: 50%; animation: spin .7s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .analyse-error { font-size: 12px; color: var(--red); padding: 10px; background: var(--red-light); margin-top: 8px; }
+
+  /* ── Empty / loading ── */
+  .skel { background: linear-gradient(90deg,var(--surface) 25%,var(--surface-2) 50%,var(--surface) 75%); background-size: 200% 100%; animation: skel-move 1.5s infinite; height: 110px; margin-bottom: 10px; border: 1px solid var(--border); }
   @keyframes skel-move { to { background-position: -200% 0; } }
   .empty-msg { text-align: center; padding: 48px 20px; color: var(--ink-3); }
   .empty-msg strong { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 500; font-style: italic; color: var(--ink-2); display: block; margin-bottom: 7px; }
-
-  /* ── Back to top ── */
-  .back-top { display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; margin-top: 24px; padding: 13px 0; background: transparent; border: 1px solid var(--border); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); cursor: pointer; transition: all .2s; }
-  .back-top:hover { border-color: var(--ink); color: var(--ink); }
-  .back-top svg { transition: transform .2s; }
-  .back-top:hover svg { transform: translateY(-2px); }
+  .empty-msg p { font-size: 13px; line-height: 1.6; max-width: 340px; margin: 0 auto; }
 
   footer { margin-top: 40px; text-align: center; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); border-top: 1px solid var(--border); padding-top: 20px; }
 
-  /* ── Mobile ── */
   @media (max-width: 640px) {
-    .wrap { padding: 20px 16px 70px; }
+    .wrap { padding: 20px 16px 60px; }
     .logo { font-size: 26px; }
     .card { padding: 13px 12px 11px; }
-    .card-title { font-size: 17px; padding-right: 52px; }
+    .card-title { font-size: 16px; }
     .card-score-num { font-size: 26px; }
     .card-footer { flex-direction: column; align-items: stretch; gap: 8px; }
     .apply-btn { justify-content: center; padding: 11px 0; }
-    .expand-hint { justify-content: center; }
-    #board { max-height: 580px; }
-    .orbit-intel-grid { grid-template-columns: 1fr; }
-  }
-  @media (min-width: 641px) and (max-width: 820px) {
-    .orbit-intel-grid { grid-template-columns: 1fr 1fr; }
-    .orbit-col.visa { grid-column: span 2; }
+    .board-scroll { max-height: 580px; }
+    .tab-btn { padding: 10px 14px; font-size: 12px; }
   }
 </style>
 </head>
@@ -235,48 +226,26 @@
       </div>
     </div>
     <div class="logo">Career Orbit</div>
-    <div class="logo-sub">Senior PM &middot; Visa-sponsored roles &middot; Scored daily</div>
-    <div class="logo-sub" style="margin-top:3px;opacity:0.7;">🇬🇧 UK &nbsp;&middot;&nbsp; 🇸🇬 Singapore &nbsp;&middot;&nbsp; 🇩🇪 Germany &nbsp;&middot;&nbsp; 🇦🇺 Australia &nbsp;&middot;&nbsp; 🇺🇸 USA &nbsp;&middot;&nbsp; 🇮🇳 Hyderabad</div>
+    <div class="logo-sub">Visa-sponsored PM roles · Scored daily across 🇬🇧 🇸🇬 🇩🇪 🇦🇺 🇺🇸 🇮🇳</div>
   </header>
 
   <div class="stats-bar">
-    <div class="stat">
-      <div class="stat-val" id="stat-scanned">&mdash;</div>
-      <div class="stat-lbl">Scanned</div>
-    </div>
-    <div class="stat">
-      <div class="stat-val" id="stat-acquired">&mdash;</div>
-      <div class="stat-lbl">Matched</div>
-    </div>
-    <div class="stat">
-      <div class="stat-val" id="stat-confirmed">&mdash;</div>
-      <div class="stat-lbl">Confirmed</div>
-    </div>
-    <div class="stat">
-      <div class="stat-val" id="stat-last">&mdash;</div>
-      <div class="stat-lbl">Last Scan</div>
-    </div>
+    <div class="stat"><div class="stat-val" id="stat-scanned">—</div><div class="stat-lbl">Scanned</div></div>
+    <div class="stat"><div class="stat-val" id="stat-matched">—</div><div class="stat-lbl">Matched</div></div>
+    <div class="stat"><div class="stat-val" id="stat-confirmed">—</div><div class="stat-lbl">Confirmed</div></div>
+    <div class="stat"><div class="stat-val" id="stat-starred">—</div><div class="stat-lbl">Starred</div></div>
   </div>
 
-  <nav class="quick-nav" id="quick-nav">
-    <a href="#roles"       class="qnav-item active">Matched Roles</a>
-    <a href="#certs"       class="qnav-item">Certifications</a>
-    <a href="#orbit-intel" class="qnav-item">Orbit Intel</a>
-  </nav>
+  <!-- Tab bar -->
+  <div class="tab-bar">
+    <button class="tab-btn active" id="tab-all" onclick="switchTab('all')">All Roles</button>
+    <button class="tab-btn" id="tab-starred" onclick="switchTab('starred')">
+      ⭐ Starred <span class="tab-badge hidden" id="star-badge">0</span>
+    </button>
+  </div>
 
-  <!-- 1. Matched Roles -->
-  <section class="section-block" id="roles">
-    <div class="sec-head">
-      <span class="sec-title">Matched Roles</span>
-      <div class="sec-rule"></div>
-      <div class="sec-actions">
-        <button class="sort-btn active" data-s="sponsor">Sponsorship</button>
-        <button class="sort-btn" data-s="score">Match</button>
-        <button class="sort-btn" data-s="new">Latest</button>
-      </div>
-    </div>
-
-    <!-- Country filter tabs -->
+  <!-- All Roles view -->
+  <div id="view-all">
     <div class="country-tabs" id="country-tabs">
       <button class="ctab active" data-country="all">All</button>
       <button class="ctab" data-country="United Kingdom">🇬🇧 UK</button>
@@ -286,310 +255,467 @@
       <button class="ctab" data-country="USA">🇺🇸 USA</button>
       <button class="ctab" data-country="India">🇮🇳 Hyderabad</button>
     </div>
-
-    <div class="board-wrap">
-      <main id="board">
-        <div class="skel"></div>
-        <div class="skel"></div>
-        <div class="skel"></div>
-      </main>
-    </div>
-  </section>
-
-  <!-- 2. Certifications -->
-  <section class="section-block" id="certs">
-    <div class="sec-head">
-      <span class="sec-title">Certifications</span>
-      <div class="sec-rule"></div>
-    </div>
-    <div class="certs-panel" id="certs-panel">
-      <div class="certs-items">
-        <div class="skel" style="height:100px;border:none;margin:0"></div>
+    <div class="board-controls">
+      <span class="result-count" id="result-count"></span>
+      <div class="sort-group">
+        <button class="sort-btn active" data-s="sponsor">Sponsorship</button>
+        <button class="sort-btn" data-s="score">Match</button>
+        <button class="sort-btn" data-s="new">Latest</button>
       </div>
     </div>
-  </section>
-
-  <!-- 3. Orbit Intel -->
-  <section class="section-block" id="orbit-intel">
-    <div class="sec-head">
-      <span class="sec-title">Orbit Intel</span>
-      <div class="sec-rule"></div>
+    <div class="board-wrap">
+      <div class="board-scroll" id="board-all">
+        <div class="skel"></div><div class="skel"></div><div class="skel"></div>
+      </div>
     </div>
-    <div class="orbit-intel-grid" id="orbit-intel-grid">
-      <div class="skel" style="height:160px;margin:0"></div>
-      <div class="skel" style="height:160px;margin:0"></div>
-      <div class="skel" style="height:160px;margin:0"></div>
-    </div>
-  </section>
+  </div>
 
-  <button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-      <path d="M2 8l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    Back to top
-  </button>
-  <footer>Career Orbit &middot; Scans daily at 9 PM IST &middot; Hyderabad → 🌏</footer>
+  <!-- Starred view -->
+  <div id="view-starred" style="display:none">
+    <div class="board-wrap">
+      <div class="board-scroll" id="board-starred">
+        <div class="empty-msg">
+          <strong>No starred roles yet</strong>
+          <p>Star a role from All Roles to pin it here. Starred roles are saved permanently and include a full resume match analysis.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>Career Orbit · Scans daily at 9 PM IST · Only starred roles survive each scan</footer>
 </div>
 
 <script>
-  const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-  const fmtDate = iso => {
-    if (!iso || iso === '2000-01-01') return '\u2014';
-    const d = new Date(iso);
-    return isNaN(d) ? '\u2014' : d.toLocaleDateString('en-IN', {day:'numeric', month:'short'});
-  };
-  const scoreClass = s => s >= 85 ? 'green' : s >= 70 ? 'amber' : 'red';
-  const scoreLabel = s => s >= 85 ? 'Strong Match' : s >= 70 ? 'Good Match' : 'Weak Match';
+// ── CV text injected at build time (used for resume match) ──
+// In production you'd base64-encode this in a separate file fetched at runtime.
+// For now it's embedded as a constant the Claude API call uses.
+const CV_TEXT = `Aaron Kankipati — Senior Digital Product Manager, 7 years, digital banking and fintech.
 
-  const SPONSOR_LABEL = { confirmed: 'Confirmed', likely: 'Likely', local: 'Local', unclear: 'Unclear', no: 'No Sponsorship' };
-  const COUNTRY_FLAG  = { 'United Kingdom': '🇬🇧', 'UK': '🇬🇧', 'Singapore': '🇸🇬', 'Germany': '🇩🇪', 'Australia': '🇦🇺', 'USA': '🇺🇸', 'United States': '🇺🇸', 'India': '🇮🇳' };
+CURRENT: Senior Digital Product Manager, Wells Fargo (Nov 2025–present)
+- Core banking migration: legacy → cloud-native. Availability 99.9% → 99.999% (8.7hr/yr → <6min downtime).
+- Real-time posting replacing batch processing. Authored CD renewal journey and interest payment frequency features end-to-end.
+- Owns testing strategy, all agile ceremonies, story lifecycle from refinement to closure.
 
-  function countryFlag(country) {
-    for (const [k, v] of Object.entries(COUNTRY_FLAG)) {
-      if ((country || '').toLowerCase().includes(k.toLowerCase())) return v;
-    }
-    return '🌐';
+PREVIOUS: Digital Product Manager, Wells Fargo (Jan 2024–Nov 2025)
+- Small Business Digital Deposit Application: 66.5% fully digital completion, onboarding 18min → 9min.
+- J.D. Power mobile app ranking #5 → #2 during tenure. Spotlight Award.
+
+PREVIOUS: Business Analyst, IDFC First Bank (Aug 2022–Jan 2024)
+- WhatsApp loan journeys (personal + auto loans), IVR, in-app chatbot.
+- 60% lead conversion rate via WhatsApp bot.
+
+PREVIOUS: Product Owner, Piramal Finance (Jan 2020–Jul 2022)
+- Salesforce-based home loan origination. ₹500 crore (~$60M) disbursed in year 1.
+- KYC turnaround reduced via automation. Disha Champions of Change Award.
+
+PERSONAL PROJECTS (shipped independently):
+- Moodfilm: AI film recommender (Claude API), Android + PWA. Google Play Billing, subscriptions, server-side purchase verification.
+- Neon Bull: Autonomous paper-trading simulator, NSE data, Cloudflare Workers, live dashboard.
+- Little Disciples: Offline-first children's learning app, 106 lessons, Play Families certified.
+- Trap Tap: Mobile arcade game, React Native, 600+ assertion test suite.
+
+SKILLS: Product ownership, backlog management, user story definition, acceptance criteria, roadmap contribution, cross-geo Scrum, change governance, release management, UAT, Jira, LLM integration (Claude API), React Native, JavaScript, serverless (Cloudflare Workers), REST APIs, Salesforce, Google Play compliance, test automation.
+
+DOMAIN: Core banking, legacy modernisation, digital onboarding, KYC, loan origination, conversational AI, regulated environments.
+
+EDUCATION: MBA/PGDM — Institute of Public Enterprise, Hyderabad 2019. B.Com — Little Flower Degree College 2017.
+CERTIFICATIONS: IIM Lucknow MDP in Product Management 2021. Design Thinking Practitioner. Generative AI Foundation. AI for Product Management.`;
+
+// ── Utilities ──
+const esc = s => String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmtDate = iso => { if(!iso||iso==='2000-01-01')return '—'; const d=new Date(iso); return isNaN(d)?'—':d.toLocaleDateString('en-IN',{day:'numeric',month:'short'}); };
+const scoreClass = s => s>=85?'green':s>=70?'amber':'red';
+const scoreLabel = s => s>=85?'Strong Match':s>=70?'Good Match':'Weak Match';
+const SPONSOR_LABEL = {confirmed:'Confirmed',likely:'Likely',local:'Local',unclear:'Unclear'};
+const COUNTRY_FLAG  = {'united kingdom':'🇬🇧','uk':'🇬🇧','singapore':'🇸🇬','germany':'🇩🇪','australia':'🇦🇺','usa':'🇺🇸','united states':'🇺🇸','india':'🇮🇳'};
+function countryFlag(c){ for(const[k,v]of Object.entries(COUNTRY_FLAG)){if((c||'').toLowerCase().includes(k))return v;}return '🌐'; }
+
+// ── State ──
+let JOBS = [], sortMode = 'sponsor', countryFilter = 'all', activeTab = 'all';
+const sigOrder = {confirmed:0,likely:1,local:2,unclear:3,no:4};
+
+// ── Starred jobs (localStorage) ──
+const STARRED_KEY = 'career_orbit_starred_v1';
+function loadStarred() { try { return JSON.parse(localStorage.getItem(STARRED_KEY)||'{}'); } catch { return {}; } }
+function saveStarred(s) { localStorage.setItem(STARRED_KEY, JSON.stringify(s)); }
+
+let STARRED = loadStarred(); // hash → full job object
+
+function isStarred(hash) { return !!STARRED[hash]; }
+
+function toggleStar(hash, jobObj) {
+  if (STARRED[hash]) {
+    delete STARRED[hash];
+  } else {
+    STARRED[hash] = jobObj;
   }
+  saveStarred(STARRED);
+  updateStarBadge();
+  renderAll();
+  if (activeTab === 'starred') renderStarred();
+}
 
-  let JOBS = [], sortMode = 'sponsor', countryFilter = 'all';
+function updateStarBadge() {
+  const count = Object.keys(STARRED).length;
+  const badge = document.getElementById('star-badge');
+  badge.textContent = count;
+  badge.classList.toggle('hidden', count === 0);
+  document.getElementById('stat-starred').textContent = count || '—';
+}
 
-  // ── Status pill ──
-  function updateStatusPill(meta) {
-    const pill = document.getElementById('status-pill');
-    const txt  = document.getElementById('status-text');
-    if (!pill || !txt) return;
-    const todayStr = new Date().toISOString().slice(0, 10);
-    const lastRun  = meta?.lastRun;
-    if (lastRun && lastRun >= todayStr) {
-      pill.className = 'status-pill ok';
-      txt.textContent = 'Scanned \u00b7 ' + fmtDate(lastRun);
-    } else if (lastRun) {
-      pill.className = 'status-pill pending';
-      txt.textContent = 'Next scan \u00b7 9 PM IST';
-    } else {
-      pill.className = 'status-pill waiting';
-      txt.textContent = 'Awaiting first scan';
-    }
-  }
+// ── Tab switching ──
+function switchTab(tab) {
+  activeTab = tab;
+  document.getElementById('tab-all').classList.toggle('active', tab==='all');
+  document.getElementById('tab-starred').classList.toggle('active', tab==='starred');
+  document.getElementById('view-all').style.display = tab==='all' ? '' : 'none';
+  document.getElementById('view-starred').style.display = tab==='starred' ? '' : 'none';
+  if (tab === 'starred') renderStarred();
+}
 
-  function renderStats(meta) {
-    updateStatusPill(meta);
-    document.getElementById('stat-scanned').textContent = meta?.scanned ?? '\u2014';
-    document.getElementById('stat-acquired').textContent = JOBS.length;
-    const confirmed = JOBS.filter(j => j.sponsorshipSignal === 'confirmed').length;
-    document.getElementById('stat-confirmed').textContent = confirmed || '\u2014';
-    document.getElementById('stat-last').textContent = meta?.lastRun ? fmtDate(meta.lastRun) : '\u2014';
-  }
+// ── Status pill ──
+function updateStatusPill(meta) {
+  const pill = document.getElementById('status-pill');
+  const txt  = document.getElementById('status-text');
+  const todayStr = new Date().toISOString().slice(0,10);
+  const lastRun  = meta?.lastRun;
+  if (lastRun && lastRun >= todayStr) { pill.className='status-pill ok'; txt.textContent='Scanned · '+fmtDate(lastRun); }
+  else if (lastRun) { pill.className='status-pill pending'; txt.textContent='Next scan · 9 PM IST'; }
+  else { pill.className='status-pill waiting'; txt.textContent='Awaiting first scan'; }
+}
 
-  // ── Card ──
-  const chevron = '<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+function renderStats(meta) {
+  updateStatusPill(meta);
+  document.getElementById('stat-scanned').textContent = meta?.scanned ?? '—';
+  document.getElementById('stat-matched').textContent = JOBS.length || '—';
+  const confirmed = JOBS.filter(j=>j.sponsorshipSignal==='confirmed').length;
+  document.getElementById('stat-confirmed').textContent = confirmed || '—';
+  updateStarBadge();
+}
 
-  function cardHTML(j, idx) {
-    const cls  = scoreClass(j.score);
-    const fit  = ['good','stretch','mismatch'].includes(j.seniorityFit) ? j.seniorityFit : 'stretch';
-    const fitTxt = {good:'Good Fit', stretch:'Stretch', mismatch:'Mismatch'}[fit];
-    const sig  = j.sponsorshipSignal || 'unclear';
-    const flag = countryFlag(j.country || j.location);
-    const pros = (j.pros || []).map(p => '<li>' + esc(p) + '</li>').join('');
-    const cons = (j.cons || []).map(c => '<li>' + esc(c) + '</li>').join('');
-    const num  = String(idx + 1).padStart(2, '0');
+// ── Chevron SVG ──
+const chevron = '<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
-    const evidenceHtml = (sig !== 'local' && j.sponsorshipEvidence)
-      ? `<div class="sponsor-evidence"><div class="sponsor-evidence-label">Sponsorship signal</div>${esc(j.sponsorshipEvidence)}</div>`
-      : '';
+// ── Card HTML ──
+function cardHTML(j, idx, isStarredView=false) {
+  const cls  = scoreClass(j.score);
+  const fit  = ['good','stretch','mismatch'].includes(j.seniorityFit)?j.seniorityFit:'stretch';
+  const fitTxt = {good:'Good Fit',stretch:'Stretch',mismatch:'Mismatch'}[fit];
+  const sig  = j.sponsorshipSignal||'unclear';
+  const flag = countryFlag(j.country||j.location);
+  const pros = (j.pros||[]).map(p=>'<li>'+esc(p)+'</li>').join('');
+  const cons = (j.cons||[]).map(c=>'<li>'+esc(c)+'</li>').join('');
+  const starClass = isStarred(j.hash)?'starred':'';
+  const starBtnClass = isStarred(j.hash)?'starred':'';
+  const starIcon = isStarred(j.hash)?'★':'☆';
+  const num = String(idx+1).padStart(2,'0');
 
-    const visaHtml = j.visaType
-      ? `<div class="visa-type-row">${esc(j.visaType)}</div>`
-      : '';
+  const evidenceHtml = (sig!=='local'&&j.sponsorshipEvidence)
+    ? `<div class="sponsor-evidence"><div class="sponsor-evidence-label">Sponsorship signal</div>${esc(j.sponsorshipEvidence)}</div>` : '';
+  const visaHtml = j.visaType
+    ? `<div class="visa-type-row">${esc(j.visaType)}</div>` : '';
 
-    return `<article class="card score-${cls}" data-hash="${esc(j.hash)}" data-country="${esc(j.country||'')}" style="animation-delay:${idx * 45}ms">
-      <div class="card-header">
-        <div class="card-header-left">
-          <div class="card-company">
-            <span>${num} &nbsp; ${flag} ${esc(j.company)}</span>
-            <span class="card-src">${esc(j.source)}</span>
-          </div>
-          <div class="card-title">${esc(j.title)}</div>
+  // Resume match panel (only in starred view, lazy loaded)
+  const resumeMatchHtml = isStarredView
+    ? `<div class="resume-match-wrap" id="rm-${esc(j.hash)}">
+        <div class="resume-match-header">
+          <span class="resume-match-title">Resume Match Analysis</span>
         </div>
-        <div class="card-score-block">
-          <div class="card-score-num ${cls}">${j.score}</div>
-          <div class="card-score-lbl">${scoreLabel(j.score)}</div>
+        <button class="analyse-btn" onclick="runAnalysis('${esc(j.hash)}', event)" id="analyse-btn-${esc(j.hash)}">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M4 6.5h5M6.5 4v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Analyse my fit against this JD
+        </button>
+        <div id="analysis-result-${esc(j.hash)}"></div>
+      </div>` : '';
+
+  return `<article class="card score-${cls} ${starClass}" data-hash="${esc(j.hash)}" data-country="${esc(j.country||'')}" style="animation-delay:${idx*45}ms">
+    <div class="card-header">
+      <div class="card-header-left">
+        <div class="card-company">
+          <span>${num} &nbsp;${flag} ${esc(j.company)}</span>
+          <span class="card-src">${esc(j.source)}</span>
         </div>
+        <div class="card-title">${esc(j.title)}</div>
       </div>
-      <div class="card-meta">
-        <span class="sponsor-badge ${sig}">${SPONSOR_LABEL[sig] || sig}</span>
-        <span>${esc(j.location || '\u2014')}</span>
-        <span>Posted ${fmtDate(j.postedAt)}</span>
+      <div class="card-score-block">
+        <div class="card-score-num ${cls}">${j.score}</div>
+        <div class="card-score-lbl">${scoreLabel(j.score)}</div>
+        <button class="star-btn ${starBtnClass}" onclick="handleStar('${esc(j.hash)}',event)" title="${isStarred(j.hash)?'Unstar':'Star this role'}">${starIcon}</button>
       </div>
-      <div class="card-verdict">${esc(j.verdict)}</div>
-      <div class="card-footer">
-        <a class="apply-btn" href="${esc(j.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Apply Now &rarr;</a>
-        <span class="expand-hint">Details ${chevron}</span>
-      </div>
-      <div class="card-detail">
-        <div class="fit-label ${fit}">${esc(fitTxt)} &mdash; Seniority</div>
-        ${visaHtml}
-        ${evidenceHtml}
-        ${pros ? '<ul class="plist pro">' + pros + '</ul>' : ''}
-        ${cons ? '<ul class="plist con">' + cons + '</ul>' : ''}
-      </div>
-    </article>`;
+    </div>
+    <div class="card-meta">
+      <span class="sponsor-badge ${sig}">${SPONSOR_LABEL[sig]||sig}</span>
+      <span>${esc(j.location||'—')}</span>
+      <span>Posted ${fmtDate(j.postedAt)}</span>
+    </div>
+    <div class="card-verdict">${esc(j.verdict)}</div>
+    <div class="card-footer">
+      <a class="apply-btn" href="${esc(j.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Apply Now →</a>
+      <span class="expand-hint">Details ${chevron}</span>
+    </div>
+    <div class="card-detail">
+      <div class="fit-label ${fit}">${esc(fitTxt)} — Seniority</div>
+      ${visaHtml}
+      ${evidenceHtml}
+      ${pros?'<ul class="plist pro">'+pros+'</ul>':''}
+      ${cons?'<ul class="plist con">'+cons+'</ul>':''}
+      ${resumeMatchHtml}
+    </div>
+  </article>`;
+}
+
+// ── Star handler ──
+function handleStar(hash, e) {
+  e.stopPropagation();
+  const job = JOBS.find(j=>j.hash===hash) || STARRED[hash];
+  if (!job) return;
+  toggleStar(hash, job);
+}
+
+// ── Sort & filter ──
+function sortJobs(list) {
+  return [...list].sort((a,b) => {
+    if (sortMode==='score') return b.score-a.score;
+    if (sortMode==='new')   return String(b.firstSeen).localeCompare(String(a.firstSeen))||b.score-a.score;
+    const sA=sigOrder[a.sponsorshipSignal]??3, sB=sigOrder[b.sponsorshipSignal]??3;
+    return sA!==sB ? sA-sB : b.score-a.score;
+  });
+}
+
+function filterByCountry(list) {
+  if (countryFilter==='all') return list;
+  return list.filter(j=>{
+    const c=(j.country||j.location||'').toLowerCase(), f=countryFilter.toLowerCase();
+    if(f==='india') return c.includes('india')||c.includes('hyderabad')||c.includes('hyd');
+    if(f==='usa')   return c.includes('usa')||c.includes('united states')||c.includes('us ');
+    if(f==='united kingdom') return c.includes('united kingdom')||c.includes(' uk')||c.includes('london');
+    return c.includes(f);
+  });
+}
+
+// ── Render All tab ──
+function renderAll() {
+  const board = document.getElementById('board-all');
+  const visible = filterByCountry(sortJobs(JOBS));
+  document.getElementById('result-count').textContent = visible.length ? `${visible.length} role${visible.length!==1?'s':''}` : '';
+
+  if (!JOBS.length) { board.innerHTML='<div class="empty-msg"><strong>No matches yet</strong><p>Run the workflow to populate this board.</p></div>'; return; }
+  if (!visible.length) { board.innerHTML='<div class="empty-msg"><strong>No roles in this country yet</strong><p>Try All, or wait for the next scan.</p></div>'; return; }
+
+  board.innerHTML = visible.map((j,i)=>cardHTML(j,i,false)).join('');
+  attachCardListeners(board);
+}
+
+// ── Render Starred tab ──
+function renderStarred() {
+  const board = document.getElementById('board-starred');
+  const starredJobs = Object.values(STARRED);
+
+  if (!starredJobs.length) {
+    board.innerHTML='<div class="empty-msg"><strong>No starred roles yet</strong><p>Star a role from All Roles to pin it here. Starred roles are saved permanently and include a full resume match analysis.</p></div>';
+    return;
   }
 
-  // ── Sort + filter ──
-  const sigOrder = { confirmed: 0, likely: 1, local: 2, unclear: 3, no: 4 };
+  const sorted = [...starredJobs].sort((a,b)=>b.score-a.score);
+  board.innerHTML = sorted.map((j,i)=>cardHTML(j,i,true)).join('');
+  attachCardListeners(board);
+}
 
-  function sortJobs(list) {
-    return [...list].sort((a, b) => {
-      if (sortMode === 'score') return b.score - a.score;
-      if (sortMode === 'new')   return String(b.firstSeen).localeCompare(String(a.firstSeen)) || b.score - a.score;
-      // sponsor (default): confirmed first, then by score
-      const sA = sigOrder[a.sponsorshipSignal] ?? 3;
-      const sB = sigOrder[b.sponsorshipSignal] ?? 3;
-      if (sA !== sB) return sA - sB;
-      return b.score - a.score;
+function attachCardListeners(board) {
+  board.querySelectorAll('.card').forEach(c=>{
+    c.addEventListener('click', e=>{
+      if(e.target.closest('.apply-btn')||e.target.closest('.star-btn')||e.target.closest('.analyse-btn')) return;
+      c.classList.toggle('open');
     });
-  }
+  });
+}
 
-  function filterByCountry(list) {
-    if (countryFilter === 'all') return list;
-    return list.filter(j => {
-      const c = (j.country || j.location || '').toLowerCase();
-      const f = countryFilter.toLowerCase();
-      if (f === 'india') return c.includes('india') || c.includes('hyderabad') || c.includes('hyd');
-      if (f === 'usa') return c.includes('usa') || c.includes('united states') || c.includes('us ') || c.endsWith(' us');
-      if (f === 'united kingdom') return c.includes('united kingdom') || c.includes(' uk') || c.startsWith('uk ') || c.includes('london');
-      return c.includes(f);
+// ── Resume Match Analysis (Claude API in-browser) ──
+async function runAnalysis(hash, e) {
+  e.stopPropagation();
+  const job = STARRED[hash];
+  if (!job) return;
+
+  const btn = document.getElementById('analyse-btn-'+hash);
+  const resultDiv = document.getElementById('analysis-result-'+hash);
+
+  btn.disabled = true;
+  btn.innerHTML = '<div class="spinner"></div> Analysing your fit…';
+  resultDiv.innerHTML = '';
+
+  const prompt = `You are a career coach specialising in product management roles. Analyse how well this candidate's CV matches the job description, then provide specific rewrite suggestions.
+
+## Candidate CV
+${CV_TEXT}
+
+## Job Description
+Title: ${job.title}
+Company: ${job.company}
+Location: ${job.location}
+${job.description ? 'Description:\n' + job.description.slice(0, 2000) : ''}
+
+## Instructions
+Return ONLY valid JSON with this exact structure:
+{
+  "matchPercent": <0-100 integer>,
+  "covered": [
+    "<specific skill/experience from CV that matches this JD>",
+    "<another matched point>",
+    "<another matched point>",
+    "<another matched point>"
+  ],
+  "gaps": [
+    "<specific requirement in JD not evidenced in CV>",
+    "<another gap>",
+    "<another gap>"
+  ],
+  "rewrites": [
+    {
+      "section": "Summary",
+      "before": "<current summary opening or phrase>",
+      "after": "<rewritten version tailored to this specific JD and company>"
+    },
+    {
+      "section": "Experience — Wells Fargo",
+      "before": "<current bullet that undersells for this role>",
+      "after": "<stronger version that speaks directly to this JD's requirements>"
+    },
+    {
+      "section": "Skills",
+      "before": "<current skills section gap>",
+      "after": "<what to add or reorder to match this JD's keywords>"
+    }
+  ]
+}
+
+Rules:
+- matchPercent: honest 0-100. 90+ only if CV is nearly perfect for this role.
+- covered: 4-6 items, be specific (quote the actual skill or achievement).
+- gaps: 2-4 items, only real gaps — don't invent problems.
+- rewrites: 3 sections, each with concrete before/after. The "after" must reference this specific company and role, not be generic.`;
+
+  try {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 1000,
+        messages: [{ role: 'user', content: prompt }]
+      })
     });
-  }
 
-  function renderBoard() {
+    const data = await response.json();
+    const text = data.content?.[0]?.text || '';
+    const result = JSON.parse(text.replace(/```json|```/g,'').trim());
+
+    renderAnalysis(hash, result);
+    // Cache result so it doesn't re-run
+    STARRED[hash]._analysis = result;
+    saveStarred(STARRED);
+  } catch(err) {
+    resultDiv.innerHTML = `<div class="analyse-error">Analysis failed: ${esc(err.message)}. Check your browser console for details.</div>`;
+    btn.disabled = false;
+    btn.innerHTML = 'Retry analysis';
+  }
+}
+
+function renderAnalysis(hash, r) {
+  const btn = document.getElementById('analyse-btn-'+hash);
+  const resultDiv = document.getElementById('analysis-result-'+hash);
+
+  btn.style.display = 'none';
+
+  const pct = r.matchPercent || 0;
+  const pctClass = pct >= 75 ? 'high' : pct >= 55 ? 'mid' : 'low';
+  const fillClass = pctClass;
+
+  const coveredHtml = (r.covered||[]).map(c=>'<li>'+esc(c)+'</li>').join('');
+  const gapsHtml    = (r.gaps||[]).map(g=>'<li>'+esc(g)+'</li>').join('');
+  const rewriteHtml = (r.rewrites||[]).map(rw=>`
+    <div class="rewrite-section">
+      <div class="rewrite-section-label">${esc(rw.section)}</div>
+      <div class="rewrite-before">${esc(rw.before)}</div>
+      <div class="rewrite-arrow">↓ suggested rewrite</div>
+      <div class="rewrite-after">${esc(rw.after)}</div>
+    </div>`).join('');
+
+  resultDiv.innerHTML = `
+    <div class="match-bar-wrap">
+      <div class="match-bar-label">
+        <span>CV–JD match</span>
+        <span class="match-pct ${pctClass}">${pct}%</span>
+      </div>
+      <div class="match-bar-track"><div class="match-bar-fill ${fillClass}" style="width:0%" id="bar-${esc(hash)}"></div></div>
+    </div>
+    <div class="match-section-title">What's covered ✓</div>
+    <ul class="match-list covered">${coveredHtml}</ul>
+    <div class="match-section-title">Gaps to address ✗</div>
+    <ul class="match-list gaps">${gapsHtml||'<li>No significant gaps identified</li>'}</ul>
+    <div class="match-section-title">Suggested rewrites for this role</div>
+    <div class="rewrite-block">${rewriteHtml}</div>
+    <button class="analyse-btn" style="margin-top:12px;background:var(--surface-2);color:var(--ink);border:1px solid var(--border)" onclick="clearAnalysis('${esc(hash)}',event)">Re-run analysis</button>`;
+
+  // Animate bar after render
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    const bar = document.getElementById('bar-'+hash);
+    if(bar) bar.style.width = pct+'%';
+  }));
+}
+
+function clearAnalysis(hash, e) {
+  e.stopPropagation();
+  if(STARRED[hash]) { delete STARRED[hash]._analysis; saveStarred(STARRED); }
+  renderStarred();
+}
+
+// ── Sort buttons ──
+document.querySelectorAll('.sort-btn').forEach(b=>{
+  b.addEventListener('click',()=>{
+    sortMode=b.dataset.s;
+    document.querySelectorAll('.sort-btn').forEach(x=>x.classList.toggle('active',x.dataset.s===sortMode));
+    renderAll();
+  });
+});
+
+// ── Country tabs ──
+document.querySelectorAll('.ctab').forEach(t=>{
+  t.addEventListener('click',()=>{
+    countryFilter=t.dataset.country;
+    document.querySelectorAll('.ctab').forEach(x=>x.classList.toggle('active',x.dataset.country===countryFilter));
+    renderAll();
+  });
+});
+
+// ── Load data ──
+fetch('./data/results.json?t='+Date.now())
+  .then(r=>{ if(!r.ok) throw new Error('no data'); return r.json(); })
+  .then(data=>{
+    window.__meta = data.meta||{};
+    JOBS = (data.jobs||[]).filter(j=>j.firstSeen&&j.firstSeen!=='2000-01-01');
+
+    // Restore any cached analyses for starred jobs
+    for(const h of Object.keys(STARRED)){
+      const live = JOBS.find(j=>j.hash===h);
+      if(live&&STARRED[h]._analysis) live._analysis = STARRED[h]._analysis;
+    }
+
     renderStats(window.__meta);
-    const board = document.getElementById('board');
-    const visible = filterByCountry(sortJobs(JOBS));
-    if (!JOBS.length) {
-      board.innerHTML = '<div class="empty-msg"><strong>No matches yet</strong>Run the workflow to populate this board.</div>';
-      return;
-    }
-    if (!visible.length) {
-      board.innerHTML = '<div class="empty-msg"><strong>No roles in this country yet</strong>Try All, or wait for the next scan.</div>';
-      return;
-    }
-    board.innerHTML = visible.map(cardHTML).join('');
-    board.querySelectorAll('.card').forEach(c => {
-      c.addEventListener('click', e => {
-        if (e.target.closest('.apply-btn')) return;
-        c.classList.toggle('open');
-      });
-    });
-  }
-
-  // ── Sort buttons ──
-  document.querySelectorAll('.sort-btn').forEach(b => {
-    b.addEventListener('click', () => {
-      sortMode = b.dataset.s;
-      document.querySelectorAll('.sort-btn').forEach(x => x.classList.toggle('active', x.dataset.s === sortMode));
-      renderBoard();
-    });
+    renderAll();
+    updateStarBadge();
+  })
+  .catch(()=>{
+    updateStatusPill(null);
+    document.getElementById('board-all').innerHTML='<div class="empty-msg"><strong>No signal yet</strong><p>Run the workflow to generate results.</p></div>';
   });
 
-  // ── Country tabs ──
-  document.querySelectorAll('.ctab').forEach(t => {
-    t.addEventListener('click', () => {
-      countryFilter = t.dataset.country;
-      document.querySelectorAll('.ctab').forEach(x => x.classList.toggle('active', x.dataset.country === countryFilter));
-      renderBoard();
-    });
-  });
-
-  // ── Certifications ──
-  function renderCerts(d) {
-    const panel = document.getElementById('certs-panel');
-    if (!panel) return;
-    if (!d?.certifications?.length) {
-      panel.innerHTML = '<div class="certs-items"><div style="padding:16px 0;font-size:12px;color:var(--ink-3)">Run agent to generate certifications.</div></div>';
-      return;
-    }
-    const items = d.certifications.map(c =>
-      '<div class="cert-item"><div class="cert-name">' + esc(c.name) +
-      '</div><div class="cert-provider">' + esc(c.provider) +
-      '</div><div class="cert-why">' + esc(c.why) + '</div></div>'
-    ).join('');
-    panel.innerHTML = '<div class="certs-items">' + items + '</div>';
+// Restore cached analyses on starred jobs that are already stored
+for(const [hash, job] of Object.entries(STARRED)){
+  if(job._analysis){
+    // Will be rendered when tab opens
   }
-
-  // ── Orbit Intel (3-col) ──
-  function renderOrbitIntel(d) {
-    const grid = document.getElementById('orbit-intel-grid');
-    if (!grid) return;
-    const empty = '<div style="padding:10px 0;font-size:12px;color:var(--ink-3)">Run agent to generate.</div>';
-
-    const trends = d?.trends?.map(t =>
-      '<div class="orbit-item"><div class="trend-label">' + esc(t.label) +
-      '</div><div class="trend-detail">' + esc(t.detail) + '</div></div>'
-    ).join('') || '';
-
-    const news = d?.news?.map(n =>
-      '<div class="orbit-item"><div class="news-headline">' + esc(n.headline) +
-      '</div><div class="news-summary">' + esc(n.summary) + '</div></div>'
-    ).join('') || '';
-
-    const visa = d?.visaIntel?.map(v => {
-      const sponsors = (v.topSponsors || []).map(s =>
-        '<span class="visa-sponsor-tag">' + esc(s) + '</span>'
-      ).join('');
-      return '<div class="orbit-item"><div class="visa-country">' + esc(v.country) +
-        '</div><div class="visa-trend">' + esc(v.trend) +
-        '</div>' + (sponsors ? '<div class="visa-sponsors">' + sponsors + '</div>' : '') +
-        '</div>';
-    }).join('') || '';
-
-    grid.innerHTML =
-      '<div class="orbit-col trends"><div class="orbit-col-title">Market Trends</div><div class="orbit-items">' + (trends || empty) + '</div></div>' +
-      '<div class="orbit-col news" style="animation-delay:80ms"><div class="orbit-col-title">Industry News</div><div class="orbit-items">' + (news || empty) + '</div></div>' +
-      '<div class="orbit-col visa" style="animation-delay:160ms"><div class="orbit-col-title">Visa Intel</div><div class="orbit-items">' + (visa || empty) + '</div></div>';
-  }
-
-  // ── Intersection observer for nav ──
-  function initNav() {
-    const items = {};
-    document.querySelectorAll('.qnav-item').forEach(a => {
-      items[a.getAttribute('href').slice(1)] = a;
-    });
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          Object.values(items).forEach(a => a.classList.remove('active'));
-          if (items[e.target.id]) items[e.target.id].classList.add('active');
-        }
-      });
-    }, { threshold: 0.25 });
-    ['roles','certs','orbit-intel'].forEach(id => {
-      const el = document.getElementById(id);
-      if (el) obs.observe(el);
-    });
-  }
-
-  // ── Load data ──
-  fetch('./data/insights.json?t=' + Date.now())
-    .then(r => r.ok ? r.json() : null)
-    .then(d => { renderCerts(d); renderOrbitIntel(d); })
-    .catch(() => { renderCerts(null); renderOrbitIntel(null); });
-
-  fetch('./data/results.json?t=' + Date.now())
-    .then(r => { if (!r.ok) throw new Error('no data'); return r.json(); })
-    .then(data => {
-      window.__meta = data.meta || {};
-      JOBS = (data.jobs || []).filter(j => j.firstSeen && j.firstSeen !== '2000-01-01');
-      renderBoard();
-    })
-    .catch(() => {
-      updateStatusPill(null);
-      document.getElementById('board').innerHTML =
-        '<div class="empty-msg"><strong>No signal yet</strong>Run the workflow to generate results.</div>';
-    });
-
-  initNav();
+}
+updateStarBadge();
 </script>
 </body>
 </html>

@@ -2,8 +2,7 @@ name: Job Radar
 
 on:
   schedule:
-    # 04:17 UTC daily (~09:47 IST). Off-the-hour to avoid GitHub's scheduling
-    # congestion. The agent itself enforces the every-2-days cadence.
+    # 15:30 UTC daily = 21:00 IST. Off-the-hour to avoid GitHub scheduling congestion.
     - cron: '30 15 * * *'
   workflow_dispatch:
     inputs:
@@ -27,14 +26,18 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Ensure data directory exists
+        run: mkdir -p data
+
       - name: Run the job agent
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ secrets.GEMINI_MODEL || 'gemini-2.5-flash' }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
           ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
           JSEARCH_API_KEY: ${{ secrets.JSEARCH_API_KEY }}
           PROFILE_JSON: ${{ secrets.PROFILE_JSON }}
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           FORCE_RUN: ${{ inputs.force }}
         run: node scripts/agent.mjs
 
@@ -43,5 +46,5 @@ jobs:
           git config user.name "job-radar-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/
-          git diff --staged --quiet || git commit -m "Update job matches ($(date -u +%Y-%m-%d))"
+          git diff --staged --quiet || git commit -m "job scan $(date -u +%Y-%m-%d)"
           git push

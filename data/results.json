@@ -1,64 +1,11 @@
 {
   "meta": {
-    "lastRun": null,
-    "generatedAt": "sample",
-    "note": "Sample rows for dashboard preview. firstSeen 2000-01-01 means they drop on first real scan.",
-    "scanned": 0,
+    "lastRun": "2026-08-17",
+    "generatedAt": "2026-08-17T09:46:59.091Z",
+    "scanned": 400,
     "newlyScored": 0,
     "newMatches": 0,
-    "onBoard": 2
+    "onBoard": 0
   },
-  "jobs": [
-    {
-      "hash": "sample1",
-      "company": "Revolut",
-      "title": "Senior Product Manager — Banking",
-      "location": "London, United Kingdom",
-      "country": "United Kingdom",
-      "url": "https://www.revolut.com/en-GB/careers/",
-      "source": "sample",
-      "score": 91,
-      "seniorityFit": "good",
-      "verdict": "Strong fit — regulated digital banking, end-to-end PO ownership, known visa sponsor for Indian talent.",
-      "pros": [
-        "Core banking and digital deposit domain maps directly to Wells Fargo CD migration work",
-        "Revolut is a well-known UK Skilled Worker visa sponsor for senior product hires",
-        "End-to-end product ownership with cross-functional team leadership matches current role"
-      ],
-      "cons": [
-        "Fast-growth startup culture differs from regulated US banking environment"
-      ],
-      "sponsorshipSignal": "confirmed",
-      "sponsorshipEvidence": "Revolut sponsors Skilled Worker visas for senior product roles — confirmed from public immigration data",
-      "visaType": "UK Skilled Worker Visa",
-      "postedAt": "2000-01-01",
-      "firstSeen": "2000-01-01"
-    },
-    {
-      "hash": "sample2",
-      "company": "Grab Financial Group",
-      "title": "Product Lead — Digital Payments",
-      "location": "Singapore",
-      "country": "Singapore",
-      "url": "https://careers.grab.com/",
-      "source": "sample",
-      "score": 78,
-      "seniorityFit": "stretch",
-      "verdict": "Good fit — fintech, digital payments, strong AI product angle aligns with independent projects.",
-      "pros": [
-        "Digital payments and financial services domain is adjacent to core banking background",
-        "Singapore Employment Pass accessible for senior Indian product professionals",
-        "AI product focus resonates with independently built Claude API projects"
-      ],
-      "cons": [
-        "Payments domain is adjacent but not a direct match to deposits and loan origination",
-        "Grab's scale may expect prior platform PM experience"
-      ],
-      "sponsorshipSignal": "likely",
-      "sponsorshipEvidence": "Grab is a regional HQ employer in Singapore with a strong track record of sponsoring Employment Passes for senior hires",
-      "visaType": "Singapore Employment Pass",
-      "postedAt": "2000-01-01",
-      "firstSeen": "2000-01-01"
-    }
-  ]
+  "jobs": []
 }

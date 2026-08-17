@@ -437,42 +437,55 @@ Sponsorship signal:
 Seniority: "good" = correct level, "stretch" = slightly above/below, "mismatch" = clearly wrong level.`;
 }
 
-async function scoreWithGemini(prompt) {
+async function scoreWithGemini(systemPrompt, userPrompt) {
   if (!GEMINI_KEY) throw new Error('No Gemini key');
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_KEY}`;
+  // Use gemini-2.0-flash as the stable free-tier model; override with GEMINI_MODEL secret if set
+  const model = (GEMINI_MODEL && GEMINI_MODEL !== 'gemini-2.5-flash')
+    ? GEMINI_MODEL
+    : 'gemini-2.0-flash';
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${GEMINI_KEY}`;
   const res = await httpsPost(url, {
-    contents: [{ parts: [{ text: prompt }] }],
-    generationConfig: { temperature: 0.1, maxOutputTokens: 500 }
+    system_instruction: { parts: [{ text: systemPrompt }] },
+    contents: [{ role: 'user', parts: [{ text: userPrompt }] }],
+    generationConfig: { temperature: 0.1, maxOutputTokens: 600, responseMimeType: 'application/json' }
   });
-  if (res.status !== 200) throw new Error(`Gemini ${res.status}`);
+  if (res.status !== 200) {
+    const errMsg = typeof res.body === 'object' ? JSON.stringify(res.body) : String(res.body).slice(0, 200);
+    throw new Error(`Gemini ${res.status}: ${errMsg}`);
+  }
   const text = res.body?.candidates?.[0]?.content?.parts?.[0]?.text || '';
   return JSON.parse(text.replace(/```json|```/g, '').trim());
 }
 
-async function scoreWithGroq(prompt) {
+async function scoreWithGroq(systemPrompt, userPrompt) {
   if (!GROQ_KEY) throw new Error('No Groq key');
+  // llama-3.3-70b-versatile was deprecated — use llama-3.1-8b-instant as stable fallback
+  const model = 'llama-3.1-8b-instant';
   const res = await httpsPost('https://api.groq.com/openai/v1/chat/completions', {
-    model: 'llama-3.3-70b-versatile',
+    model,
     messages: [
-      { role: 'system', content: SCORE_SYSTEM },
-      { role: 'user', content: prompt }
+      { role: 'system', content: systemPrompt },
+      { role: 'user', content: userPrompt }
     ],
     temperature: 0.1,
-    max_tokens: 500
+    max_tokens: 600
   }, { Authorization: `Bearer ${GROQ_KEY}` });
-  if (res.status !== 200) throw new Error(`Groq ${res.status}`);
+  if (res.status !== 200) {
+    const errMsg = typeof res.body === 'object' ? JSON.stringify(res.body) : String(res.body).slice(0, 200);
+    throw new Error(`Groq ${res.status}: ${errMsg}`);
+  }
   const text = res.body?.choices?.[0]?.message?.content || '';
   return JSON.parse(text.replace(/```json|```/g, '').trim());
 }
 
 async function scoreJob(job) {
-  const prompt = buildScorePrompt(job, profile);
+  const userPrompt = buildScorePrompt(job, profile);
   try {
-    return await scoreWithGemini(SCORE_SYSTEM + '\n\n' + prompt);
+    return await scoreWithGemini(SCORE_SYSTEM, userPrompt);
   } catch (e) {
     log('Gemini failed, trying Groq:', e.message);
     try {
-      return await scoreWithGroq(prompt);
+      return await scoreWithGroq(SCORE_SYSTEM, userPrompt);
     } catch (e2) {
       log('Groq also failed:', e2.message);
       return null;
@@ -527,13 +540,14 @@ Rules:
 - visaIntel: one entry per target country, name real companies known to sponsor Indian PMs
 - Be specific, not generic. Avoid filler sentences.`;
 
+  const insightsSystem = 'You are a career intelligence analyst. Return ONLY valid JSON, no markdown, no preamble.';
   try {
-    const raw = await scoreWithGemini(prompt);
+    const raw = await scoreWithGemini(insightsSystem, prompt);
     return raw;
   } catch (e) {
     log('Insights Gemini failed, trying Groq:', e.message);
     try {
-      return await scoreWithGroq(prompt);
+      return await scoreWithGroq(insightsSystem, prompt);
     } catch (e2) {
       log('Insights generation failed:', e2.message);
       return null;
